@@ -1,1 +1,265 @@
-<div>hello word</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff14;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 4px 6px;
+  text-decoration: none;
+}
+.topnav a img{width: 50%;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  /*background-color: #04AA6D;*/
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/*@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}*/
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.header1{width: 100%;margin-top:5%;}
+.header1 h1{  background: linear-gradient(
+    to right, 
+    hsl(98 100% 62%), 
+    hsl(204 100% 59%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;}
+
+.bungkusribbon{       width: 99%;
+    /* display: flex; */
+    height: 66px;
+    position: absolute;
+    top: 0px;
+}
+.ribonleft{    position: absolute;
+    top: -100%;left:0%;    -webkit-transform: rotate(
+202deg
+);    -moz-transform: rotate(202deg);
+    -ms-transform: rotate(202deg);
+    -o-transform: rotate(202deg);
+   background: #005AA7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 50%;
+    height: 169px;z-index: -1}
+.ribonright{     position: absolute;
+    top: -100%;
+    right: 0;
+    -webkit-transform: rotate( 
+158deg
+ );
+    -moz-transform: rotate(158deg);
+    -ms-transform: rotate(158deg);
+    -o-transform: rotate(158deg);
+    background: #005AA7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 50%;
+    height: 169px;
+    z-index: -1;}
+
+.bungkus{     position: relative;
+    width: 20%;
+    margin: auto;
+    height: 217px;}
+.circle1 {position: absolute;
+    top: -3px;
+    left: -1.5%;
+    margin: 0% auto;
+    border: 4px dotted white;
+    border-radius: 50%;
+    padding: 50%;
+    background-color: #0CB1C4;
+    animation-name: spin;
+    animation-duration: 20000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.bungkusimgprofile{position: absolute;
+    width: 100%;
+    text-align: center;}
+.bungkusimgprofile img{    width: 100%;
+    border-radius: 50%;}
+
+
+
+.skill{width: 96%;background: white;padding: 2%;margin: auto;}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+  margin: 6px;font-size: small;
+}
+
+.skills {padding-left: 5px;
+  text-align: right;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  color: white;
+}
+
+.container .skills i{float: left;}
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 90%; background-color: #2196F3;}
+.js {width: 75%; background-color: #f44336;}
+.php {width: 90%; background-color: #808080;}
+.jquery {width: 70%; background-color: #808080;}
+.vb {width: 80%; background-color: #808080;}
+.java {width: 65%; background-color: #808080;}
+.design {width: 90%; background-color: #808080;}
+.office {width: 95%; background-color: #808080;}
+.writer {width: 85%; background-color: #808080;}
+.mc {width: 85%; background-color: #808080;}
+</style>
+</head>
+<body>
+<div class="bodynya">
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active"><img src="facebook.png"/></a>
+  <a href="#news"><img src="twitter.png"/></a>
+  <a href="#contact"><img src="instagram.png"/></a>
+  <a href="#about"><img src="youtube.png"/></a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+<div class="bungkusribbon">
+<div class="ribonleft"></div>
+<div class="ribonright"></div>
+</div>
+<div class="bungkus">
+<div class="circle1"></div>
+<div class="bungkusimgprofile">
+	<img src="profile.jpg"/>
+</div>
+</div>
+<div class="header1">
+	<h1>Yusup maulana S.Tr.Kom, MOS</h1>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</div>
+
+
+
+<div class="skill">
+<h2>Programming Skills</h2>
+
+<div class="container">
+  <div class="skills html"><i>HTML</i> 90%</div>
+</div>
+
+<div class="container">
+  <div class="skills css"><i>CSS</i> 90%</div>
+</div>
+
+<div class="container">
+  <div class="skills js"><i>JAVASCRIPT</i> 75%</div>
+</div>
+
+<div class="container">
+  <div class="skills php"><i>PHP</i> 90%</div>
+</div>
+
+<div class="container">
+  <div class="skills jquery"><i>JQUERY</i> 70%</div>
+</div>
+
+<div class="container">
+  <div class="skills vb"><i>VISUAL BASIC</i> 80%</div>
+</div>
+
+<div class="container">
+  <div class="skills java"><i>JAVA</i> 65%</div>
+</div>
+
+
+<h2>Other Skills</h2>
+
+<div class="container">
+  <div class="skills design"><i>DESIGN</i> 90%</div>
+</div>
+
+<div class="container">
+  <div class="skills office"><i>OFFICE</i> 95%</div>
+</div>
+
+<div class="container">
+  <div class="skills writer"><i>WRITER</i> 85%</div>
+</div>
+
+<div class="container">
+  <div class="skills mc"><i>MAINTENANCE COMPUTER</i> 85%</div>
+</div>
+
+</div>
+</body>
+</html>
