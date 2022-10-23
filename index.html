@@ -1,265 +1,1252 @@
+  <div id="loaderpertamakali">
+  <div class="loader">
+    <div class="loader">
+        <div class="loader">
+           <div class="loader">
+            
+           </div>
+        </div>
+    </div>
+  </div>
+</div> 
+<script type="text/javascript"> 
+
+document.documentElement.className = "jsloadingfistme";
+
+</script>
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
+  .jsloadingfistme body{visibility: hidden;}
+
+#loaderpertamakali {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  width: 150px;
+    height: 150px; 
+    display: none; 
+}
+
+.loader {
+    width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  border: 8px solid #162534;
+  border-top: 8px solid #09f;
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+100% {transform: rotate(360deg);}
+} 
+
+
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  /*background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);*/
 }
+.header1{width: 100%;background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);display: flex;    padding: 2% 2% 0% 2%;color: white;}
+.head{   width: 18%;  margin-right: 1%;}
+.head .head-in{ }
+.head .head-in .img-profile1{}
+.head .head-in .img-qr-code1{}
+.head .head-in .img-profile1 img{width: 100%;    border-radius: 50%;}
+.head .head-in .img-qr-code1 img{width: 100%;}
 
-.topnav {
-  overflow: hidden;
-  background-color: #ffffff14;
-}
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 4px 6px;
-  text-decoration: none;
-}
-.topnav a img{width: 50%;
-}
-.topnav a:hover {
+.head2{width: 30%; }
+.head2 .head-in2{     margin: 5%;}
+.head2 .head-in2 .head-in2-1{font-size: x-large;
+    background: #1e2328;
+    padding: 3%;}
+.head2 .head-in2 .head-in2-2{font-size: small;    font-style: italic;    line-height: 16px;    display: block;}
+.head2 .head-in2 .head-in2-3 img{  width: 35px;  vertical-align: top;   border: 2px solid white;    border-radius: 50%; }
+.head2 .head-in2 .head-in2-4{  font-size: x-large;}   
+.head2 .head-in2  .head-intable1{font-size: small;    color: white;}
+
+.head3{width: 50%; }
+.head3 .head-in3{     margin: 3%;}
+.head3 .head-in3 .head-in3-1{ font-size: x-large;color: #cdbe91;}
+.head3 .head-in3 .head-in3-2{     text-align: justify;    display: block;font-size: small;}
+
+
+
+.leher{    padding: 1% 0px 1% 0%;
+    font-size: small;
+    display: flex;
+    background: #1e2328;
+    color: #cdbe91;
+    box-shadow: inset 0 0 2px #cdbe91;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 1px; }
+.leher .leher1{    color: #cdbe91;    margin: auto; /* margin: 0px 1% 0px 1%;*/}
+.leher .leher1 span:nth-child(1){}
+.leher .leher1 span img{width: 30px;    border-radius: 50%;    border: 2px solid white;}
+
+
+
+.tab-content{    padding: 2%;}
+.skill{margin: 3% 0% 1% 0%;}
+.skill table{ width: 90%;    margin: auto;}
+   
+.container {
+  width: 100%;margin: auto;
   background-color: #ddd;
-  color: black;
+   font-size: small;
+ 
+
 }
 
-.topnav a.active {
-  /*background-color: #04AA6D;*/
+.skills { transition:0.5s;
+  padding-left: 5px;
+  text-align: right;
+  padding-top: 7px;
+  padding-bottom:7px;
   color: white;
 }
+.skills:hover{    background: #00000038;transition: width 2s;  padding-top: 9px;
+  padding-bottom:9px;}
+.container .skills i{float: left;}
+.dgm {width: 70%; background-color: #006622;}
+.office {width: 95%; background-color: #00802b;}
+.manajementdata {width: 99%; background-color: #009933;}
+.its {width: 90%; background-color: #00b33c;}
+.itn {width: 90%; background-color: #00cc44;}
+.eis {width: 90%; background-color: #00e64d;}
 
-.topnav .icon {
-  display: none;
+.googleoffice {width: 90%; background-color: #0066cc;}
+.jarmik {width: 70%; background-color: #0073e6;}
+.adbp {width: 80%; background-color: #0080ff;}
+.mysqldb {width: 90%; background-color: #3399ff;}
+.progr {width: 90%; background-color: #66b3ff;}
+.sonveg {width: 90%; background-color: #80bfff;}
+.visstu {width: 90%; background-color: #99ccff;}
+
+.html {width: 99%; background-color: #b34700;}
+.css {width: 90%; background-color: #cc5200;}
+.js {width: 75%; background-color: #e65c00;}
+.php {width: 90%; background-color: #ff6600;}
+.jquery {width: 80%; background-color: #ff751a;}
+.vb {width: 80%; background-color: #ff8533;}
+.java {width: 65%; background-color: #ffa366;}
+
+
+
+
+
+
+
+
+
+@media  screen and (min-width: 1200px){
+.container {    max-width: 100%;}
 }
 
-/*@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}*/
+@media  screen and(min-width: 992px){
+.container {   max-width: 100%;}
+}
+
+@media  screen and(min-width: 768px){
+.container {   max-width: 100%;}
+}
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+
 }
 
-.header1{width: 100%;margin-top:5%;}
-.header1 h1{  background: linear-gradient(
-    to right, 
-    hsl(98 100% 62%), 
-    hsl(204 100% 59%)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;}
-
-.bungkusribbon{       width: 99%;
-    /* display: flex; */
-    height: 66px;
-    position: absolute;
-    top: 0px;
+@media  screen and(min-width: 576px){
+.container {    max-width: 100%;}
 }
-.ribonleft{    position: absolute;
-    top: -100%;left:0%;    -webkit-transform: rotate(
-202deg
-);    -moz-transform: rotate(202deg);
-    -ms-transform: rotate(202deg);
-    -o-transform: rotate(202deg);
-   background: #005AA7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    width: 50%;
-    height: 169px;z-index: -1}
-.ribonright{     position: absolute;
-    top: -100%;
-    right: 0;
-    -webkit-transform: rotate( 
-158deg
- );
-    -moz-transform: rotate(158deg);
-    -ms-transform: rotate(158deg);
-    -o-transform: rotate(158deg);
-    background: #005AA7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    width: 50%;
-    height: 169px;
-    z-index: -1;}
-
-.bungkus{     position: relative;
-    width: 20%;
-    margin: auto;
-    height: 217px;}
-.circle1 {position: absolute;
-    top: -3px;
-    left: -1.5%;
-    margin: 0% auto;
-    border: 4px dotted white;
-    border-radius: 50%;
-    padding: 50%;
-    background-color: #0CB1C4;
-    animation-name: spin;
-    animation-duration: 20000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-.bungkusimgprofile{position: absolute;
-    width: 100%;
-    text-align: center;}
-.bungkusimgprofile img{    width: 100%;
-    border-radius: 50%;}
-
-
-
-.skill{width: 96%;background: white;padding: 2%;margin: auto;}
-
-.container {
-  width: 100%;
-  background-color: #ddd;
-  margin: 6px;font-size: small;
-}
-
-.skills {padding-left: 5px;
-  text-align: right;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  color: white;
-}
-
-.container .skills i{float: left;}
-.html {width: 90%; background-color: #04AA6D;}
-.css {width: 90%; background-color: #2196F3;}
-.js {width: 75%; background-color: #f44336;}
-.php {width: 90%; background-color: #808080;}
-.jquery {width: 70%; background-color: #808080;}
-.vb {width: 80%; background-color: #808080;}
-.java {width: 65%; background-color: #808080;}
-.design {width: 90%; background-color: #808080;}
-.office {width: 95%; background-color: #808080;}
-.writer {width: 85%; background-color: #808080;}
-.mc {width: 85%; background-color: #808080;}
 </style>
 </head>
+
 <body>
-<div class="bodynya">
-<div class="topnav" id="myTopnav">
-  <a href="#home" class="active"><img src="facebook.png"/></a>
-  <a href="#news"><img src="twitter.png"/></a>
-  <a href="#contact"><img src="instagram.png"/></a>
-  <a href="#about"><img src="youtube.png"/></a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
 
 
 
-<div class="bungkusribbon">
-<div class="ribonleft"></div>
-<div class="ribonright"></div>
-</div>
-<div class="bungkus">
-<div class="circle1"></div>
-<div class="bungkusimgprofile">
-	<img src="profile.jpg"/>
-</div>
-</div>
+
 <div class="header1">
-	<h1>Yusup maulana S.Tr.Kom, MOS</h1>
-</div>
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+
+<div class="head">
+  <style type="text/css">
+    /* entire container, keeps perspective */
+.card-container {
+    -webkit-perspective: 800px;
+   -moz-perspective: 800px;
+     -o-perspective: 800px;
+        perspective: 800px;
+        margin-bottom: 30px;
 }
-</script>
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card{
+  -webkit-transform: rotateY( 180deg );
+-moz-transform: rotateY( 180deg );
+ -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+.card-container.static:hover .card,
+.card-container.static.hover .card {
+  -webkit-transform: none;
+-moz-transform: none;
+ -o-transform: none;
+    transform: none;
+}
+/* flip speed goes here */
+.card {
+   -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+     -o-transition: -o-transform .5s;
+        transition: transform .5s;
+-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+ /* background-color: #3e0a0d;*/
+ background: url(profile.jpg) no-repeat;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+    -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+     -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+        z-index: 3;
+}
+
+.back .btn-simple{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+}
+/*        Style       */
+
+
+.card{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #444444;
+}
+.card-container, .front, .back {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+}
+.card .cover{
+    height: 105px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+
+.card .user{box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 50%;
+    display: block;
+    height: 174px;
+    margin: -55px auto 0;
+    overflow: hidden;
+    width: 178px;
+}
+.card .user img{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 4px solid #FFFFFF;
+    width: 100%;
+}
+
+.card .content{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    
+}
+
+.card .back .content .main {
+    height: 215px;
+}
+.card .name {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.card h5{
+    margin: 5px 0;
+    font-weight: 400;
+    line-height: 20px;
+}
+.card .profession{
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card{border: none!important;}
+
+.card .motto{
+    border-bottom: 1px solid #EEEEEE;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+    .front{
+        z-index: 4;
+    }
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back{
+        z-index: 5;
+        visibility: visible;
+    }
+}
+  </style>
+  <div class="card-container">
+         <div class="card">
+             <div class="front">
+                 <div class="cover">
+              
+                 </div>
+                 <div class="user">
+                     <img class="img-circle" src="profile.jpg"/>
+                 </div>
+                 <div class="content">
+                     <div class="main">
+                         <h3 class="name">Maulana</h3>
+                         <p class="profession">Nama Panggilan</p>
+
+                         
+                     </div>
+                     
+                 </div>
+             </div> <!-- end front panel -->
+             <div class="back">
+                 <div class="header">
+                     <h5 class="motto">"Aku merindukan kekuatan yang mendominasi!"</h5>
+                 </div>
+                 <div class="content">
+                     <div class="main">
+                         <h4 class="text-center">Assalamualaikum...</h4>
+                         <p class="text-center" style="font-size:small; padding: 12%;">Saya sedang mencari peluang baru, kotak masuk saya selalu terbuka. Apakah Anda memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba yang terbaik untuk menghubungi Anda kembali!</p>
+
+
+                     </div>
+                 </div>
+             
+             </div> <!-- end back panel -->
+         </div> <!-- end card -->
+     </div> <!-- end card-container -->
+
+<!-- <div class="head-in">
+  <div class="img-profile1"><img src="profile.jpg" /></div>
+</div>
+<div class="head-in">
+  <div class="img-qr-code1"></div>
+</div> -->
+</div>
+
+<div class="head2">
+<div class="head-in2">
+ <span class="head-in2-1">Yusup maulana S.Tr.Kom</span>
+</div>
+<div class="head-in2">
+<span class="head-in2-2"><a target="_blank" style="color:white;" href="https://goo.gl/maps/dMiEzwcTv2FKPEw79">Kp/Ds. Nyenang, RT/RW. 03/03, Kec. Cipeundeuy, Kab. Bandung Barat, Jawa Barat, 40558, Indonesia</a></span>
+</div>
+<div class="head-in2">
+<span class="head-in2-3"><img src="wa.png" /></span><span class="head-in2-4"> <a target="_blank" style="color:white;" href="https://api.whatsapp.com/send?phone=083898610918">083898610918</a></span>
+</div>
+<div class="head-in2">
+<table class="head-intable1">
+     <tr> <td>Tempat, Tanggal Lahir </td> <td>: Bandung, 07 Juli 1996</td> </tr>
+       <tr><td>Jenis Kelamin</td> <td>: Laki-laki</td> </tr>
+        <tr><td>Agama</td> <td>: Islam </td> </tr>
+        <tr> <td>Status</td> <td>: Belum Menikah </td> </tr>
+</table>
+</div>
+</div>
+
+<div class="head3">
+<div class="head-in3">
+  <span class="head-in3-1">Tentang Saya</span>
+</div>
+<div class="head-in3">
+  <span class="head-in3-2">Berpengalaman dalam Tender Proyek, Administrasi, dan IT Support lebih dari 4 tahun  di PT. Raya Azura Persada dengan hasil efisiensi dalam pengelolaan data meningkat sebesar 60%. Keahlian favorit saya adalah membangun sebuah Web dalam Pemograman Native dan membangun sebuah Jaringan Komputer. Saya dapat mengelola beberapa tanggung jawab sekaligus dengan berfokus pada satu tugas sambil melacak yang lain. 
+Sehingga Perasaan produktivitas saya, dapat meningkatkan motivasi orang lain untuk terus mengerjakan tugas mereka. 
+Sebagai asisten administrasi untuk kantor, saya menjalankan tugas dengan memproses beberapa dokumen persyaratan dan menyiapkannya lalu menyusunnya sambil menganalisa pengelolaan dan membuat suatu rancangan secara berkala untuk meningkatkan efektivitas.</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="leher">
+  <a class="leher1" href="mailto:yusupmaulana.net@example.com" target="_blank"><span><img src="g.png" /></span> <span>yusupmaulana.net@gmail.com</span></a>
+  <a class="leher1" href="https://www.nyenang.com/" target="_blank"><span><img src="web.png" /></span> <span>nyenang.com</span></a>
+  <a class="leher1" href="https://www.instagram.com/maulana_net" target="_blank"><span><img src="instagram.png" /></span> <span>maulana_net</span></a>
+  <a class="leher1" href="https://www.facebook.com/chunk.lovereggae/" target="_blank"><span><img src="facebook.png" /></span> <span>facebook</span></a>
+  <a class="leher1" href="https://twitter.com/castrol_chunk" target="_blank"><span><img src="tw.png" /></span> <span>Twitter</span></a>
+  <a class="leher1" href="https://www.youtube.com/channel/UCrnSCuFBjzBE6RuEiV-IKzg/featured" target="_blank"><span><img src="y.png" /></span> <span>SALAM NUNGGAL</span></a>
+  <a class="leher1" href="https://www.linkedin.com/in/nyenang/" target="_blank"><span><img src="linked.png" /></span> <span>linked</span></a>
 </div>
 
 
 
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Portofolio</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Keahlian</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Pendidikan</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Pengalaman Kerja</button>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======================================================================================================================== START TAB 1 -->
+<style type="text/css">
+  .card-body{height: 190px!important;}
+.card .card_status:after{ max-width: 100%;
+    height: 35px;
+    display: block;
+    content: "";
+    position: relative;
+    bottom: 0px;
+    left: -12px;
+    z-index: -1;
+    top: -17px;
+    transform: skew(33deg, 0deg);
+    padding: 0px 0px;
+    box-shadow: rgb(0 0 0 / 39%) 0px 1px 0px 0px;
+}
+.box_gbr{  border-radius: 5px 5px 0px 0px;
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+     top: 0px;
+    left: 0%;
+    background: black;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); overflow: hidden;}
+    
+
+.card_status_completed:after{ background: #159957;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.card .card_status {
+      position: absolute;
+    left: 0px;
+    top: 169px;
+    padding: 0px 0px;
+    font-size: 10px;
+    text-align: center;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    text-transform: capitalize;
+    z-index: 1;
+    width: 132px;
+   
+    overflow: auto;
+}.card .card_status span{   position: relative;
+    left: -6px;
+    top: 9px;}
+.card .card_tahun {
+    position: absolute;
+    right: 0px;
+    background: #1e2328;
+    font-weight: 600;
+    top: 6px;
+    padding: 2px 3px 2px 7px;
+    font-size: 11px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 0.5s ease;
+    /* text-shadow: 0px 1px 2px #000000d1; */
+    box-shadow: rgb(0 0 0 / 39%) 0px 1px 0px 0px;
+    text-transform: capitalize;
+}
+</style>
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+ <div class="row">
+     <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>Februari - Maret 2022</span></div>
+           <div class=" box_gbr" tabindex="0" id="">
+                  <img class="card-img-top" src="manpumpingchar.jpg" alt="Card image cap">
+                </div>
+            <div class="card-body">
+               <h5 class="card-title">Man. Pumping Charity</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi web pengelolaan data SPT control, dana kelola, member, basecamp, profit, inventaris, transaksi, kas, dan laporan yang kompleks dengan 3 sisi user</p>
+               
+               <a target="_blank" href="" class="btn btn-warning btn-sm">Demo</a>
+               <a href="" class="btn btn-info btn-sm">Selengkapnya</a>
+            </div>
+         </div>
+      </div>
+
+       <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>Januari - Februari 2021</span></div>
+           <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="webanime.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">Website Video Anime</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah Website single page pengelola link video </p>
+               <a target="_blank" href="https://maulanaproject1.000webhostapp.com/" class="btn btn-warning btn-sm">Demo</a>
+               
+               <button id="portofolio-webanime" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+            </div>
+         </div>
+      </div>
+
+      <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>Oktober - Desember 2019</span></div>
+          <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="pwebazura.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">Website RAP</h5>
+               <p class="card-text" style="font-size: smaller;">Merupakan sebuah website dari PT. Raya Azura Persada. unik, simpel, dan user friendly</p>
+               
+               <a target="_blank" href="http://rayaazurapersada.dx.am/" class="btn btn-primary btn-sm">Lihat</a>
+               <button id="portofolio-websiteRAP" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+            </div>
+         </div>
+      </div>
+ <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+           <div class="card_status card_status_completed" style-hover="background:green"><span>Juli - Agustus 2019</span></div>
+           <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="inventaris.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">Inventaris RAP</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi web pengelolaan data inventaris yang terintegrasi dengan web PT. Raya Azura Persada</p>
+               <a target="_blank" href="https://inventaris-maulana.000webhostapp.com/master_gudang.php" class="btn btn-warning btn-sm">Demo</a>
+               <button id="portofolio-inventarisRAP" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+            </div>
+         </div>
+      </div>
+
+    <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>Maret - Maret 2019</span></div>
+          <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="cashflow.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">Cashflow Proyek</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi web untuk membantu estimasi pengeluaran rencana dan aktual Proyek </p>
+               <a target="_blank" href="https://internetclanc.000webhostapp.com/" class="btn btn-warning btn-sm">Demo</a>
+               
+               <button id="portofolio-cashflow" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+            </div>
+         </div>
+      </div>
+
+      
+
+    
+
+    
+     
+
+        <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>Agustus - agustus 2018</span></div>
+          <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="siak.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">SIAK</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah sistem informasi administrasi kependudukan untuk mengelola data KTP + KK berbasis dekstop</p>
+             
+               <a target="_blank" href="https://www.nyenang.com/2022/10/sistem-informasi-administrasi.html" class="btn btn-info btn-sm">Selengkapnya</a>
+            </div>
+         </div>
+      </div>
+
+        <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>April - April 2018</span></div>
+           <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="inventaris.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">Logistik RAP</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi berbasis desktop untuk mengelola data logistik </p>
+               <a target="_blank" href="http://rayaazurapersada.dx.am/" class="btn btn-warning btn-sm">Demo</a>
+               
+               <button class="btn btn-info btn-sm">Selengkapnya</button>
+            </div>
+         </div>
+      </div>
+
+
+
+       <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>Januari - Maret 2018</span></div>
+          <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="manktr.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">Man. KTR</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi berbasis web untuk pengelolaan data, baik logistik, transaksi, karyawan dan info harga barang </p>
+               <a target="_blank" href="https://maulana-project10.000webhostapp.com/#popuplogin" class="btn btn-warning btn-sm">Demo</a>
+               
+               <button id="portofolio-manktr" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+            </div>
+         </div>
+      </div>
+
+   </div>
+  
+  </div>
+
+<!-- ======================================================================================================================== START TAB 2 -->
+  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<h2>Kemampuan & Kompetensi</h2>
 <div class="skill">
-<h2>Programming Skills</h2>
-
-<div class="container">
-  <div class="skills html"><i>HTML</i> 90%</div>
+<table>
+<tr>
+  <td><h2>Professional Skill</h2></td>
+</tr>
+<tr>
+  <td>
+    <div class="container">
+  <div class="skills dgm popover-DigitalMarketing" tabindex="0"  data-toggle="popover" data-trigger="focus" title="Digital Marketing" data-content="Terlatih dalam menggunakan media digital atau internet dengan tujuan untuk menarik konsumen atau calon konsumen secara cepat"><i>Digital Marketing</i> 70%</div>
 </div>
-
 <div class="container">
-  <div class="skills css"><i>CSS</i> 90%</div>
+  <div id="MircrosoftOfficeSpecialist" class="skills office popover-office in_view" tabindex="0"  data-toggle="popover" data-trigger="focus" title="Mircrosoft Office Specialist" data-content="Menguasai fitur dan fungsionalitas lengkap Microsoft Office, mulai dari Excel, Word, Power Point, Publisher, Acces dan telah memiliki sertifikasi yang dikeluarkan oleh Certiport, Kredensial yang diakui secara global."><i>Mircrosoft Office Specialist</i> <span style="font-size:x-small;">Klik lihat kompetensi</span> 95%</div>
 </div>
-
+<div class="container">
+  <div id="ManajemenData" class="skills manajementdata popover-manajementdata in_view"  tabindex="0"  data-toggle="popover" data-trigger="focus" title="Manajemen Data" data-content="Mampu Menyusun, mempermudah, Menjaga keamanan, Memelihara, baik dari pembaruan, penambahan, hingga penghapusan data agar sumber data tetap aktual"><i>Manajemen Data</i> <span style="font-size:x-small;">Klik lihat kompetensi</span> 99%</div>
+</div>
+<div class="container">
+  <div id="InformationTechnologySupport" class="skills its popover-its in_view " tabindex="0"  data-toggle="popover" data-trigger="focus" title="Information Technology Support" data-content="Mahir dalam mengidentifikasi, memasang perlengkapan, mengoprasikan perangkat komputer, dan melakukan instalasi jaringan serta instalasi operating system"><i>Information Technology Support</i> <span style="font-size:x-small;">Klik lihat kompetensi</span> 90%</div>
+</div>
+<div class="container">
+  <div id="InformationTechnologyNetwork" class="skills itn popover-itn in_view"  tabindex="0"  data-toggle="popover" data-trigger="focus" title="Information Technology Network" data-content="Lihai membuat jaringan lokal, dan nirkabel dan juga Terampil melaksanakan prosedur perawatan serta menyelenggarakan adm sistem jaringan, maupun menginstal sumber daya berbagi pada jaringan"><i>Information Technology Network</i> <span style="font-size:x-small;">Klik lihat kompetensi</span> 90%</div>
+</div>
+<div class="container">
+  <div id="InformationTechnologySystem" class="skills eis popover-eis in_view"  tabindex="0"  data-toggle="popover" data-trigger="focus" title="Engineering Information System" data-content="Cakap dalam membuat algoritma, menulis atau membuat dokumen kode pemograman yang terstruktur dan Tangkas dalam mengoprasikan aplikasi basis data"><i>Engineering Information System</i> <span style="font-size:x-small;">Klik lihat kompetensi</span> 90%</div>
+</div>
+  </td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+$('.popover-DigitalMarketing').popover({
+  trigger: 'hover'
+})
+$('.popover-office').popover({
+  trigger: 'hover'
+})
+$('.popover-manajementdata').popover({
+  trigger: 'hover'
+})
+$('.popover-its').popover({
+  trigger: 'hover'
+})
+$('.popover-itn').popover({
+  trigger: 'hover'
+})
+$('.popover-eis').popover({
+  trigger: 'hover'
+})
+</script>
+<div class="skill">
+<table>
+<tr>
+  <td><h2>Technical Skill</h2></td>
+</tr>
+<tr>
+  <td>
+<div class="container">
+  <div class="skills googleoffice"><i>Google Office</i> 90%</div>
+</div>
+<div class="container">
+  <div class="skills jarmik"><i>Jaringan Mikrotik</i> 70%</div>
+</div>
+<div class="container">
+  <div class="skills adbp"><i>Adobe Photoshop</i> 85%</div>
+</div>
+<div class="container">
+  <div class="skills mysqldb"><i>Mysql Database</i> 90%</div>
+</div>
+<div class="container">
+  <div class="skills progr"><i>Programmer</i> 90%</div>
+</div>
+<div class="container">
+  <div class="skills sonveg"><i>Sony Vegas</i> 90%</div>
+</div>
+<div class="container">
+  <div class="skills visstu"><i>Visual Studio</i> 90%</div>
+</div>
+  </td>
+</tr>
+</table>
+</div>
+<div class="skill">
+<table>
+<tr>
+  <td><h2>Programming Skills</h2></td>
+</tr>
+<tr>
+  <td>
+<div class="container">
+  <div class="skills html"><i>HyperText Markup Language (HTML)</i> 99%</div>
+</div>
+<div class="container">
+  <div class="skills css"><i>Cascading Style Sheet (CSS)</i> 90%</div>
+</div>
 <div class="container">
   <div class="skills js"><i>JAVASCRIPT</i> 75%</div>
 </div>
-
 <div class="container">
-  <div class="skills php"><i>PHP</i> 90%</div>
+  <div class="skills php"><i>Hypertext Preprocessor (PHP)</i> 90%</div>
+</div>
+<div class="container">
+  <div class="skills jquery"><i>JQUERY</i> 80%</div>
 </div>
 
 <div class="container">
-  <div class="skills jquery"><i>JQUERY</i> 70%</div>
+  <div class="skills vb"><i>Visual Basic .NET</i> 80%</div>
 </div>
-
-<div class="container">
-  <div class="skills vb"><i>VISUAL BASIC</i> 80%</div>
-</div>
-
 <div class="container">
   <div class="skills java"><i>JAVA</i> 65%</div>
 </div>
-
-
-<h2>Other Skills</h2>
-
-<div class="container">
-  <div class="skills design"><i>DESIGN</i> 90%</div>
+  </td>
+</tr>
+</table>
+</div>
 </div>
 
-<div class="container">
-  <div class="skills office"><i>OFFICE</i> 95%</div>
+
+
+
+
+
+
+
+<!-- ======================================================================================================================== START TAB 3 -->
+<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+    <style type="text/css">
+      ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 30px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+ul.timeline > li span{
+color: #727272;
+}
+ul.timeline > li ul li ul li{
+    margin: 0% 0% 0.5% 0%;
+}
+    </style>
+  <div class="row">
+    <div class="">
+     
+      <ul class="timeline">
+        <li>
+          <span>September 2014 - Oktober 2018</span>
+          <a href="#" class="float-right"> </a>
+          <h3> <a target="_blank" href="https://www.piksi.ac.id/" >Politeknik Piksi Ganesha Bandung</a></h3>
+          <h5>DIV Manajemen Informatika - IPK 3.09</h5>
+          <button class="btn btn-outline-primary btn-sm in_view" id="LihatIjazah">Lihat Ijazah</button>
+          <button class="btn btn-outline-primary btn-sm in_view" id="KeteranganLulus">Keterangan Lulus</button>
+          <button class="btn btn-outline-primary btn-sm in_view" id="SKHUN-PIKSI">Rekap Nilai</button>
+          <ul style="margin-top: 1%;">
+            <li><p>Setiap masuk kuliah saya ditantang untuk menempuh 60 km perjalanan dari rumah sampai kampus dengan menggunakan sepeda motor, diperlukan waktu kurang lebih 2-3 jam untuk sampai dan itu saya lakukan konsisten selama 4 tahun.</p></li>
+            <li><p>Saya aktif mengikuti seminar dan kompetensi, selama kuliah</p>
+                  <ul>
+                    <li><button class="btn btn-info btn-sm in_view" id="CALLFORPAPER">Seminar Nasional dan Call For Paper Information Technology & Computer</button> </li>
+                     <li><button class="btn btn-info btn-sm in_view" id="TOEIC">Sertifikasi TOEIC</button> </li>
+                    <li><button class="btn btn-info btn-sm in_view" id="ORACLE">Introduction to Big Data : Limitless Possibilities</button> </li>
+                    <li><button class="btn btn-info btn-sm in_view" id="EKSIS2017">Ekonomi Kesehatan Sistem Informasi Bisnis (EKSIS) 2017</button> </li>
+                    <li><button class="btn btn-info btn-sm in_view" id="PICKS2016">Piksi International Conference on Knowledge and Sciences (PICKS) 2016</button></li>
+                  </ul>
+            </li>
+          </ul>
+        </li>
+
+         <li style="margin-top: 5%;">
+          <span>Juli 2011 - Mei 2014</span>
+          <a href="#" class="float-right"> </a>
+          <h3> <a target="_blank" href="https://goo.gl/maps/LE4vZkz2FK5UE2aa8" >Madrasah Aliyah Muslimin Cipeundeuy</a></h3>
+          <h5>Jurusan Ilmu Pengetahuan Sosial (IPS)</h5>
+          <button class="btn btn-outline-primary btn-sm in_view" id="LihatIjazah-MA">Lihat Ijazah</button>
+          <button class="btn btn-outline-primary btn-sm in_view" id="SKHUN-MA">SKHUN</button>
+          <ul style="margin-top: 1%;">
+            <li><p>Pernah mewakili sekolah dalam mengikuti lomba catur tingkat kecamatan.</p></li>
+            <li><p>Mengikuti organisasi IKRIMA sebagai anggota</p>
+            </li>
+          </ul>
+        </li>
+
+        <li style="margin-top: 5%;">
+          <span>2007 - Juni 2011</span>
+          <a href="#" class="float-right"> </a>
+          <h3> <a target="_blank" href="https://www.google.com/maps/place/6%C2%B044'17.4%22S+107%C2%B021'49.8%22E/@-6.7381707,107.3632978,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0x14e44832bcfe5168!7e2!8m2!3d-6.7381721!4d107.3638448" >Madrasah Tsanawiyah Muslimin Cipeundeuy</a></h3>
+          
+          <button class="btn btn-outline-primary btn-sm in_view" id="LihatIjazah-MTS">Lihat Ijazah</button>
+          <button class="btn btn-outline-primary btn-sm in_view" id="SKHUN-MTS">SKHUN</button>
+          <ul style="margin-top: 1%;">
+            <li><p>2.5 Tahun pernah mondok di <a target="_blank" href="https://goo.gl/maps/pVkRSEpvG6P3rp147">PONPES SABIILUNNAJA</a> dimulai kelas 1 sampai kelas 3 MTS</p></li>
+           
+          </ul>
+        </li>
+
+          <li style="margin-top: 5%;">
+          <span>2002 - 2007</span>
+          <a href="#" class="float-right"> </a>
+          <h3> <a target="_blank" href="https://goo.gl/maps/9cN6afUvH75b69y4A" >Madrasah Ibtidaiyah Nyenang</a></h3>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+<!-- ======================================================================================================================== START TAB 4 -->
+  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+    <div class="row">
+        <div class="col-12">
+            <div class="media border p-3 flex-column flex-md-row">
+              <img src="rap.png" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
+              <div class="media-body align-self-center">
+                <h4><a target="_blank" href="https://goo.gl/maps/TLHgSqZvYX9LZ94c9">PT. Raya Azura Persada</a></h4>
+                <small><p>Januari 2020 - Sekarang (Pesanggrahan, Jakarta Selatan)</p></small>
+                <h5>Administrative Officer</h5>
+                <ul><li>Menyiapkan serta memvalidasi data-data perusahaan serta mengorganisasi kelengkapan dokumen untuk proses Tender Proyek dan persyaratan lainnya yang berkaitan dengan perizinan</li>
+                <li>Bertanggung jawab mengelola dan mengarsipkan dokumen kelengkapan kebutuhan legalitas perusahaan, baik yang bentuknya fisik atau digital</li>
+                <li>Memanipulasi data statistik, apabila ada tuntutan dari atasan atau situasi yang mendesak</li>
+                <li>Mengelola setiap surat yang keluar ataupun masuk ke perusahaan</li>
+                <li>Bertanggung jawab dalam pengelolaan peralatan dan kelengkapan inventaris perusahaan</li>
+                <li>Mengoperasikan peralatan mesin fotokopi, mesin faks, printer, dan sebagainya</li>
+              </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-12">
+            <div class="media border p-3 flex-column flex-md-row">
+              <img src="rap.png" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
+              <div class="media-body align-self-center">
+                <h4><a target="_blank" href="https://goo.gl/maps/TLHgSqZvYX9LZ94c9">PT. Raya Azura Persada</a></h4>
+                <small><p>Januari 2018 - Desember 2019 (Pesanggrahan, Jakarta Selatan)</p></small>
+                 <button class="btn btn-info btn-sm in_view" id="SuketKerjaRAP">Surat Keterangan</button>
+                <h5>IT Support</h5>
+                <ul><li>Mendevelop website perusahaan berbasis PHP dengan database Mysql dan mengoprasikannya </li>
+                <li>Membuat Aplikasi Inventaris peralatan dan barang berbasis WEB yang terintegrasi dengan website perusahaan dan mengoprasikannya</li>
+                <li>Mendevelop Aplikasi management kantor, accounting, kepegawaian, Logistik local LAN berbasis WEB dan mengimplementasikannya..</li>
+                <li>Membuat aplikasi Logistik berbasis Dekstop terintegrasi dengan Aplikasi WEB Local Lan</li>
+                <li>Membantu setiap senior karyawan perusahaan terkait masalah software, hardware dan Mengkoordinasikan ruang kerja serta hal-hal yang berkaitan dengan informasi teknologi juga persiapan meeting</li>
+                <li>Membantu mengurus dokumen perusahaan, disposisi surat, baik yang bentuknya fisik atau digital dan menyiapkan data-data legalitas perusahaan untuk proses Tender Proyek</li>
+              </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+          <div class="row">
+        <div class="col-12">
+            <div class="media border p-3 flex-column flex-md-row">
+              <img src="kbk.jpg" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
+              <div class="media-body align-self-center">
+                <h4><a target="_blank" href="https://twitter.com/KecBankul">Kantor Kecamatan Bandung Kulon</a></h4>
+                <small><p>Oktober 2017 - Desember 2017 (Bandung kulon, Kota Bandung)</p></small>
+                <button class="btn btn-info btn-sm in_view" id="Pengantar">Pengantar</button>
+                <button class="btn btn-info btn-sm in_view" id="Absen">Absen</button>
+                <h5>Praktek Kerja Lapangan Rolling Staff Kepala Sub Bagian (KASUBAG)</h5>
+                <ul><li>Membantu mengolah data penduduk pada setiap kelurahan, Update media sosial di KASUBAG Command Centre </li>
+                <li>Membantu Acara Sosialisasi masyarakat serta mendokumentasikan dan membuat notulen pada setiap acara yang berlangsung di KASUBAG Unit Pemberdayaan Masyarakat</li>
+                <li>Membantu Disposisi Surat di KASUBAG Unit Kepegawaian</li>
+                <li>Membantu mengolah permintaan, Perubahan, data KTP, Kartu Keluarga di KASUBAG Unit Pelayanan</li>
+              </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
 
-<div class="container">
-  <div class="skills writer"><i>WRITER</i> 85%</div>
-</div>
 
-<div class="container">
-  <div class="skills mc"><i>MAINTENANCE COMPUTER</i> 85%</div>
-</div>
 
-</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ====================================================================================================== START Inview klik open -->
+
+<style type="text/css">
+  .in_view{cursor: pointer;}
+  #in_view_form{  display: none;       transition: all 0.3s ease-out;
+           border-radius: 20px;
+    background: white;
+    overflow: auto;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 96%;
+    height: 92%;
+    margin: 2% auto;
+    padding: 2%;
+       box-shadow: rgb(0 0 0 / 15%) -1px 1px 20px 20px; }
+
+.close-button {
+      width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #3e3e3e;
+    right: 1%;
+    top: 1%;
+    position: absolute;
+    display: block;
+    z-index: 200;
+    text-indent: -9999px;
+    box-shadow: rgb(0 243 255) 0px 0px 0px 2px;
+    border: none;
+}
+.close-button:before,
+.close-button:after {
+  content: '';
+  width: 55%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 48%;
+  left: 22%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.close-button:after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.close-button:hover:before,
+.close-button:hover:after {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.inview_frame iframe{  width: 100%;  height: 500px;}
+.inview_frame img{  max-width: 100%; }
+</style>
+
+
+<div id="in_view_form"  title="Detail">
+<button class="close-button">x</button>
+
+<div class="inview_frame"></div>
+</div>
+
+<script>
+  function klikClosebtninview(argument) {
+ $("#in_view_form").css('display','none');
+  $( ".inview_nama" ).empty();
+  $( ".inview_status" ).empty();
+  $( ".inview_idtrans" ).empty();
+   $( ".inview_tgl" ).empty();
+ $( ".inview_frame" ).empty();
+}
+$(document).on('click', '.close-button', function(){
+  klikClosebtninview();
+});
+$(document).on('click', '.in_view', function(){
+  var stat = $(this).attr("id");
+            if(stat == "MircrosoftOfficeSpecialist"){
+              $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/16LDi4XU0qaFX-wQsOnKpRu3ahG1LIG5I/preview" />');
+            }
+            else if(stat == "ManajemenData"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" />');
+            }
+            else if(stat == "InformationTechnologySupport"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1GRKu-OdNKD_TFHURZimDeM2YJLpLXuL1/preview" />');
+            }
+            else if(stat == "InformationTechnologyNetwork"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/12yPnLG5v5e1VtWNfA3VkgK1sQPNakOCC/preview" />');
+            }
+            else if(stat == "InformationTechnologySystem"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1Pkhz1i4Mw6OCRKCDSvgKVwc7AkGKTBfX/preview" />');
+            }
+            else if(stat == "LihatIjazah"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" />');
+            }
+            else if(stat == "KeteranganLulus"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1LohMqstmsX4ujx74yaJbg41SEOSWG1CD/preview" />');
+            }
+            else if(stat == "CALLFORPAPER"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1LLkm3GmxhXWPbo2HuawRnJV7ab2rW5Zi/preview" />');
+            }
+            else if(stat == "TOEIC"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1MbFAvmm47GoR5rEoMdj6JgZVdQaPn0qz/preview" />');
+            }
+            else if(stat == "ORACLE"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1fBrfSLDw3EeQRQ-HsO1dFSN4lApeX3py/preview" />');
+            }
+            else if(stat == "EKSIS2017"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1BA9KvDkAmDQhx_WclroQ2R0RaVKV3_BM/preview" />');
+            }
+            else if(stat == "PICKS2016"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1sm63YoLQsDy1ob1p_DVph5H0XOClyONJ/preview" />');
+            }
+            else if(stat == "LihatIjazah-MA"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1IIcC3sZW2nZoVDniDs-XdHJa5XUehQ-o/preview" />');
+            }
+            else if(stat == "SKHUN-MA"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1S4EobZy1FW1mQoqXClK_0DHs51GZmxLC/preview" />');
+            }
+             else if(stat == "LihatIjazah-MTS"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1u5qAPLCxngIvfkh-pdg9_b7jhpsRK-uF/preview" />');
+            }
+            else if(stat == "SKHUN-MTS"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/18WXcldAqJFhpefVmYUZaBs-ophyRwAN2/preview" />');
+            }
+             else if(stat == "SKHUN-PIKSI"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1PuSQ6CJ6Khn6uF1Igv2CYe57XKIlbXta/preview" />');
+            }
+            else if(stat == "Pengantar"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1ZepM4Xno5bMo27X2-k80565bCzojTFpf/preview" />');
+            }
+            else if(stat == "Absen"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/16eHkXyKMTDY1IoF8hXu8fzE5CbUvfnTC/preview" />');
+            }
+            else if(stat == "SuketKerjaRAP"){
+             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/105pgmA3CPSVtPPrnvPcuhHrHAjqk6QsR/preview" />');
+            }
+            else if(stat == "portofolio-webanime"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-webanime.html" />');
+            }
+            else if(stat == "portofolio-websiteRAP"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-websiteRAP.html" />');
+            }
+             else if(stat == "portofolio-inventarisRAP"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-inventarisRAP.html" />');
+            }
+            else if(stat == "portofolio-cashflow"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-cashflow.html" />');
+            }
+            else if(stat == "portofolio-manktr"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-manktr.html" />');
+            }
+
+
+           
+     $("#in_view_form").css('display','block');
+});
+      </script>
+ <!-- ====================================================================================================== END Inview klik open -->
+<script>
+
+var readyStateCheckInterval = setInterval(function() {
+  $("#loaderpertamakali").show();
+    if (document.readyState === "complete") {
+      $("body").css("visibility","visible");
+
+   $("#loaderpertamakali").hide();
+        clearInterval(readyStateCheckInterval);
+    }
+}, 10);
+</script>
+
+
+<!-- <div class="title">
+            <h3><small>With Icons</small></h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-8">
+                <ul class="nav nav-pills nav-pills-icons" role="tablist">
+                 
+                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dashboard-1" role="tab" data-toggle="tab">
+                            <i class="material-icons">dashboard</i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#schedule-1" role="tab" data-toggle="tab">
+                            <i class="material-icons">schedule</i>
+                            Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
+                            <i class="material-icons">list</i>
+                            Tasks
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content tab-space">
+                    <div class="tab-pane active" id="dashboard-1">
+                      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                      <br><br>
+                      Dramatically visualize customer directed convergence without revolutionary ROI.
+                    </div>
+                    <div class="tab-pane" id="schedule-1">
+                      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                      <br><br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                    </div>
+                    <div class="tab-pane" id="tasks-1">
+                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                        <br><br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+                    </div>
+                </div>
+            </div> -->
+
+
+
