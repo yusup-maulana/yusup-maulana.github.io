@@ -640,14 +640,14 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>April - April 2018</span></div>
            <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="inventaris.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="osengmercon.jpeg" alt="Card image cap">
             </div>
             <div class="card-body">
-               <h5 class="card-title">Logistik RAP</h5>
-               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi berbasis desktop untuk mengelola data logistik </p>
-               <a target="_blank" href="http://rayaazurapersada.dx.am/" class="btn btn-warning btn-sm">Demo</a>
+               <h5 class="card-title">Oseng Mercon</h5>
+               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi pengelola stok bahan makanan untuk multi outlet berbasis web</p>
+               <a target="_blank" href="https://internetclan.000webhostapp.com/" class="btn btn-warning btn-sm">Demo</a>
                
-               <button class="btn btn-info btn-sm">Selengkapnya</button>
+               <button id="portofolio-osengmercon" class="btn btn-info btn-sm in_view">Selengkapnya</button>
             </div>
          </div>
       </div>
@@ -666,6 +666,23 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
                <a target="_blank" href="https://maulana-project10.000webhostapp.com/#popuplogin" class="btn btn-warning btn-sm">Demo</a>
                
                <button id="portofolio-manktr" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+            </div>
+         </div>
+      </div>
+
+
+      <div class="col-md-4">
+         <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          <div class="card_status card_status_completed" style-hover="background:green"><span>Agustus - Agustus 2017</span></div>
+          <div class=" box_gbr" tabindex="0" id="">
+            <img class="card-img-top" src="webcommandcentre.jpeg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+               <h5 class="card-title">Website Command Centre</h5>
+               <p class="card-text" style="font-size: smaller;">Website  </p>
+               <a target="_blank" href="" class="btn btn-warning btn-sm">Demo</a>
+               
+               <button id="portofolio-webcommandcentre" class="btn btn-info btn-sm in_view">Selengkapnya</button>
             </div>
          </div>
       </div>
@@ -1181,6 +1198,12 @@ $(document).on('click', '.in_view', function(){
             }
             else if(stat == "portofolio-manktr"){
              $( ".inview_frame" ).append('<iframe  src="portofolio-manktr.html" />');
+            }
+            else if(stat == "portofolio-osengmercon"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-osengmercon.html" />');
+            }
+            else if(stat == "portofolio-webcommandcentre"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-webcommandcentre.html" />');
             }
 
 
