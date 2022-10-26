@@ -1,4 +1,4 @@
-  <div id="loaderpertamakali">
+<div id="loaderpertamakali">
   <div class="loader">
     <div class="loader">
         <div class="loader">
@@ -10,9 +10,7 @@
   </div>
 </div> 
 <script type="text/javascript"> 
-
 document.documentElement.className = "jsloadingfistme";
-
 </script>
 <!DOCTYPE html>
 <html>
@@ -22,6 +20,8 @@ document.documentElement.className = "jsloadingfistme";
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 <style>
   .jsloadingfistme body{visibility: hidden;}
 
@@ -55,9 +55,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   /*background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);*/
 }
-.header1{width: 100%;background: #232526;
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    background: linear-gradient(to right, #414345, #232526);display: flex;    padding: 2% 2% 0% 2%;color: white;}
+.header1{width: 100%;
+   display: flex;    padding: 2% 2% 2% 2%;color: white;
+background-image: radial-gradient(circle at center center, transparent,rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 2px,transparent 2px, transparent 10px,rgb(33,33,33) 10px, rgb(33,33,33) 11px,transparent 11px, transparent 21px),repeating-linear-gradient(45deg, rgb(47,47,47) 0px, rgb(47,47,47) 4px,transparent 4px, transparent 8px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+}
 .head{   width: 18%;  margin-right: 1%;}
 .head .head-in{ }
 .head .head-in .img-profile1{}
@@ -164,7 +165,24 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+.header1{display: block;}
+.head{width: 100%;}
+.head1{width: 100%;}
+.head2{width: 100%;}
+.head2 .head-in2{text-align: center;}
+.head2 .head-in2 .head-intable1 {  width: 100%;}
+.head-intable1 tr td:nth-child(1){text-align: right;}
+.head3{width: 100%;}
+.head3 .head-in3 {
+    text-align: center;
+}
+.leher{display: grid;
+width: 100%;}
+.leher .leher1 {
 
+  margin: 0px 1% 0px 1%;
+
+}
 }
 
 @media  screen and(min-width: 576px){
@@ -230,8 +248,9 @@ body {
   top: 0;
   left: 0;
  /* background-color: #3e0a0d;*/
- background: url(profile.jpg) no-repeat;
+
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+    background-image: radial-gradient(circle at bottom right, rgb(242, 106, 56) 0%, rgb(242, 106, 56) 4%,rgb(238, 120, 55) 4%, rgb(238, 120, 55) 14%,rgb(233, 134, 54) 14%, rgb(233, 134, 54) 25%,rgb(229, 148, 53) 25%, rgb(229, 148, 53) 42%,rgb(246,178,57) 42%, rgb(246,178,57) 49%,rgb(246,198,60) 49%, rgb(246,198,60) 66%,rgb(255,230,103) 66%, rgb(255,230,103) 97%,rgb(255,247,128) 97%, rgb(255,247,128) 100%);
 }
 
 /* front pane, placed above back */
@@ -308,22 +327,26 @@ body {
     line-height: 20px;
 }
 .card .profession{
-    color: #999999;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
+    font-size: large;
+    font-weight: lighter;
+    letter-spacing: 7px;
 }
 .card{border: none!important;}
 
 .card .motto{
-    border-bottom: 1px solid #EEEEEE;
+border-bottom: 1px solid #EEEEEE;
     color: #999999;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: xx-small;
     padding-bottom: 10px;
     text-align: center;
 }
 
-
+.main .text-center{    font-size: small;
+    padding: 7%!important;
+    text-align: justify!important;}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .front, .back{
@@ -356,8 +379,8 @@ body {
                  </div>
                  <div class="content">
                      <div class="main">
-                         <h3 class="name">Maulana</h3>
-                         <p class="profession">Nama Panggilan</p>
+                         <h3 class="name">Biasa di panggil</h3>
+                         <p class="profession">MAULANA</p>
 
                          
                      </div>
@@ -394,7 +417,7 @@ body {
  <span class="head-in2-1">Yusup maulana S.Tr.Kom</span>
 </div>
 <div class="head-in2">
-<span class="head-in2-2"><a target="_blank" style="color:white;" href="https://goo.gl/maps/dMiEzwcTv2FKPEw79">Kp/Ds. Nyenang, RT/RW. 03/03, Kec. Cipeundeuy, Kab. Bandung Barat, Jawa Barat, 40558, Indonesia</a></span>
+<span class="head-in2-2"><a target="_blank" style="color:white;" href="https://goo.gl/maps/dMiEzwcTv2FKPEw79">Kec. Cipeundeuy, Kab. Bandung Barat, Jawa Barat, 40558, Indonesia</a></span>
 </div>
 <div class="head-in2">
 <span class="head-in2-3"><img src="wa.png" /></span><span class="head-in2-4"> <a target="_blank" style="color:white;" href="https://api.whatsapp.com/send?phone=083898610918">083898610918</a></span>
@@ -414,9 +437,8 @@ body {
   <span class="head-in3-1">Tentang Saya</span>
 </div>
 <div class="head-in3">
-  <span class="head-in3-2">Berpengalaman dalam Tender Proyek, Administrasi, dan IT Support lebih dari 4 tahun  di PT. Raya Azura Persada dengan hasil efisiensi dalam pengelolaan data meningkat sebesar 60%. Keahlian favorit saya adalah membangun sebuah Web dalam Pemograman Native dan membangun sebuah Jaringan Komputer. Saya dapat mengelola beberapa tanggung jawab sekaligus dengan berfokus pada satu tugas sambil melacak yang lain. 
-Sehingga Perasaan produktivitas saya, dapat meningkatkan motivasi orang lain untuk terus mengerjakan tugas mereka. 
-Sebagai asisten administrasi untuk kantor, saya menjalankan tugas dengan memproses beberapa dokumen persyaratan dan menyiapkannya lalu menyusunnya sambil menganalisa pengelolaan dan membuat suatu rancangan secara berkala untuk meningkatkan efektivitas.</span>
+  <span class="head-in3-2">Berpengalaman dalam Tender Proyek juga Administrasi lebih dari 4 tahun di PT. Raya Azura Persada dengan hasil efisiensi dalam pengelolaan data meningkat sebesar 60%, dan saya adalah seorang IT Support, Keahlian favorit saya adalah membangun sebuah Web dalam Pemograman Native dan membangun sebuah Jaringan Komputer. Saya dapat mengelola beberapa tanggung jawab sekaligus dengan berfokus pada satu tugas sambil melacak yang lain. 
+Sehingga Perasaan produktivitas saya, dapat meningkatkan motivasi orang lain untuk terus mengerjakan tugas mereka.</span>
 </div>
 </div>
 
@@ -424,13 +446,33 @@ Sebagai asisten administrasi untuk kantor, saya menjalankan tugas dengan mempros
 
 
 <div class="leher">
-  <a class="leher1" href="mailto:yusupmaulana.net@example.com" target="_blank"><span><img src="g.png" /></span> <span>yusupmaulana.net@gmail.com</span></a>
-  <a class="leher1" href="https://www.nyenang.com/" target="_blank"><span><img src="web.png" /></span> <span>nyenang.com</span></a>
-  <a class="leher1" href="https://www.instagram.com/maulana_net" target="_blank"><span><img src="instagram.png" /></span> <span>maulana_net</span></a>
-  <a class="leher1" href="https://www.facebook.com/chunk.lovereggae/" target="_blank"><span><img src="facebook.png" /></span> <span>facebook</span></a>
-  <a class="leher1" href="https://twitter.com/castrol_chunk" target="_blank"><span><img src="tw.png" /></span> <span>Twitter</span></a>
-  <a class="leher1" href="https://www.youtube.com/channel/UCrnSCuFBjzBE6RuEiV-IKzg/featured" target="_blank"><span><img src="y.png" /></span> <span>SALAM NUNGGAL</span></a>
-  <a class="leher1" href="https://www.linkedin.com/in/nyenang/" target="_blank"><span><img src="linked.png" /></span> <span>linked</span></a>
+  <a class="leher1" href="mailto:yusupmaulana.net@example.com" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+  <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+</svg><i class="bi bi-google"></i></span> <span>yusupmaulana.net@gmail.com</span>
+  </a>
+  <a class="leher1" href="https://www.nyenang.com/" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+</svg><i class="bi bi-globe"></i></span> <span>nyenang.com</span>
+  </a>
+  <a class="leher1" href="https://www.instagram.com/maulana_net" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+</svg><i class="bi bi-instagram"></i></span> <span>Instagram</span>
+  </a>
+  <a class="leher1" href="https://www.facebook.com/chunk.lovereggae/" target="_blank">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg>
+<i class="bi bi-facebook"></i></span> <span>Facebook</span>
+</a>
+  <a class="leher1" href="https://twitter.com/castrol_chunk" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+</svg><i class="bi bi-twitter"></i></span> <span>Twitter</span></a>
+  <a class="leher1" href="https://www.youtube.com/channel/UCrnSCuFBjzBE6RuEiV-IKzg/featured" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+</svg><i class="bi bi-youtube"></i></span> <span>Youtube</span></a>
+  <a class="leher1" href="https://www.linkedin.com/in/nyenang/" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+</svg><i class="bi bi-linkedin"></i></span> <span>linked</span></a>
 </div>
 
 
@@ -679,8 +721,8 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
             </div>
             <div class="card-body">
                <h5 class="card-title">Website Command Centre</h5>
-               <p class="card-text" style="font-size: smaller;">Website  </p>
-               <a target="_blank" href="" class="btn btn-warning btn-sm">Demo</a>
+               <p class="card-text" style="font-size: smaller;">Website Command Centre untuk kecamatan Andir Bandung</p>
+               <a target="_blank" href="https://maulana-project11.000webhostapp.com" class="btn btn-warning btn-sm">Demo</a>
                
                <button id="portofolio-webcommandcentre" class="btn btn-info btn-sm in_view">Selengkapnya</button>
             </div>
@@ -1225,15 +1267,15 @@ var readyStateCheckInterval = setInterval(function() {
 }, 10);
 </script>
 
-
-<!-- <div class="title">
+<!-- 
+<div class="title">
             <h3><small>With Icons</small></h3>
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-8">
                 <ul class="nav nav-pills nav-pills-icons" role="tablist">
                  
-                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                    
                  
                     <li class="nav-item">
                         <a class="nav-link" href="#dashboard-1" role="tab" data-toggle="tab">
@@ -1245,6 +1287,12 @@ var readyStateCheckInterval = setInterval(function() {
                         <a class="nav-link active" href="#schedule-1" role="tab" data-toggle="tab">
                             <i class="material-icons">schedule</i>
                             Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
+                            <i class="material-icons">list</i>
+                            Tasks
                         </a>
                     </li>
                     <li class="nav-item">
@@ -1268,8 +1316,135 @@ var readyStateCheckInterval = setInterval(function() {
                         Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
                         <br><br>Dynamically innovate resource-leveling customer service for state of the art customer service.
                     </div>
+                     <div class="tab-pane" id="tasks-1">
+                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                        <br><br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+                    </div>
                 </div>
-            </div> -->
+            </div>
 
 
 
+ -->
+<!-- facebook -->
+
+
+<style type="text/css">
+ a:hover,a:focus{
+    outline: none;
+    text-decoration: none;
+}
+.tab .nav-tabs{
+    position: relative;
+    border-bottom: 0 none;
+}
+.tab .nav-tabs li{
+    text-align: center;
+}
+.tab .nav-tabs li a{
+    width: 52px;
+    border-radius: 25px 25px 0 0;
+    padding: 6px 6px 35px 6px;
+    background: #ccc;
+    text-align: center;
+    margin-right: 5px;
+    border: none;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li a:hover{
+    border: none;
+    background: #928584;
+}
+.tab .nav-tabs li a i{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    color: #908a78;
+    transition: all 0.5s ease 0s;
+}
+.tab .nav-tabs li a:hover i,
+.tab .nav-tabs li.active a i{
+    color: #fff;
+}
+.tab .nav-tabs li:nth-child(1) a:hover i,
+.tab .nav-tabs li:nth-child(1).active a i{
+     background: #f56336;
+}
+.tab .nav-tabs li:nth-child(2) a:hover i,
+.tab .nav-tabs li:nth-child(2).active a i{
+    background: #33ccff;
+}
+.tab .nav-tabs li:nth-child(3) a:hover i,
+.tab .nav-tabs li:nth-child(3).active a i{
+    background: #dd4d3a;
+}
+.tab .nav-tabs li:nth-child(4) a:hover i,
+.tab .nav-tabs li:nth-child(4).active a i{
+    background: #0d78a9;
+}
+.tab .nav-tabs li:nth-child(5) a:hover i,
+.tab .nav-tabs li:nth-child(5).active a i{
+    background: #8661e8;
+}
+.tab .tab-content{
+    font-size: 14px;
+    color: #fff;
+    line-height: 26px;
+    background: #928584;
+    padding: 20px;
+}
+.tab .tab-content h3{
+    font-size: 24px;
+    color: #fff;
+    margin-top: 0;
+}
+.tab .tab-content p{
+    margin-bottom: 0;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-envelope"></i></a></li>
+                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-comment"></i></a></li>
+                    <li role="presentation"><a href="#Section4" aria-controls="about" role="tab" data-toggle="tab"><i class="fa fa-cube"></i></a></li>
+                    <li role="presentation"><a href="#Section5" aria-controls="contact" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i></a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabs">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                        <h3>Section 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+                        <h3>Section 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section3">
+                        <h3>Section 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section4">
+                        <h3>Section 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section5">
+                        <h3>Section 5</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
