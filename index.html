@@ -1,13 +1,11 @@
 <div id="loaderpertamakali">
-  <div class="loader">
-    <div class="loader">
-        <div class="loader">
-           <div class="loader">
-            
-           </div>
-        </div>
+   <div class="column-1 box">
+    <div  id="loader">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
+    <div  id="view"> </div>
   </div>
+
 </div> 
 <script type="text/javascript"> 
 document.documentElement.className = "jsloadingfistme";
@@ -15,6 +13,7 @@ document.documentElement.className = "jsloadingfistme";
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Yusup maulana</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -47,6 +46,114 @@ document.documentElement.className = "jsloadingfistme";
 @keyframes rotate {
 100% {transform: rotate(360deg);}
 } 
+
+/* start css loading......... */
+#loader{
+      z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10% 0px 0px 0px;
+    background: #1e202c;
+    border-radius: 12px;
+    display: none;
+}
+
+
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* end css loading......... */
+
+
+
+
+
+
+
 
 
 
@@ -103,6 +210,21 @@ background-image: radial-gradient(circle at center center, transparent,rgb(33,33
 .skill{margin: 3% 0% 1% 0%;}
 .skill table{ width: 90%;    margin: auto;}
    
+
+.nav{
+    position: sticky;
+top: 0;z-index: 500;background: #e9e9ed;
+}
+.nav-link{}
+#myTab li button{-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; height: 60px;}
+
+.navlibuttonspan{display: none; }
+.navlibuttonspanopen{  background-color: #1e2328;color: #cdbe91;}
+.navlibuttonspanactive{  display: block;}
+
 .container {
   width: 100%;margin: auto;
   background-color: #ddd;
@@ -173,16 +295,9 @@ background-image: radial-gradient(circle at center center, transparent,rgb(33,33
 .head2 .head-in2 .head-intable1 {  width: 100%;}
 .head-intable1 tr td:nth-child(1){text-align: right;}
 .head3{width: 100%;}
-.head3 .head-in3 {
-    text-align: center;
-}
-.leher{display: grid;
-width: 100%;}
-.leher .leher1 {
-
-  margin: 0px 1% 0px 1%;
-
-}
+.head3 .head-in3 {   text-align: center;}
+.leher{display: grid; width: 100%;}
+.leher .leher1{margin: 0px 1% 0px 1%;padding: 3%;}
 }
 
 @media  screen and(min-width: 576px){
@@ -480,19 +595,57 @@ Sehingga Perasaan produktivitas saya, dapat meningkatkan motivasi orang lain unt
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Portofolio</button>
+    <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
+  <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/>
+</svg><i class="bi bi-archive-fill"></i> <span class="navlibuttonspan navlibuttonspanactive">Portofolio</span></button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Keahlian</button>
+    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+  <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+  <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+</svg><i class="bi bi-award-fill"></i> <span class="navlibuttonspan">Keahlian</span></button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Pendidikan</button>
+    <button class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+</svg><i class="bi bi-mortarboard-fill"></i> <span class="navlibuttonspan">Pendidikan</span></button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Pengalaman Kerja</button>
+    <button class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
+</svg><i class="bi bi-briefcase-fill"></i> <span class="navlibuttonspan">Pengalaman Kerja</span></button>
   </li>
 </ul>
+<script type="text/javascript">
 
+// $(document).on('click', '#myTab li button', function(){
+//  $('#myTab li button span').hide()
+//  $(this).find("span").show()
+
+// });
+
+$(document).on('click', '#myTab li button', function(){
+ //    $('#myTab li button span').css("display","none");
+ // $(this).find("span").css("display","inline-block");
+     // $(".navlibuttonspanan").slideToggle("slow");
+     $('.navlibuttonspan').removeClass("navlibuttonspanactive");
+   $(this).find("span").addClass('navlibuttonspanactive');
+  //  $("#myTab li button span").fadeIn();
+  // $("#myTab li button span").fadeIn("slow");
+  // $("#myTab li button span").fadeIn(3000);
+
+ });
+
+$(document).on('mouseover', '#myTab li button', function(){
+     $(this).addClass('navlibuttonspanopen');
+});
+$(document).on('mouseout', '#myTab li button', function(){
+    $('#myTab li button').removeClass("navlibuttonspanopen");
+});
+     
+</script>
 
 
 
@@ -1328,123 +1481,3 @@ var readyStateCheckInterval = setInterval(function() {
  -->
 <!-- facebook -->
 
-
-<style type="text/css">
- a:hover,a:focus{
-    outline: none;
-    text-decoration: none;
-}
-.tab .nav-tabs{
-    position: relative;
-    border-bottom: 0 none;
-}
-.tab .nav-tabs li{
-    text-align: center;
-}
-.tab .nav-tabs li a{
-    width: 52px;
-    border-radius: 25px 25px 0 0;
-    padding: 6px 6px 35px 6px;
-    background: #ccc;
-    text-align: center;
-    margin-right: 5px;
-    border: none;
-    position: relative;
-    transition: all 0.5s ease 0s;
-}
-.tab .nav-tabs li.active a,
-.tab .nav-tabs li a:hover{
-    border: none;
-    background: #928584;
-}
-.tab .nav-tabs li a i{
-    display: block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    color: #908a78;
-    transition: all 0.5s ease 0s;
-}
-.tab .nav-tabs li a:hover i,
-.tab .nav-tabs li.active a i{
-    color: #fff;
-}
-.tab .nav-tabs li:nth-child(1) a:hover i,
-.tab .nav-tabs li:nth-child(1).active a i{
-     background: #f56336;
-}
-.tab .nav-tabs li:nth-child(2) a:hover i,
-.tab .nav-tabs li:nth-child(2).active a i{
-    background: #33ccff;
-}
-.tab .nav-tabs li:nth-child(3) a:hover i,
-.tab .nav-tabs li:nth-child(3).active a i{
-    background: #dd4d3a;
-}
-.tab .nav-tabs li:nth-child(4) a:hover i,
-.tab .nav-tabs li:nth-child(4).active a i{
-    background: #0d78a9;
-}
-.tab .nav-tabs li:nth-child(5) a:hover i,
-.tab .nav-tabs li:nth-child(5).active a i{
-    background: #8661e8;
-}
-.tab .tab-content{
-    font-size: 14px;
-    color: #fff;
-    line-height: 26px;
-    background: #928584;
-    padding: 20px;
-}
-.tab .tab-content h3{
-    font-size: 24px;
-    color: #fff;
-    margin-top: 0;
-}
-.tab .tab-content p{
-    margin-bottom: 0;
-}
-</style>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="tab" role="tabpanel">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-envelope"></i></a></li>
-                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-comment"></i></a></li>
-                    <li role="presentation"><a href="#Section4" aria-controls="about" role="tab" data-toggle="tab"><i class="fa fa-cube"></i></a></li>
-                    <li role="presentation"><a href="#Section5" aria-controls="contact" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i></a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content tabs">
-                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                        <h3>Section 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section2">
-                        <h3>Section 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section3">
-                        <h3>Section 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section4">
-                        <h3>Section 4</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section5">
-                        <h3>Section 5</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
