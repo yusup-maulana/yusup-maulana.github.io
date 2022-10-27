@@ -1,116 +1,52 @@
-<div  id="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div> 
-<style type="text/css">
-    body{visibility: hidden;}
-.loader {
-    width: calc(100% - 0px);
-  height: calc(100% - 0px);
-  border: 8px solid #162534;
-  border-top: 8px solid #09f;
-  border-radius: 50%;
-  animation: rotate 5s linear infinite;
-}
+<div  id="loader"><span class="loader2"></span>
+<img src="me.webp" class="imageloading" />
 
+</div>
+<style type="text/css">
+body{visibility: hidden;}
+/* start css loading......... */
+.imageloading{width: 120px;
+margin: auto;}
 @keyframes rotate {
 100% {transform: rotate(360deg);}
+}
+.loader2 {
+width: 120px;
+height: 118px;
+border-radius: 50%;
+display: inline-block;
+position: absolute;
+background: linear-gradient(0deg, rgba(18, 140, 83, 0.17) 33%, #05e8ff 100%);
+box-sizing: border-box;
+animation: rotation 1s linear infinite;
+margin: auto;
+}
+.loader2::after {
+content: '';
+box-sizing: border-box;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background: #027eae26;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
 } 
 
-/* start css loading......... */
 #loader{
-      z-index: 999;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 10% 0px 0px 0px;
-    background: #1e202c;
-    border-radius: 12px;
-   
+    z-index: 999;
+position: fixed;
+width: 100%;
+height: 100%;
+text-align: center;
+padding: 10% 0px 0px 0px;
 }
 
-.lds-roller {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-roller div {
-  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  transform-origin: 40px 40px;
-}
-.lds-roller div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #fff;
-  margin: -4px 0 0 -4px;
-}
-.lds-roller div:nth-child(1) {
-  animation-delay: -0.036s;
-}
-.lds-roller div:nth-child(1):after {
-  top: 63px;
-  left: 63px;
-}
-.lds-roller div:nth-child(2) {
-  animation-delay: -0.072s;
-}
-.lds-roller div:nth-child(2):after {
-  top: 68px;
-  left: 56px;
-}
-.lds-roller div:nth-child(3) {
-  animation-delay: -0.108s;
-}
-.lds-roller div:nth-child(3):after {
-  top: 71px;
-  left: 48px;
-}
-.lds-roller div:nth-child(4) {
-  animation-delay: -0.144s;
-}
-.lds-roller div:nth-child(4):after {
-  top: 72px;
-  left: 40px;
-}
-.lds-roller div:nth-child(5) {
-  animation-delay: -0.18s;
-}
-.lds-roller div:nth-child(5):after {
-  top: 71px;
-  left: 32px;
-}
-.lds-roller div:nth-child(6) {
-  animation-delay: -0.216s;
-}
-.lds-roller div:nth-child(6):after {
-  top: 68px;
-  left: 24px;
-}
-.lds-roller div:nth-child(7) {
-  animation-delay: -0.252s;
-}
-.lds-roller div:nth-child(7):after {
-  top: 63px;
-  left: 17px;
-}
-.lds-roller div:nth-child(8) {
-  animation-delay: -0.288s;
-}
-.lds-roller div:nth-child(8):after {
-  top: 56px;
-  left: 12px;
-}
-@keyframes lds-roller {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /* end css loading......... */
 </style>
 <script>
@@ -122,7 +58,7 @@
 //         clearInterval(readyStateCheckInterval);
 //     }
 // }, 10);
- document.onreadystatechange = function() {
+document.onreadystatechange = function() {
             if (document.readyState !== "complete") {
                 document.querySelector(
                   "body").style.visibility = "hidden";
