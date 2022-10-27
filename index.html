@@ -1,15 +1,15 @@
-<div  id="loader"><span class="loader2"></span>
+<div  id="loader">
+<span class="loader2"></span>
 <img src="me.webp" class="imageloading" />
-
 </div>
 <style type="text/css">
-body{visibility: hidden;}
-/* start css loading......... */
+/*body{visibility: hidden;}*/
 .imageloading{width: 120px;
 margin: auto;}
 @keyframes rotate {
 100% {transform: rotate(360deg);}
 }
+.loadertxt{}
 .loader2 {
 width: 120px;
 height: 118px;
@@ -37,6 +37,7 @@ background: #027eae26;
   0% { transform: rotate(0deg) }
   100% { transform: rotate(360deg)}
 } 
+/* start css loading......... */
 
 #loader{
     z-index: 999;
@@ -44,34 +45,11 @@ position: fixed;
 width: 100%;
 height: 100%;
 text-align: center;
-padding: 10% 0px 0px 0px;
+padding: 10% 0px 0px 0px;background: #0908088c;
 }
-
 /* end css loading......... */
 </style>
-<script>
-// var readyStateCheckInterval = setInterval(function() {
-//   $("#loader").show();
-//     if (document.readyState === "complete") {
-//       $("body").css("visibility","visible");
-//      // $("#loader").hide();
-//         clearInterval(readyStateCheckInterval);
-//     }
-// }, 10);
-document.onreadystatechange = function() {
-            if (document.readyState !== "complete") {
-                document.querySelector(
-                  "body").style.visibility = "hidden";
-                document.querySelector(
-                  "#loader").style.visibility = "visible";
-            } else {
-                document.querySelector(
-                  "#loader").style.display = "none";
-                document.querySelector(
-                  "body").style.visibility = "visible";
-            }
-        };
-</script>
+
 
 <!DOCTYPE html>
 <html>
@@ -1332,3 +1310,26 @@ $(document).on('click', '.in_view', function(){
 </body>
 </html>
 
+<script>
+// var readyStateCheckInterval = setInterval(function() {
+//   $("#loader").show();
+//     if (document.readyState === "complete") {
+//       $("body").css("visibility","visible");
+//      // $("#loader").hide();
+//         clearInterval(readyStateCheckInterval);
+//     }
+// }, 10);
+document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+</script>
