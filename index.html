@@ -1,28 +1,6 @@
 <div  id="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div> 
-<!-- 
-
-<div id="loaderpertamakali">
-   <div class="column-1 box">
-    <div  id="loader">
-      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    </div>
-    <div  id="view"> </div>
-  </div> -->
-
-</div> 
 <style type="text/css">
-    /*.jsloadingfistme body{visibility: hidden;}*/
-
-/*#loaderpertamakali {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  width: 150px;
-    height: 150px; 
-    display: none; 
-}*/
-
+    body{visibility: hidden;}
 .loader {
     width: calc(100% - 0px);
   height: calc(100% - 0px);
@@ -48,8 +26,6 @@
     border-radius: 12px;
    
 }
-
-
 
 .lds-roller {
   display: inline-block;
@@ -136,15 +112,35 @@
   }
 }
 /* end css loading......... */
-
 </style>
-<script type="text/javascript"> 
-document.documentElement.className = "jsloadingfistme";
+<script>
+// var readyStateCheckInterval = setInterval(function() {
+//   $("#loader").show();
+//     if (document.readyState === "complete") {
+//       $("body").css("visibility","visible");
+//      // $("#loader").hide();
+//         clearInterval(readyStateCheckInterval);
+//     }
+// }, 10);
+ document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
 </script>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Yusup maulana</title>
+<title>Yusup maulana</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -153,16 +149,6 @@ document.documentElement.className = "jsloadingfistme";
 
 
 <style>
-  
-
-
-
-
-
-
-
-
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -313,10 +299,6 @@ top: 0;z-index: 500;background: #e9e9ed;
 </head>
 
 <body>
-
-
-
-
 <div class="header1">
 
 <div class="head">
@@ -1187,9 +1169,6 @@ ul.timeline > li ul li ul li{
 
 
 
-</body>
-</html>
-
 
 
 
@@ -1413,15 +1392,7 @@ $(document).on('click', '.in_view', function(){
 });
       </script>
  <!-- ====================================================================================================== END Inview klik open -->
-<script>
 
-var readyStateCheckInterval = setInterval(function() {
-  $("#loader").show();
-    if (document.readyState === "complete") {
-      $("body").css("visibility","visible");
+</body>
+</html>
 
-   $("#loader").hide();
-        clearInterval(readyStateCheckInterval);
-    }
-}, 10);
-</script>
