@@ -1,30 +1,19 @@
+<div  id="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div> 
+<!-- 
+
 <div id="loaderpertamakali">
    <div class="column-1 box">
     <div  id="loader">
       <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
     <div  id="view"> </div>
-  </div>
+  </div> -->
 
 </div> 
-<script type="text/javascript"> 
-document.documentElement.className = "jsloadingfistme";
-</script>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Yusup maulana</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style type="text/css">
+    .jsloadingfistme body{visibility: hidden;}
 
-
-<style>
-  .jsloadingfistme body{visibility: hidden;}
-
-#loaderpertamakali {
+/*#loaderpertamakali {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,7 +21,7 @@ document.documentElement.className = "jsloadingfistme";
   width: 150px;
     height: 150px; 
     display: none; 
-}
+}*/
 
 .loader {
     width: calc(100% - 0px);
@@ -57,7 +46,7 @@ document.documentElement.className = "jsloadingfistme";
     padding: 10% 0px 0px 0px;
     background: #1e202c;
     border-radius: 12px;
-    display: none;
+   
 }
 
 
@@ -148,6 +137,23 @@ document.documentElement.className = "jsloadingfistme";
 }
 /* end css loading......... */
 
+</style>
+<script type="text/javascript"> 
+document.documentElement.className = "jsloadingfistme";
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yusup maulana</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<style>
+  
 
 
 
@@ -1410,74 +1416,12 @@ $(document).on('click', '.in_view', function(){
 <script>
 
 var readyStateCheckInterval = setInterval(function() {
-  $("#loaderpertamakali").show();
+  $("#loader").show();
     if (document.readyState === "complete") {
       $("body").css("visibility","visible");
 
-   $("#loaderpertamakali").hide();
+   $("#loader").hide();
         clearInterval(readyStateCheckInterval);
     }
 }, 10);
 </script>
-
-<!-- 
-<div class="title">
-            <h3><small>With Icons</small></h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-8">
-                <ul class="nav nav-pills nav-pills-icons" role="tablist">
-                 
-                    
-                 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#dashboard-1" role="tab" data-toggle="tab">
-                            <i class="material-icons">dashboard</i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#schedule-1" role="tab" data-toggle="tab">
-                            <i class="material-icons">schedule</i>
-                            Schedule
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
-                            <i class="material-icons">list</i>
-                            Tasks
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
-                            <i class="material-icons">list</i>
-                            Tasks
-                        </a>
-                    </li>
-                </ul>
-                <div class="tab-content tab-space">
-                    <div class="tab-pane active" id="dashboard-1">
-                      Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
-                      <br><br>
-                      Dramatically visualize customer directed convergence without revolutionary ROI.
-                    </div>
-                    <div class="tab-pane" id="schedule-1">
-                      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
-                      <br><br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                    </div>
-                    <div class="tab-pane" id="tasks-1">
-                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
-                        <br><br>Dynamically innovate resource-leveling customer service for state of the art customer service.
-                    </div>
-                     <div class="tab-pane" id="tasks-1">
-                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
-                        <br><br>Dynamically innovate resource-leveling customer service for state of the art customer service.
-                    </div>
-                </div>
-            </div>
-
-
-
- -->
-<!-- facebook -->
-
