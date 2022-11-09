@@ -59,6 +59,7 @@ padding: 10% 0px 0px 0px;
 <html>
 <head>
 <title>Yusup maulana</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
@@ -366,18 +367,33 @@ background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsl
 
 
 
-@media  screen and (min-width: 1200px){
-.container {    max-width: 100%;}
+@media screen and (min-width: 1200px){.container { max-width: 100%;}}
+
+@media screen and(min-width: 992px){.container {  max-width: 100%;}}
+@media screen and (min-width : 101px) and (max-width :1024px) {
+.head{width: 28%;}
+.head1{width: 35%;}
+.head2{width: 35%;}
+.bungkus-skil .kiri ul li:nth-child(2) {    width: 40%;}
 }
 
-@media  screen and(min-width: 992px){
-.container {   max-width: 100%;}
+@media screen and (min-width : 601px) and (max-width : 1000px) {
+.container {max-width:100%;}
+.col-md-4{ -ms-flex: 0 0 50%; flex: 0 0 50%!important;max-width: 50%!important;}
+.header1{display: block;}
+.head{width: 100%;}
+.head1{width: 100%;}
+.head2{width: 100%;}
+.head2 .head-in2{text-align: center;}
+.head2 .head-in2 .head-intable1 {  width: 100%;}
+.head-intable1 tr td:nth-child(1){text-align: right;}
+.head3{width: 100%;}
+.head3 .head-in3 {   text-align: center;}
+.leher{display: grid; width: 100%;}
+.leher .leher1{margin: 0px 1% 0px 1%;padding: 3%;}
+#profile h2{font-size: small;    margin: 5% 0% 3% 0%; text-align: center;}
+.bungkus-skil .kiri ul li:nth-child(2) {    width: 40%;}
 }
-
-@media  screen and(min-width: 768px){
-.container {   max-width: 100%;}
-}
-
 @media screen and (max-width: 600px) {
 .header1{display: block;}
 .head{width: 100%;}
@@ -391,6 +407,7 @@ background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsl
 .leher{display: grid; width: 100%;}
 .leher .leher1{margin: 0px 1% 0px 1%;padding: 3%;}
 #profile h2{font-size: small;    margin: 5% 0% 3% 0%; text-align: center;}
+.bungkus-skil .kiri ul li:nth-child(2) {    width: 40%;}
 }
 
 @media  screen and(max-width: 576px){
