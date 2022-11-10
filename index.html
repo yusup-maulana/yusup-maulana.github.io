@@ -59,7 +59,8 @@ padding: 10% 0px 0px 0px;
 <html>
 <head>
 <title>Yusup maulana</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" href="f.ico">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
@@ -766,7 +767,7 @@ $(document).on('mouseout', '#myTab li button', function(){
 <style type="text/css">
   .card-body{position: absolute;border-radius: 5px 5px 5px 5px;
     width: 100%;
-    height: -webkit-fill-available;
+    height: -webkit-fill-available;height: 100%;
     color: white;
     background-image: linear-gradient(45deg, rgb(144 100 159 / 41%) 0%, rgb(144 100 159 / 61%) 24%,rgb(112 112 163 / 38%) 24%, rgb(112 112 163 / 44%) 28%,rgb(79 124 166 / 39%) 28%, rgb(79 124 166 / 59%) 40%,rgb(47 136 170 / 24%) 40%, rgb(47 136 170 / 38%) 84%,rgb(14 148 173 / 38%) 84%, rgb(14 148 173 / 39%) 100%),linear-gradient(0deg, rgb(144 100 159 / 43%) 0%, rgb(144 100 159 / 49%) 24%,rgb(112 112 163 / 46%) 24%, rgb(112 112 163 / 36%) 28%,rgb(79 124 166 / 48%) 28%, rgb(79 124 166 / 35%) 40%,rgb(47 136 170 / 43%) 40%, rgb(47 136 170 / 45%) 84%,rgb(14 148 173 / 37%) 84%, rgb(14 148 173 / 30%) 100%),linear-gradient(135deg, rgb(144 100 159 / 41%) 0%, rgb(144 100 159 / 40%) 24%,rgb(112 112 163 / 52%) 24%, rgb(112 112 163 / 40%) 28%,rgb(79 124 166 / 42%) 28%, rgb(79 124 166 / 38%) 40%,rgb(47 136 170 / 43%) 40%, rgb(47 136 170 / 29%) 84%,rgb(14 148 173 / 21%) 84%, rgb(14 148 173 / 32%) 100%),linear-gradient(90deg, rgb(79 35 157 / 51%),rgb(43 171 222 / 15%));
     background-blend-mode: overlay,overlay,overlay,normal;}
@@ -845,8 +846,8 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
                <h5 class="card-title">Man. Pumping Charity</h5>
                <p class="card-text" style="font-size: smaller;">Sebuah aplikasi web pengelolaan data SPT control, dana kelola, member, basecamp, profit, inventaris, transaksi, kas, dan laporan yang kompleks dengan 3 sisi user</p>
                
-               <a target="_blank" href="" class="btn btn-warning btn-sm">Demo</a>
-               <a href="" class="btn btn-info btn-sm">Selengkapnya</a>
+               <a target="_blank" href="https://maulana-project122.000webhostapp.com/" class="btn btn-warning btn-sm">Demo</a>
+                <button id="portofolio-manpumping" class="btn btn-info btn-sm in_view">Selengkapnya</button>
             </div>
          </div>
       </div>
@@ -1595,6 +1596,9 @@ $(document).on('click', '.in_view', function(){
             }
             else if(stat == "portofolio-webcommandcentre"){
              $( ".inview_frame" ).append('<iframe  src="portofolio-webcommandcentre.html" />');
+            }
+            else if(stat == "portofolio-manpumping"){
+             $( ".inview_frame" ).append('<iframe  src="portofolio-manpumping.html" />');
             }
  $("#in_view_form").css('display','block');
 $("#in_view_form").animate({top: '0%',});
