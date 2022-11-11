@@ -1,18 +1,12 @@
 <div  id="loader">
-<span class="loader2"></span>
-<img src="me.webp" class="imageloading" />
+<b class="loader2"></b>
+<img src="me.webp" data-src="me.webp" class="imageloading" />
 </div>
 <style type="text/css">
 /*body{visibility: hidden;}*/
-*{    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;}
-.imageloading{width: 120px;
-margin: auto;}
-@keyframes rotate {
-100% {transform: rotate(360deg);}
-}
+*{    -webkit-transition: all 0.5s ease;    -moz-transition: all 0.5s ease;    -o-transition: all 0.5s ease;    transition: all 0.5s ease;}
+.imageloading{width: 120px;margin: auto;    filter: none;}
+@keyframes rotate {100% {transform: rotate(360deg);}}
 .loadertxt{}
 .loader2 {
 width: 120px;
@@ -22,7 +16,7 @@ display: inline-block;
 position: absolute;
 background: linear-gradient(0deg, rgba(18, 140, 83, 0.17) 33%, #05e8ff 100%);
 box-sizing: border-box;
-animation: rotation 1s linear infinite;
+animation:rotation 1s linear infinite!important;
 margin: auto;
 }
 .loader2::after {
@@ -83,20 +77,29 @@ padding: 10% 0px 0px 0px;
 </style>
 
 <style>
-    #loader{
-background: #0908088c;
+#loader{background: #0908088c;}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
-body {
-background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, rgba(77,77,77, 0.08) 0px, rgba(77,77,77, 0.08) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(90deg, rgba(77,77,77, 0.08) 0px, rgba(77,77,77, 0.08) 1px,transparent 1px, transparent 13px),linear-gradient(45deg, rgb(6,7,30),rgb(6,36,44));
+img{object-fit: cover; filter: blur(20px);transition: all 3s;animation:pulse 9s linear infinite;}
+
+body {background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, rgba(77,77,77, 0.08) 0px, rgba(77,77,77, 0.08) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(90deg, rgba(77,77,77, 0.08) 0px, rgba(77,77,77, 0.08) 1px,transparent 1px, transparent 13px),linear-gradient(45deg, rgb(6,7,30),rgb(6,36,44));
   margin: 0;
   font-family: calibri,Arial, Helvetica, sans-serif;
 
 }
-svg{    width: 22px;
-    height: 22px;}
-.header1{width: 100%;
-   display: flex;    padding: 2% 2% 2% 2%;color: white;
-/*background-image: radial-gradient(circle at center center, transparent,rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 2px,transparent 2px, transparent 10px,rgb(33,33,33) 10px, rgb(33,33,33) 11px,transparent 11px, transparent 21px),repeating-linear-gradient(45deg, rgb(47,47,47) 0px, rgb(47,47,47) 4px,transparent 4px, transparent 8px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));*/
+svg{    width: 22px;    height: 22px;}
+.header1{width: 100%;   display: flex;    padding: 2% 2% 2% 2%;color: white;
 background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, rgba(77,77,77, 0.08) 0px, rgba(77,77,77, 0.08) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(90deg, rgba(77,77,77, 0.08) 0px, rgba(77,77,77, 0.08) 1px,transparent 1px, transparent 13px),linear-gradient(45deg, rgb(6,7,30),rgb(6,36,44));
 }
 .head{   width: 18%;  margin-right: 1%;}
@@ -117,7 +120,7 @@ background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsl
 .head2 .head-in2 .head-in2-3{      vertical-align: text-bottom;
     color: #00fdab; }
 .head2 .head-in2 .head-in2-4{  font-size: x-large;}   
-.head2 .head-in2  .head-intable1{font-size: small;    color: white;    width: 100%;}
+.head2 .head-in2  .head-intable1{font-size: small;    color: white;    width: 100%;opacity: 0;  filter: blur(4px);    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
 .head2 .head-in2  .head-intable1 tr{border-bottom: 1px solid #ffffff5e; line-height: 2;}
 .head2 .head-in2  .head-intable1 tr:last-child {
  border-bottom:none;
@@ -141,6 +144,9 @@ background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsl
 
 
 .tab-content{    padding: 2%;}
+.tab-content>.active{animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    opacity: 0;
+    filter: blur(4px);}
 .skill{margin: 3% 0% 1% 0%;}
 .skill table{ width: 90%;    margin: auto;}
 
@@ -239,6 +245,13 @@ background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsl
   position: absolute;
   top: 0;
   z-index: 1;
+  filter: none;
+  opacity: none;
+}
+.progress span {
+
+  filter: none;
+  opacity: 2;
 }
 .progress .progress-left {
   left: 0;
@@ -401,8 +414,8 @@ background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsl
 .head1{width: 100%;}
 .head2{width: 100%;}
 .head2 .head-in2{text-align: center;}
-.head2 .head-in2 .head-intable1 {  width: 100%;}
-.head-intable1 tr td:nth-child(1){text-align: right;}
+.head2 .head-in2 .head-intable1 {  width: 100%; }
+.head-intable1 tr td:nth-child(1){text-align: right; }
 .head3{width: 100%;}
 .head3 .head-in3 {   text-align: center;}
 .leher{display: grid; width: 100%;}
@@ -531,7 +544,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 .card .user img{
     background: none repeat scroll 0 0 #FFFFFF;
-    border: 4px solid #FFFFFF;
+   
     width: 100%;
 }
 
@@ -605,7 +618,7 @@ border-bottom: 1px solid #EEEEEE;
               
                  </div>
                  <div class="user">
-                     <img class="img-circle" src="profile.webp"/>
+                     <img class="img-circle" src="img.png" data-src="profile.webp"/>
                  </div>
                  <div class="content">
                      <div class="main">
@@ -663,8 +676,141 @@ border-bottom: 1px solid #EEEEEE;
   <span class="head-in3-1">Tentang Saya</span>
 </div>
 <div class="head-in3">
-  <span class="head-in3-2">Keahlian favorit saya adalah membangun sebuah Web dalam Pemograman Native dan membuat sebuah Jaringan Komputer. Selain itu, saya berpengalaman dalam Tender Proyek pengadaan barang/jasa di lingkungan PT PLN (Persero), juga sebagai IT Support dan Administrasi lebih dari 4 tahun di PT. Raya Azura Persada dengan hasil efisiensi dalam pengelolaan data meningkat sebesar 60%, Saya dapat mengelola beberapa tanggung jawab sekaligus dengan berfokus pada satu tugas sambil melacak yang lain. 
-Sehingga Perasaan produktivitas saya, dapat meningkatkan motivasi orang lain untuk terus mengerjakan tugas mereka.</span>
+<style type="text/css">
+.animate-text1{ text-align: justify; transform: scale(0.94);  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);}
+@keyframes scale {  100% {    transform: scale(1);  }}
+span {  opacity: 0;  filter: blur(4px);}
+span:nth-child(1) {  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(2) {  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(3) {  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(4) {  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(5) {  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(6) {  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(7) {  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(8) {  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(9) {  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(10) {  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(11) {  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(12) {  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(13) {  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(14) {  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(15) {  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(16) {  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(17) {  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(18) {  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(19) {  animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(20) {  animation: fade-in 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(21) {  animation: fade-in 0.8s 2.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(22) {  animation: fade-in 0.8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(23) {  animation: fade-in 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(24) {  animation: fade-in 0.8s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(25) {  animation: fade-in 0.8s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(26) {  animation: fade-in 0.8s 2.6s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(27) {  animation: fade-in 0.8s 2.7s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(28) {  animation: fade-in 0.8s 2.8s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(29) {  animation: fade-in 0.8s 2.9s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(30) {  animation: fade-in 0.8s 3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(31) {  animation: fade-in 0.8s 3.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(32) {  animation: fade-in 0.8s 3.2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(33) {  animation: fade-in 0.8s 3.3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(34) {  animation: fade-in 0.8s 3.4s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(35) {  animation: fade-in 0.8s 3.5s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(36) {  animation: fade-in 0.8s 3.6s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(37) {  animation: fade-in 0.8s 3.7s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(38) {  animation: fade-in 0.8s 3.8s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(39) {  animation: fade-in 0.8s 3.9s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(40) {  animation: fade-in 0.8s 4s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(41) {  animation: fade-in 0.8s 4.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(42) {  animation: fade-in 0.8s 4.2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(43) {  animation: fade-in 0.8s 4.3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(44) {  animation: fade-in 0.8s 4.4s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(45) {  animation: fade-in 0.8s 4.5s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(46) {  animation: fade-in 0.8s 4.6s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(47) {  animation: fade-in 0.8s 4.7s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(48) {  animation: fade-in 0.8s 4.8s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(49) {  animation: fade-in 0.8s 4.9s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(50) {  animation: fade-in 0.8s 5s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(51) {  animation: fade-in 0.8s 5.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(52) {  animation: fade-in 0.8s 5.2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(53) {  animation: fade-in 0.8s 5.3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(54) {  animation: fade-in 0.8s 5.4s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(55) {  animation: fade-in 0.8s 5.5s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(56) {  animation: fade-in 0.8s 5.6s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(57) {  animation: fade-in 0.8s 5.7s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(58) {  animation: fade-in 0.8s 5.8s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(59) {  animation: fade-in 0.8s 5.9s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(60) {  animation: fade-in 0.8s 6s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(61) {  animation: fade-in 0.8s 6.1s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(62) {  animation: fade-in 0.8s 6.2s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+span:nth-child(63) {  animation: fade-in 0.8s 6.3s forwards cubic-bezier(0.11, 0, 0.5, 0);}
+@keyframes fade-in {  100% {    opacity: 1;    filter: blur(0);  }}
+</style>
+<div class="animate-text1">
+  <span>Keahlian</span>
+  <span>favorit</span>
+  <span>saya</span>
+  <span>adalah</span>
+  <span>membangun</span>
+  <span>sebuah</span>
+  <span>Web dalam</span>
+  <span>Pemograman Native</span>
+  <span>dan membuat</span>
+  <span>sebuah Jaringan Komputer</span>
+  <span>Selain itu,</span>
+  <span>saya berpengalaman</span>
+  <span>dalam Tender</span>
+  <span>Proyek</span>
+  <span>pengadaan</span>
+  <span>barang/jasa</span>
+  <span>di lingkungan</span>
+  <span>PT PLN (Persero),</span>
+  <span>juga</span>
+  <span>sebagai</span>
+  <span>IT Support</span>
+  <span>dan Administrasi</span>
+  <span>lebih</span>
+  <span>dari</span>
+  <span>4 tahun</span>
+  <span>di PT. Raya Azura Persada</span>
+  <span>dengan</span>
+  <span>hasil</span>
+  <span>efisiensi</span>
+  <span>dalam</span>
+  <span>pengelolaan</span>
+  <span>data</span>
+  <span>meningkat</span>
+  <span>sebesar</span>
+  <span>60%,</span>
+  <span>Saya</span>
+  <span>juga</span>
+  <span>dapat</span>
+  <span>mengelola</span>
+  <span>beberapa</span>
+  <span>tanggung</span>
+  <span>jawab</span>
+  <span>sekaligus</span>
+  <span>dengan</span>
+  <span>berfokus</span>
+  <span>pada</span>
+  <span>satu tugas</span>
+  <span>sambil melacak</span>
+  <span>yang lain.</span>
+  <span>Sehingga</span>
+  <span>Perasaan</span>
+  <span>produktivitas</span>
+  <span>saya,</span>
+  <span>dapat</span>
+   <span>meningkatkan</span>
+  <span>motivasi</span>
+  <span>orang</span>
+  <span>lain</span>
+  <span>untuk</span>
+  <span>terus</span>
+  <span>mengerjakan</span>
+  <span>tugas</span>
+  <span>mereka.</span>
+</div>
+
 </div>
 </div>
 
@@ -759,10 +905,6 @@ $(document).on('mouseout', '#myTab li button', function(){
 
 
 
-
-
-
-
 <!-- ======================================================================================================================== START TAB 1 -->
 <style type="text/css">
   .card-body{position: absolute;border-radius: 5px 5px 5px 5px;
@@ -840,7 +982,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>Februari - Maret 2022</span></div>
            <div class=" box_gbr" tabindex="0" id="">
-                  <img class="card-img-top" src="manpumpingchar.webp" alt="Card image cap">
+                  <img  src="img.png" class="card-img-top" data-src="manpumpingchar.webp" alt="Card image cap">
                 </div>
             <div class="card-body">
                <h5 class="card-title">Man. Pumping Charity</h5>
@@ -856,7 +998,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>Januari - Februari 2021</span></div>
            <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="webanime.webp" alt="Card image cap">
+            <img src="img.png" class="card-img-top" data-src="webanime.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">Website Video Anime</h5>
@@ -872,7 +1014,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>Oktober - Desember 2019</span></div>
           <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="pwebazura.webp" alt="Card image cap">
+            <img src="img.png" class="card-img-top" data-src="pwebazura.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">Website RAP</h5>
@@ -887,7 +1029,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
            <div class="card_status card_status_completed" style-hover="background:green"><span>Juli - Agustus 2019</span></div>
            <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="inventaris.webp" alt="Card image cap">
+            <img src="img.png" class="target card-img-top" data-src="inventaris.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">Inventaris RAP</h5>
@@ -902,7 +1044,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>Maret - Maret 2019</span></div>
           <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="cashflow.webp" alt="Card image cap">
+            <img src="f.ico" class="card-img-top" data-src="cashflow.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">Cashflow Proyek</h5>
@@ -920,7 +1062,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>Agustus - agustus 2018</span></div>
           <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="siak.webp" alt="Card image cap">
+            <img src="img.png" class="card-img-top" data-src="siak.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">SIAK</h5>
@@ -935,7 +1077,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>April - April 2018</span></div>
            <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="osengmercon.webp" alt="Card image cap">
+            <img src="img.png" class="card-img-top" data-src="osengmercon.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">Oseng Mercon</h5>
@@ -953,7 +1095,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>Januari - Maret 2018</span></div>
           <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="manktr.webp" alt="Card image cap">
+            <img src="img.png" class="card-img-top" data-src="manktr.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">Man. KTR</h5>
@@ -970,7 +1112,7 @@ background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, F
          <div class="card mb-4 border-dark "  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
           <div class="card_status card_status_completed" style-hover="background:green"><span>Agustus - Agustus 2017</span></div>
           <div class=" box_gbr" tabindex="0" id="">
-            <img class="card-img-top" src="webcommandcentre.webp" alt="Card image cap">
+            <img src="img.png" class="card-img-top" data-src="webcommandcentre.webp" alt="Card image cap">
             </div>
             <div class="card-body">
                <h5 class="card-title">Website Command Centre</h5>
@@ -1246,6 +1388,7 @@ color: #727272;
 ul.timeline > li ul li ul li{
     margin: 0% 0% 0.5% 0%;
 }
+ul.timeline > li p{text-align: justify;}
     </style>
   <div class="row">
     <div class="">
@@ -1313,13 +1456,15 @@ ul.timeline > li ul li ul li{
 
 <!-- ======================================================================================================================== START TAB 4 -->
 <style type="text/css">
-    .media{    color: #adadad;}
+.media{    color: #adadad;}
+
+
 </style>
   <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
     <div class="row">
         <div class="col-12">
             <div class="media  p-3 flex-column flex-md-row">
-              <img src="rap.webp" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
+              <img src="img.png" data-src="rap.webp" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
               <div class="media-body align-self-center">
                 <h4><a target="_blank" href="https://goo.gl/maps/TLHgSqZvYX9LZ94c9">PT. Raya Azura Persada</a></h4>
                 <small><p>Januari 2020 - Sekarang (Pesanggrahan, Jakarta Selatan)</p></small>
@@ -1338,7 +1483,7 @@ ul.timeline > li ul li ul li{
       <div class="row">
         <div class="col-12">
             <div class="media  p-3 flex-column flex-md-row">
-              <img src="rap.webp" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
+              <img src="img.png" data-src="rap.webp" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
               <div class="media-body align-self-center">
                 <h4><a target="_blank" href="https://goo.gl/maps/TLHgSqZvYX9LZ94c9">PT. Raya Azura Persada</a></h4>
                 <small><p>Januari 2018 - Desember 2019 (Pesanggrahan, Jakarta Selatan)</p></small>
@@ -1358,7 +1503,7 @@ ul.timeline > li ul li ul li{
           <div class="row">
         <div class="col-12">
             <div class="media  p-3 flex-column flex-md-row">
-              <img src="kbk.webp" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
+              <img src="img.png" data-src="kbk.webp" alt="#" class="mr-3 rounded-circle" style="width: 50px;    background: #e3e3e3;    border-radius: 50%;    padding: 6px;">
               <div class="media-body align-self-center">
                 <h4><a target="_blank" href="https://twitter.com/KecBankul">Kantor Kecamatan Bandung Kulon</a></h4>
                 <small><p>Oktober 2017 - Desember 2017 (Bandung kulon, Kota Bandung)</p></small>
@@ -1417,6 +1562,46 @@ ul.timeline > li ul li ul li{
 <!-- ====================================================================================================== START Inview klik open -->
 
 <style type="text/css">
+#loader-line {
+               height: 3px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ddd;
+    margin: auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+        }
+
+#loader-line:before {
+            content: "";
+            position: absolute;
+            left: -50%;
+            height: 3px;
+            width: 40%;
+            background-color: #00b2ff;
+            -webkit-animation: lineAnim 1s linear infinite;
+            -moz-animation: lineAnim 1s linear infinite;
+            animation: lineAnim 1s linear infinite;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+        }
+
+        @keyframes lineAnim {
+            0% {
+                left: -40%;
+            }
+            50% {
+                left: 20%;
+                width: 80%;
+            }
+            100% {
+                left: 100%;
+                width: 100%;
+            }
+        }
+/* end css loading......... */
   .in_view{cursor: pointer;}
   #in_view_form{  display: none;       transition: all 0.3s ease-out;
            border-radius: 20px;
@@ -1501,6 +1686,10 @@ ul.timeline > li ul li ul li{
 </div>
 
 <script>
+  function hideLoadingiframe() {
+  document.getElementById('loader-line').style.display = "none";
+    document.getElementById('iframeid').style.display = "block";
+}
   function klikClosebtninview(argument) {
  // $("#in_view_form").css('display','none');
   $("#in_view_form").slideUp();
@@ -1517,64 +1706,64 @@ $(document).on('click', '.close-button', function(){
 $(document).on('click', '.in_view', function(){
   var stat = $(this).attr("id");
             if(stat == "MircrosoftOfficeSpecialist"){
-              $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/16LDi4XU0qaFX-wQsOnKpRu3ahG1LIG5I/preview" />');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/16LDi4XU0qaFX-wQsOnKpRu3ahG1LIG5I/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "ManajemenData"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "InformationTechnologySupport"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1GRKu-OdNKD_TFHURZimDeM2YJLpLXuL1/preview" />');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1GRKu-OdNKD_TFHURZimDeM2YJLpLXuL1/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "InformationTechnologyNetwork"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/12yPnLG5v5e1VtWNfA3VkgK1sQPNakOCC/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/12yPnLG5v5e1VtWNfA3VkgK1sQPNakOCC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "InformationTechnologySystem"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1Pkhz1i4Mw6OCRKCDSvgKVwc7AkGKTBfX/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1Pkhz1i4Mw6OCRKCDSvgKVwc7AkGKTBfX/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "LihatIjazah"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "KeteranganLulus"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1LohMqstmsX4ujx74yaJbg41SEOSWG1CD/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1LohMqstmsX4ujx74yaJbg41SEOSWG1CD/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "CALLFORPAPER"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1LLkm3GmxhXWPbo2HuawRnJV7ab2rW5Zi/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1LLkm3GmxhXWPbo2HuawRnJV7ab2rW5Zi/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "TOEIC"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1MbFAvmm47GoR5rEoMdj6JgZVdQaPn0qz/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1MbFAvmm47GoR5rEoMdj6JgZVdQaPn0qz/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "ORACLE"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1fBrfSLDw3EeQRQ-HsO1dFSN4lApeX3py/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1fBrfSLDw3EeQRQ-HsO1dFSN4lApeX3py/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "EKSIS2017"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1BA9KvDkAmDQhx_WclroQ2R0RaVKV3_BM/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1BA9KvDkAmDQhx_WclroQ2R0RaVKV3_BM/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "PICKS2016"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1sm63YoLQsDy1ob1p_DVph5H0XOClyONJ/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1sm63YoLQsDy1ob1p_DVph5H0XOClyONJ/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "LihatIjazah-MA"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1IIcC3sZW2nZoVDniDs-XdHJa5XUehQ-o/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1IIcC3sZW2nZoVDniDs-XdHJa5XUehQ-o/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "SKHUN-MA"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1S4EobZy1FW1mQoqXClK_0DHs51GZmxLC/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1S4EobZy1FW1mQoqXClK_0DHs51GZmxLC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
              else if(stat == "LihatIjazah-MTS"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1u5qAPLCxngIvfkh-pdg9_b7jhpsRK-uF/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1u5qAPLCxngIvfkh-pdg9_b7jhpsRK-uF/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "SKHUN-MTS"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/18WXcldAqJFhpefVmYUZaBs-ophyRwAN2/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/18WXcldAqJFhpefVmYUZaBs-ophyRwAN2/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
              else if(stat == "SKHUN-PIKSI"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1PuSQ6CJ6Khn6uF1Igv2CYe57XKIlbXta/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1PuSQ6CJ6Khn6uF1Igv2CYe57XKIlbXta/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "Pengantar"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/1ZepM4Xno5bMo27X2-k80565bCzojTFpf/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1ZepM4Xno5bMo27X2-k80565bCzojTFpf/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "Absen"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/16eHkXyKMTDY1IoF8hXu8fzE5CbUvfnTC/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/16eHkXyKMTDY1IoF8hXu8fzE5CbUvfnTC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "SuketKerjaRAP"){
-             $( ".inview_frame" ).append('<iframe  src="https://drive.google.com/file/d/105pgmA3CPSVtPPrnvPcuhHrHAjqk6QsR/preview" />');
+             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/105pgmA3CPSVtPPrnvPcuhHrHAjqk6QsR/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "portofolio-webanime"){
              $( ".inview_frame" ).append('<iframe  src="portofolio-webanime.html" />');
@@ -1611,7 +1800,6 @@ $("#in_view_form").animate({top: '0%',});
 </html>
 
 <script>
-
 document.onreadystatechange = function() {
             if (document.readyState !== "complete") {
                 // document.querySelector(
@@ -1625,4 +1813,41 @@ document.onreadystatechange = function() {
                   "body").style.visibility = "visible";
             }
         };
+
+// imagelazyloadtargetobser
+// function callback(entries){
+// entries.forEach(entry => {
+//     if(entry.isIntersecting){
+//        const imgElement = entry.target.querySelectorAll('img');
+//        console.log(imgElement);
+//     }
+// })
+// }
+// const options = {
+// threshold:1.0
+// }
+// let observer = new IntersectionObserver(callback, options);
+// observer.observe(document.querySelectorAll('img'));
+
+const images = document.querySelectorAll("img");
+
+const imgOptions = {};
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    const img = entry.target;
+    const realSRC = img.dataset.src;
+    console.log(realSRC);
+    img.setAttribute('src',realSRC);
+    img.style.filter="blur(0px)";
+    // img.src = img.src.replace("w=10&", "w=800&");
+    imgObserver.unobserve(entry.target);
+  });
+}, imgOptions);
+
+images.forEach((img) => {
+  imgObserver.observe(img);
+});
+
 </script>
