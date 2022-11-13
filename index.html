@@ -506,8 +506,8 @@ and (-webkit-min-device-pixel-ratio: 3) {
 /* back, initially hidden pane */
 .back {
     -webkit-transform: rotateY( 180deg );
-   -moz-transform: rotateY( 180deg );
-     -o-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
         transform: rotateY( 180deg );
         z-index: 3;
 }
@@ -546,7 +546,6 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 .card .user img{
     background: none repeat scroll 0 0 #FFFFFF;
-   
     width: 100%;
 }
 
@@ -614,11 +613,10 @@ border-bottom: 1px solid #EEEEEE;
 }
   </style>
   <div class="card-container">
-         <div class="card">
-             <div class="front">
-                 <div class="cover">
-              
-                 </div>
+        <div class="card">
+            <div class="front">
+                <div class="cover">
+                </div>
                  <div class="user">
                      <img class="img-circle" src="IMG/img.png" data-src="IMG/profile.webp"/>
                  </div>
@@ -1642,13 +1640,12 @@ ul.timeline > li p{text-align: justify;}
         }
 /* end css loading......... */
   .in_view{cursor: pointer;}
-  #in_view_form{  display: none;       transition: all 0.3s ease-out;
-           border-radius: 20px;
+  #in_view_form{  display: none; transition: all 0.3s ease-out;   border-radius: 20px;
         background-image: repeating-linear-gradient(90deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, hsla(69,0%,61%,0.05) 0px, hsla(69,0%,61%,0.05) 1px,transparent 1px, transparent 104px),repeating-linear-gradient(0deg, hsla(69,0%,61%,0.08) 0px, hsla(69,0%,61%,0.08) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(90deg, hsla(69,0%,61%,0.08) 0px, hsla(69,0%,61%,0.08) 1px,transparent 1px, transparent 13px),linear-gradient(45deg, rgb(4, 4, 4),rgb(79, 79, 79));
     overflow: auto;
     z-index: 999;
     position: fixed;
-   top: -100%;
+    top: -100%;
     right: 0;
     left: 0;
     bottom: 0;
@@ -1736,8 +1733,8 @@ ul.timeline > li p{text-align: justify;}
   $( ".inview_nama" ).empty();
   $( ".inview_status" ).empty();
   $( ".inview_idtrans" ).empty();
-   $( ".inview_tgl" ).empty();
- $( ".inview_frame" ).empty();
+  $( ".inview_tgl" ).empty();
+  $( ".inview_frame" ).empty();
 }
 $(document).on('click', '.close-button', function(){
   klikClosebtninview();
@@ -1748,95 +1745,95 @@ $(document).on('click', '.in_view', function(){
               $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/16LDi4XU0qaFX-wQsOnKpRu3ahG1LIG5I/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "ManajemenData"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "InformationTechnologySupport"){
               $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1GRKu-OdNKD_TFHURZimDeM2YJLpLXuL1/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "InformationTechnologyNetwork"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/12yPnLG5v5e1VtWNfA3VkgK1sQPNakOCC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/12yPnLG5v5e1VtWNfA3VkgK1sQPNakOCC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "InformationTechnologySystem"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1Pkhz1i4Mw6OCRKCDSvgKVwc7AkGKTBfX/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1Pkhz1i4Mw6OCRKCDSvgKVwc7AkGKTBfX/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "LihatIjazah"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "KeteranganLulus"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1LohMqstmsX4ujx74yaJbg41SEOSWG1CD/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1LohMqstmsX4ujx74yaJbg41SEOSWG1CD/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "CALLFORPAPER"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1LLkm3GmxhXWPbo2HuawRnJV7ab2rW5Zi/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1LLkm3GmxhXWPbo2HuawRnJV7ab2rW5Zi/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "TOEIC"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1MbFAvmm47GoR5rEoMdj6JgZVdQaPn0qz/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1MbFAvmm47GoR5rEoMdj6JgZVdQaPn0qz/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "ORACLE"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1fBrfSLDw3EeQRQ-HsO1dFSN4lApeX3py/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1fBrfSLDw3EeQRQ-HsO1dFSN4lApeX3py/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "EKSIS2017"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1BA9KvDkAmDQhx_WclroQ2R0RaVKV3_BM/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1BA9KvDkAmDQhx_WclroQ2R0RaVKV3_BM/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "PICKS2016"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1sm63YoLQsDy1ob1p_DVph5H0XOClyONJ/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1sm63YoLQsDy1ob1p_DVph5H0XOClyONJ/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "LihatIjazah-MA"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1IIcC3sZW2nZoVDniDs-XdHJa5XUehQ-o/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1IIcC3sZW2nZoVDniDs-XdHJa5XUehQ-o/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "SKHUN-MA"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1S4EobZy1FW1mQoqXClK_0DHs51GZmxLC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1S4EobZy1FW1mQoqXClK_0DHs51GZmxLC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
-             else if(stat == "LihatIjazah-MTS"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1u5qAPLCxngIvfkh-pdg9_b7jhpsRK-uF/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+            else if(stat == "LihatIjazah-MTS"){
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1u5qAPLCxngIvfkh-pdg9_b7jhpsRK-uF/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "SKHUN-MTS"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/18WXcldAqJFhpefVmYUZaBs-ophyRwAN2/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/18WXcldAqJFhpefVmYUZaBs-ophyRwAN2/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
-             else if(stat == "SKHUN-PIKSI"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1PuSQ6CJ6Khn6uF1Igv2CYe57XKIlbXta/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+            else if(stat == "SKHUN-PIKSI"){
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1PuSQ6CJ6Khn6uF1Igv2CYe57XKIlbXta/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "Pengantar"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1ZepM4Xno5bMo27X2-k80565bCzojTFpf/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1ZepM4Xno5bMo27X2-k80565bCzojTFpf/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "Absen"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/16eHkXyKMTDY1IoF8hXu8fzE5CbUvfnTC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/16eHkXyKMTDY1IoF8hXu8fzE5CbUvfnTC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "SuketKerjaRAP"){
-             $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/105pgmA3CPSVtPPrnvPcuhHrHAjqk6QsR/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+              $( ".inview_frame" ).html('<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/105pgmA3CPSVtPPrnvPcuhHrHAjqk6QsR/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
             }
             else if(stat == "portofolio-webanime"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-webanime.html" />');
+              $( ".inview_frame" ).append('<iframe  src="portofolio-webanime.html" />');
             }
             else if(stat == "portofolio-websiteRAP"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-websiteRAP.html" />');
+              $( ".inview_frame" ).append('<iframe  src="portofolio-websiteRAP.html" />');
             }
-             else if(stat == "portofolio-inventarisRAP"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-inventarisRAP.html" />');
+            else if(stat == "portofolio-inventarisRAP"){
+              $( ".inview_frame" ).append('<iframe  src="portofolio-inventarisRAP.html" />');
             }
             else if(stat == "portofolio-cashflow"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-cashflow.html" />');
+            $( ".inview_frame" ).append('<iframe  src="portofolio-cashflow.html" />');
             }
             else if(stat == "portofolio-manktr"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-manktr.html" />');
+            $( ".inview_frame" ).append('<iframe  src="portofolio-manktr.html" />');
             }
             else if(stat == "portofolio-osengmercon"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-osengmercon.html" />');
+            $( ".inview_frame" ).append('<iframe  src="portofolio-osengmercon.html" />');
             }
             else if(stat == "portofolio-webcommandcentre"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-webcommandcentre.html" />');
+            $( ".inview_frame" ).append('<iframe  src="portofolio-webcommandcentre.html" />');
             }
             else if(stat == "portofolio-manpumping"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-manpumping.html" />');
+            $( ".inview_frame" ).append('<iframe  src="portofolio-manpumping.html" />');
             }
             else if(stat == "portofolio-rabp"){
-             $( ".inview_frame" ).append('<iframe  src="portofolio-rabp.html" />');
+            $( ".inview_frame" ).append('<iframe  src="portofolio-rabp.html" />');
             }
- $("#in_view_form").css('display','block');
+$("#in_view_form").css('display','block');
 $("#in_view_form").animate({top: '0%',});
 
 });
       </script>
- <!-- ====================================================================================================== END Inview klik open -->
+<!-- ====================================================================================================== END Inview klik open -->
 
 </body>
 </html>
