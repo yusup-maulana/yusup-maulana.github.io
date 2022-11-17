@@ -15077,15 +15077,6 @@
     }
 
     .keahlian-list:first-child> .bungkus-skil .bagi{
-      /* position: relative;
-      top: -100%;
-      display: flex;
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
-      z-index: 565;
-      align-items: center;
-      align-content: center; */
       height: 100%;
       display: flex;
     position: absolute;
@@ -15131,22 +15122,144 @@
 
     .keahlian-list:first-child> .bungkus-skil .bagi-2{
       width: 37%;
-    height: 100%;
-    backdrop-filter: blur(4px);
+      height: 100%;
+      backdrop-filter: blur(4px);
     }
 
-    .b-chart-DataAnalytic{
+    .b-chart-FIRST{
       width: 100%;
-    height: 100%;
-    padding: 4% 4% 4% 4%;
+      height: 100%;
+      padding: 4% 4% 4% 4%;
     }
 
-    #chart-DataAnalytic{
-      /* width: 440px!important;
-    height: 220px!important; */
-
+    .b-chart{
+      width: 60%;
+      margin: auto;
+      margin-top: 48px;
+      margin-bottom: 86px;
     }
 
+    #jarvis-circle-wrapper{
+      width: 450px;
+      height: 450px;
+      position: absolute;
+      margin: auto;
+      top: 35px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+    #jarvis-circle-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #4db8ff;
+      border-bottom-color: #b3e0ff;
+      border-right-color: #66c2ff;
+      border-left-color: #80ccff;
+      box-shadow: 0 0 15px #2187e7;
+      -webkit-animation: spinJarvis 30s linear infinite;
+      animation: spinJarvis 30s linear infinite;
+    }
+  #jarvis-circle-inner:before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-color: #1d5ca9;
+      border-style:dotted;
+      -webkit-animation: spinJarvis 18s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spinJarvis 18s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+  #jarvis-circle-inner:after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      right: 25px;
+      bottom: 25px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-color: #429bc078;
+      border-width:5px;	
+      border-style:dotted solid;
+      -webkit-animation: spin 60s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 60s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  }
+  @-webkit-keyframes spinJarvis {
+      0%   {
+          -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(0deg);  /* IE 9 */
+          transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+      100% {
+          -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(360deg);  /* IE 9 */
+          transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+  }
+  @keyframes spinJarvis {
+      0%   {
+          -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(0deg);  /* IE 9 */
+          transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+      100% {
+          -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(360deg);  /* IE 9 */
+          transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+  }
+    .b-chart-strip1{
+      height: 3px;
+      background: #80cbfe;
+      width: 200px;
+      position: absolute;
+      top: 259px;
+      left: 185px;
+      box-shadow: rgb(0 67 255 / 20%) 0px 7px 29px 0px;
+    }
+    .b-chart-strip2{
+      height: 1px;
+      background: #ffdf00;
+      width: 200px;
+      position: absolute;
+      top: 242px;
+      right: 185px;
+      box-shadow: rgb(0 67 255 / 20%) 0px 7px 29px 0px;
+    }
+    .befortext {
+      width: 27%;
+      color: #ffffff;
+      padding: 0;
+      position: absolute;
+      top: 152px;
+      display: grid;
+      right: 35px;
+    }
+    .befortext span:nth-child(1){
+      background: #a9a9a926;
+      position: relative;
+      top: 13px;
+      color: #bdbdbd9c;
+      text-indent: 1%;
+    }
+    .befortext span:nth-child(2){
+      font-size: 3em;
+      color: #ffe000;
+      text-shadow: 0 0 7px #ffe000;
+      font-weight: lighter;
+    }
+    .b-text{
+      color: #a1a1a1;
+      text-align: justify;
+      font-weight: lighter;
+    }
 
     .bungkus-skil {
       -moz-transition: all 0.5s ease;
@@ -15175,6 +15288,11 @@
       background-color: #0069d900;
       border-color: #0062cc00;
       z-index: 2;
+    }
+    .bungkus-skil button:hover{ 
+      color: white;
+      background-color: #0069d900;
+      border-color: #0062cc00;
     }
 
     .bungkus-skil .k-tgl {
@@ -15208,6 +15326,11 @@
       color: #959595;
       font-size: 12px;
       text-align: justify;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .bungkus-skil ul li p::first-letter {
@@ -15303,7 +15426,6 @@
       top: 0%;
       left: 0%;
     }
-
     .progress.dgm23 .progress-bar {
       border-color: #00f1ff;
     }
@@ -15312,12 +15434,20 @@
       animation: loading-70 1.5s linear forwards 1.8s;
     }
 
+    .progress.DAytc .progress-bar {
+      border-color: #00f1ff;
+    }
+
+    .progress.DAytc .progress-left .progress-bar {
+      animation: loading-72 1.5s linear forwards 1.8s;
+    }
+
     .progress.office .progress-bar {
       border-color: #00f1ff;
     }
 
     .progress.office .progress-left .progress-bar {
-      animation: loading-95 1.5s linear forwards 1.8s;
+      animation: loading-90 1.5s linear forwards 1.8s;
     }
 
     .progress.manajementdata .progress-bar {
@@ -15325,7 +15455,7 @@
     }
 
     .progress.manajementdata .progress-left .progress-bar {
-      animation: loading-99 1.5s linear forwards 1.8s;
+      animation: loading-89 1.5s linear forwards 1.8s;
     }
 
     .progress.its .progress-bar {
@@ -15333,7 +15463,7 @@
     }
 
     .progress.its .progress-left .progress-bar {
-      animation: loading-90 1.5s linear forwards 1.8s;
+      animation: loading-92 1.5s linear forwards 1.8s;
     }
 
     .progress.itn .progress-bar {
@@ -15349,7 +15479,7 @@
     }
 
     .progress.eis .progress-left .progress-bar {
-      animation: loading-90 1.5s linear forwards 1.8s;
+      animation: loading-98 1.5s linear forwards 1.8s;
     }
 
     @keyframes loading-1 {
@@ -15388,15 +15518,15 @@
       }
     }
 
-    @keyframes loading-75 {
+    @keyframes loading-72 {
       0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
       }
 
       100% {
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
+        -webkit-transform: rotate(130deg);
+        transform: rotate(130deg);
       }
     }
 
@@ -15424,6 +15554,18 @@
       }
     }
 
+    @keyframes loading-89 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(160deg);
+        transform: rotate(160deg);
+      }
+    }
+
     @keyframes loading-90 {
       0% {
         -webkit-transform: rotate(0deg);
@@ -15431,8 +15573,20 @@
       }
 
       100% {
-        -webkit-transform: rotate(162deg);
-        transform: rotate(162deg);
+        -webkit-transform: rotate(160deg);
+        transform: rotate(160deg);
+      }
+    }
+
+    @keyframes loading-92 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(166deg);
+        transform: rotate(166deg);
       }
     }
 
@@ -15445,6 +15599,18 @@
       100% {
         -webkit-transform: rotate(171deg);
         transform: rotate(171deg);
+      }
+    }
+
+    @keyframes loading-98 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(176deg);
+        transform: rotate(176deg);
       }
     }
 
@@ -15586,13 +15752,20 @@
       }
     }
 
-    @media screen and(min-width: 992px) {
+    @media screen and (min-width: 992px) {
       .container {
         max-width: 100%;
       }
     }
-
-    @media screen and (min-width : 101px) and (max-width :1024px) {
+    /* Surface DUO================= */
+    @media screen and (min-width : 1113px) and (max-width: 1114px) {
+      .b-chart {
+        left: -8.5em!important;
+        top: 0.5em!important;
+      }
+    }
+/* LAPTOP===================================================================================================================================== */
+    @media screen and (min-width : 1024px) and (max-width :1114px) {
       .head {
         width: 28%;
       }
@@ -15605,16 +15778,56 @@
         width: 35%;
       }
 
-      .bungkus-skil .kiri ul li:nth-child(2) {
-        width: 40%;
+      .keahlian-list:first-child> .bungkus-skil .bagi-2{
+        width: 50%;
       }
+      .b-chart-FIRST{
+        position: relative;
+        top: 14px;
+      }
+      #jarvis-circle-wrapper{
+        position: relative;
+        left: 3.5em;
+        margin: 0;
+        top: 2em;
+        width: 400px;
+        height: 400px;
+        margin-bottom: 5em;
+      }
+      .b-chart {
+        width: 78%;
+        position: absolute;
+        left: -6.5em;
+        right: 0;
+        top: 1.5em;
+        margin: 48px 0px 86px 0px;
+      }
+      .b-chart-strip1{
+        display: none;
+      }
+      .b-chart-strip2{
+        top: 196px;
+      }
+      .befortext{
+        position: absolute;
+        width: 36%;
+        display: grid;
+        margin: 6% 0% 4% 0%;
+        top: 2em;
+        right: 2em;
+      }
+      .befortext span:nth-child(2) {
+        margin: 4% 0% 0% 0%;
+      }
+
     }
 
-    @media screen and (min-width : 601px) and (max-width : 1000px) {
+/* TABLET===================================================================================================================================== */
+    @media screen and (min-width : 601px) and (max-width : 1023px) {
       .container {
         max-width: 100%;
       }
-
+      
       .col-md-4 {
         -ms-flex: 0 0 50%;
         flex: 0 0 50% !important;
@@ -15628,6 +15841,39 @@
         max-width: 49.333333%;
         height: 271px;
         margin: auto;
+      }
+      .keahlian-list:first-child> .bungkus-skil .bagi-2{
+        width: 50%;
+      }
+      .b-chart-FIRST{
+        position: relative;
+        top: 23px;
+      }
+      #jarvis-circle-wrapper{
+        position: initial;
+      }
+      .b-chart {
+        width: 100%;
+        position: absolute;
+        left: -8px;
+        right: 0;
+        top: 8px;
+      }
+      .b-chart-strip1{
+        display: none;
+      }
+      .b-chart-strip2{
+        display: none;
+      }
+      .befortext{
+        position: inherit;
+        width: 100%;
+        display: grid;
+        text-align: center;
+        margin: 6% 0% 4% 0%;
+      }
+      .befortext span:nth-child(2) {
+        margin: 4% 0% 0% 0%;
       }
 
       .header1 {
@@ -15686,7 +15932,7 @@
         width: 40%;
       }
     }
-
+/* Handphone======================================================================================================= */
     @media screen and (max-width: 600px) {
       .header1 {
         display: block;
@@ -15764,7 +16010,6 @@
         width: 100%;
         height: 50%;
       }
-
       img {
         animation: none;
       }
@@ -15775,6 +16020,36 @@
         max-width: 89.333333%;
         height: 271px;
         margin: auto;
+      }
+      #jarvis-circle-wrapper{
+        width: 258px;
+        height: 259px;
+        top: 9px;
+        position: relative;
+      }
+      .b-chart {
+        width: 100%;
+        position: absolute;
+        left: -8px;
+        right: 0;
+        top: 8px;
+      }
+
+      .b-chart-strip1{
+        display: none;
+      }
+      .b-chart-strip2{
+        display: none;
+      }
+      .befortext{
+        position: inherit;
+        width: 100%;
+        display: grid;
+        text-align: center;
+        margin: 6% 0% 4% 0%;
+      }
+      .befortext span:nth-child(2) {
+        margin: 4% 0% 0% 0%;
       }
     }
 
@@ -16919,8 +17194,8 @@
 
 
         <div class="keahlian-list">
-          <div id="DataAnalytic" class="bungkus-skil in_view">
-            <button class="btn btn-sm btn-primary in_view"><i class="bi bi-eye-fill"></i><svg
+          <div class="bungkus-skil">
+            <button class="btn btn-sm btn-primary "><i class="bi bi-eye-fill"></i><svg
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill"
                 viewBox="0 0 16 16">
                 <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
@@ -16931,56 +17206,57 @@
               <div class="bagi-1">
                 <ul>
                   <li>
-                    <div class="progress its">
+                    <div class="progress dgm23">
                       <span class="progress-left"><span class="progress-bar"></span></span><span
                         class="progress-right"><span class="progress-bar"></span></span>
-                      <div class="progress-value">90%</div>
+                      <div class="progress-value">65%</div>
                     </div>
                   </li>
                   <li>
-                    <h4>Data Analytic</h4>
+                  <h4>Digital Marketing</h4>
                   </li>
                   <li>
-                    <span>16 Nov 2022</span>
-                    <p>Ulet ketika menganalisa, sehingga teliti dalam menyajikan dan menginterpretasikan Data dengan sangat
-                      baik</p>
+                    <span>On Going</span>
+                    <p>Terlatih dalam menggunakan media digital atau internet dengan tujuan untuk menarik konsumen atau
+                      calon konsumen secara cepat</p>
                   </li>
                 </ul>
               </div>
               <div class="bagi-2">
-              <div class="b-chart-DataAnalytic"><canvas id="chart-DataAnalytic"></canvas></div>
-                <script>var configchartDataAnalytic = {
-                type: 'radar',
-                data: {
-                  labels: ['Language', 'Matematika', 'Visualization', 'Data Cleaning', 'Data Mining', 'MYSQL'],
-                  datasets: [{
-                    label: "Professional Skills",
-                    data: [90, 60, 95, 80, 65, 90],
-                    backgroundColor: 'rgba(99, 211, 255, 0.2)',
+              <div class="b-chart-FIRST"><canvas id="chart-DGM"></canvas></div>
+                <script>
+                var configchartDGM = {
+                  type: 'radar',
+                  data: {
+                    labels: ['Paid Advertising', 'Funneling Strategy', 'SEO / SEM', 'Social Media Marketing','Foreign language','Market research capabilities','Writing & Storytelling'],
+                    datasets: [{
+                      label: "DM Skills",
+                      data: [50, 85, 70, 80,10,90,70],
+                      backgroundColor: 'rgba(99, 211, 255, 0.2)',
                       borderColor: '#00f1ff',
                       pointBackgroundColor: '#00f1ff',
                       pointBorderColor: '#fff',
                       pointHoverBackgroundColor: '#fff',
                       pointHoverBorderColor: '#00f1ff'
-                  }, {
-                    label: 'Professional Skills',
-                    data: [0, 0, 0, 0, 0, 0],
-                  }]
-                },
-                options: {
-                  legend: {
-                    display: false
+                    }, {
+                      label: '',
+                      data: [0, 0, 0, 0, 0, 0],
+                    }]
                   },
-                  scale: {
-                    gridLines: {
-                      color: ['#d4d4d4']
+                  options: {
+                    legend: {
+                      display: false
+                    },
+                    scale: {
+                      gridLines: {
+                        color: ['#d4d4d4']
+                      }
                     }
                   }
-                }
-              };
-              var chartDataAnalytic = document.getElementById("chart-DataAnalytic");
-              new Chart(chartDataAnalytic, configchartDataAnalytic);
-              Chart.defaults.global.defaultFontColor = '#cccccc';
+                };
+                var chartDGM = document.getElementById("chart-DGM");
+                new Chart(chartDGM, configchartDGM);
+                Chart.defaults.global.defaultFontColor = '#cccccc';
             </script>
             </div>
           </div> 
@@ -16989,22 +17265,27 @@
 
 
         <div class="keahlian-list">
-          <div class="bungkus-skil">
-            <span class="k-tgl">On Going</span>
+          <div id="DataAnalytic" class="bungkus-skil in_view">
+            <span class="k-tgl">16 NOV 2022</span>
+            <button class="btn btn-sm btn-primary in_view"><i class="bi bi-eye-fill"></i><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill"
+              viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+              </svg></button>
             <ul>
               <li>
-                <div class="progress dgm23">
+                <div class="progress DAytc">
                   <span class="progress-left"><span class="progress-bar"></span></span><span
                     class="progress-right"><span class="progress-bar"></span></span>
-                  <div class="progress-value">70%</div>
+                  <div class="progress-value">72%</div>
                 </div>
               </li>
               <li>
-                <h4>Digital Marketing </h4>
+                <b class="hh4"></b><h4>Data Analytic </h4>
               </li>
               <li>
-                <p>Terlatih dalam menggunakan media digital atau internet dengan tujuan untuk menarik konsumen atau
-                  calon konsumen secara cepat</p>
+                <p>Ulet ketika menganalisa, sehingga teliti dalam menyajikan dan menginterpretasikan Data dengan sangat baik</p>
               </li>
             </ul>
           </div>
@@ -17024,22 +17305,21 @@
                 <div class="progress manajementdata">
                   <span class="progress-left"><span class="progress-bar"></span></span><span
                     class="progress-right"><span class="progress-bar"></span></span>
-                  <div class="progress-value">99%</div>
+                  <div class="progress-value">89%</div>
                 </div>
               </li>
               <li>
-                <h4>Manajemen Informatika</h4>
+                <b class="hh4"></b><h4>Manajemen Informatika</h4>
               </li>
               <li>
-                <p>Mampu Menyusun, mempermudah, Menjaga keamanan, Memelihara, baik dari pembaruan, penambahan, hingga
-                  penghapusan data agar sumber data tetap aktual</p>
+                <p>Mampu membangun, merancang dan mengembangkan sebuah sistem software dan juga Aplikasi Berbasis WEB. Melakukan analisis secara menyeluruh pada sistem komputer. Mengelola, merapikan data-data agar sumber data tetap aktual. Pelayanan konsultasi di bidang IT dan menyusun rancangan jaringan komputer</p>
               </li>
             </ul>
           </div>
         </div>
 
         <div class="keahlian-list">
-          <div id="InformationTechnologySystem" class="bungkus-skil in_view">
+          <div id="EngineringInformationSystem" class="bungkus-skil in_view">
             <span class="k-tgl">29 Nov 2017</span>
             <button class="btn btn-sm btn-primary in_view"><i class="bi bi-eye-fill"></i><svg
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill"
@@ -17052,11 +17332,11 @@
                 <div class="progress eis">
                   <span class="progress-left"><span class="progress-bar"></span></span><span
                     class="progress-right"><span class="progress-bar"></span></span>
-                  <div class="progress-value">90%</div>
+                  <div class="progress-value">98%</div>
                 </div>
               </li>
               <li>
-                <h4>Engineering Information System </h4>
+                <b class="hh4"></b><h4>Engineering Information System </h4>
               </li>
               <li>
                 <p>Cakap dalam membuat algoritma, menulis atau membuat dokumen kode pemograman yang terstruktur dan
@@ -17080,11 +17360,11 @@
                 <div class="progress office">
                   <span class="progress-left"><span class="progress-bar"></span></span><span
                     class="progress-right"><span class="progress-bar"></span></span>
-                  <div class="progress-value">95%</div>
+                  <div class="progress-value">90%</div>
                 </div>
               </li>
               <li>
-                <h4>Mircrosoft Office Specialist </h4>
+                <b class="hh4"></b><h4>Mircrosoft Office Specialist </h4>
               </li>
               <li>
                 <p>Menguasai fitur dan fungsionalitas lengkap Microsoft Office, mulai dari Excel, Word, Power Point,
@@ -17113,7 +17393,7 @@
                 </div>
               </li>
               <li>
-                <h4>Information Technology Network </h4>
+                <b class="hh4"></b><h4>Information Technology Network </h4>
               </li>
               <li>
                 <p>Lihai membuat jaringan lokal, dan nirkabel dan juga Terampil melaksanakan prosedur perawatan serta menyelenggarakan adm sistem jaringan, maupun menginstal sumber daya berbagi pada jaringan</p>
@@ -17121,8 +17401,6 @@
             </ul>
           </div>
         </div>
-
-
 
         <div class="keahlian-list">
           <div id="InformationTechnologySupport" class="bungkus-skil in_view">
@@ -17138,11 +17416,11 @@
                     <div class="progress its">
                       <span class="progress-left"><span class="progress-bar"></span></span><span
                         class="progress-right"><span class="progress-bar"></span></span>
-                      <div class="progress-value">90%</div>
+                      <div class="progress-value">92%</div>
                     </div>
                   </li>
                   <li>
-                    <h4>Information Technology Support </h4>
+                    <b class="hh4"></b><h4>Information Technology Support </h4>
                   </li>
                   <li>
                     <p>Mahir dalam mengidentifikasi, memasang perlengkapan, mengoprasikan perangkat komputer, dan melakukan
@@ -17152,7 +17430,20 @@
           </div>
         </div>
       </div>
-
+ <script>
+$('.keahlian-list').hover(function() {
+  var $this = $(this).find( ".progress-value" );
+   $this.data('defaultText', $this.text());
+   $this.text("Open");
+   $(this).find( ".progress-value" ).css('background','rgba(0,231,255,0.12)');
+  },
+  function() {
+      var $this = $(this).find( ".progress-value" ); // caching $(this)
+        $this.text($this.data('defaultText'));
+        $(this).find( ".progress-value" ).css('background','#ffffff1f');
+  }
+);
+</script>
 
       <div class="skill">
         <table>
@@ -17659,24 +17950,117 @@
       var stat = $(this).attr("id");
       if (stat == "DataAnalytic") {
         $(".inview_frame").html(
-          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   scrolling="auto" src="https://apply.revou.co/mc-report?name=Yusup+Maulana&tier=DA3&code=yusupmaulana.net@gmail.com" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" ></iframe></div>'
+          '<div id="loader-line"></div><div id="jarvis-circle-wrapper"><div id="jarvis-circle-inner"></div></div><div class="b-chart-strip1"></div><div class="b-chart-strip2"></div><div class="b-chart"><canvas id="chart-DAtyc"></canvas></div><div class="befortext"><span>Average</span><span>72%</span><div class="b-text">Ulet ketika menganalisa, sehingga teliti dalam menyajikan dan menginterpretasikan Data dengan sangat baik</div></div><iframe onload="hideLoadingiframe()" id="iframeid"   scrolling="auto" src="https://drive.google.com/file/d/127ieaRo7ngK4_uCAjCcBUV3_27eJSt2E/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" ></iframe><br/><iframe onload="hideLoadingiframe()" id="iframeid"   scrolling="auto" src="https://apply.revou.co/mc-report?name=Yusup+Maulana&tier=DA3&code=yusupmaulana.net@gmail.com" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" ></iframe></div>'
           );
+          var configchartDAtyc = {
+          type: 'radar',
+          data: {
+            labels: ['R & Phyton', 'Mathematics', 'Visualization', 'Data Cleaning', 'Data Mining','MYSQL'],
+            datasets: [{
+              label: "DA Skills",
+              data: [40, 60, 95, 80, 65,90],
+              backgroundColor: 'rgba(99, 211, 255, 0.2)',
+              borderColor: '#00f1ff',
+              pointBackgroundColor: '#00f1ff',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: '#00f1ff'
+            }, {
+              label: '',
+              data: [0, 0, 0, 0, 0, 0],
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            scale: {
+              gridLines: {
+                color: ['#d4d4d4']
+              }
+            }
+          }
+        };
+        var chartDAtyc = document.getElementById("chart-DAtyc");
+        new Chart(chartDAtyc, configchartDAtyc);
       } else if (stat == "MircrosoftOfficeSpecialist") {
         $(".inview_frame").html(
-          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/16LDi4XU0qaFX-wQsOnKpRu3ahG1LIG5I/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+          '<div id="loader-line"></div><div id="jarvis-circle-wrapper"><div id="jarvis-circle-inner"></div></div><div class="b-chart-strip1"></div><div class="b-chart-strip2"></div><div class="b-chart"><canvas id="chart-MOS"></canvas></div><div class="befortext"><span>Average</span><span>90%</span><div class="b-text">Menguasai fitur dan fungsionalitas lengkap Microsoft Office, mulai dari Excel, Word, Power Point, Publisher, Acces dan telah memiliki sertifikasi yang dikeluarkan oleh Certiport, Kredensial yang diakui secara global</div></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/16LDi4XU0qaFX-wQsOnKpRu3ahG1LIG5I/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
           );
+          var configchartMOS = {
+          type: 'radar',
+          data: {
+            labels: ['Ms. Word', 'Ms. Excel', 'Ms. Power Point', 'Ms. Acces', 'Ms. Publisher', 'Ms. Project'],
+            datasets: [{
+              label: "MOS Skills",
+              data: [99, 95, 99, 95, 95, 55],
+              backgroundColor: 'rgba(99, 211, 255, 0.2)',
+              borderColor: '#00f1ff',
+              pointBackgroundColor: '#00f1ff',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: '#00f1ff'
+            }, {
+              label: '',
+              data: [0, 0, 0, 0, 0, 0],
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            scale: {
+              gridLines: {
+                color: ['#d4d4d4']
+              }
+            }
+          }
+        };
+        var chartMOS = document.getElementById("chart-MOS");
+        new Chart(chartMOS, configchartMOS);
       } else if (stat == "ManajemenData") {
         $(".inview_frame").html(
-          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+          '<div id="loader-line"></div><div id="jarvis-circle-wrapper"><div id="jarvis-circle-inner"></div></div><div class="b-chart-strip1"></div><div class="b-chart-strip2"></div><div class="b-chart"><canvas id="chart-MANINF"></canvas></div><div class="befortext"><span>Average</span><span>89%</span><div class="b-text">Mampu membangun, merancang dan mengembangkan sebuah sistem software dan juga Aplikasi Berbasis WEB. Melakukan analisis secara menyeluruh pada sistem komputer. Mengelola, merapikan data-data agar sumber data tetap aktual. Pelayanan konsultasi di bidang IT dan menyusun rancangan jaringan komputer</div></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
           );
+          var configchartMANINF = {
+          type: 'radar',
+          data: {
+            labels: ['Programmer', 'Software Engineer', 'System Analyst', 'Database Adm', 'IT Consultant','Web Developer','C. Network Architect'],
+            datasets: [{
+              label: "MD Skills",
+              data: [85, 95, 90, 88, 85,97,84],
+              backgroundColor: 'rgba(99, 211, 255, 0.2)',
+              borderColor: '#00f1ff',
+              pointBackgroundColor: '#00f1ff',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: '#00f1ff'
+            }, {
+              label: '',
+              data: [0, 0, 0, 0, 0, 0],
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            scale: {
+              gridLines: {
+                color: ['#d4d4d4']
+              }
+            }
+          }
+        };
+        var chartMANINF = document.getElementById("chart-MANINF");
+        new Chart(chartMANINF, configchartMANINF);
       } else if (stat == "InformationTechnologySupport") {
         $(".inview_frame").html(
-          '<div id="loader-line"></div><div class="b-chart-InformationTechnologySupport"><canvas id="chart-InformationTechnologySupport"></canvas></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1GRKu-OdNKD_TFHURZimDeM2YJLpLXuL1/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+          '<div id="loader-line"></div><div id="jarvis-circle-wrapper"><div id="jarvis-circle-inner"></div></div><div class="b-chart-strip1"></div><div class="b-chart-strip2"></div><div class="b-chart"><canvas id="chart-InformationTechnologySupport"></canvas></div> <div class="befortext"><span>Average</span><span>92%</span><div class="b-text">Mahir dalam mengidentifikasi spesifikasi, memasang perlengkapan, mengoprasikan perangkat komputer, dan melakukan instalasi jaringan serta instalasi operating system</div></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1GRKu-OdNKD_TFHURZimDeM2YJLpLXuL1/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
           );
           var configchartInformationTechnologySupport = {
           type: 'radar',
           data: {
-            labels: ['Install Pheriperal', 'PC Stand Alone', 'Instalation Network', 'Instalation Operating System', 'Identification  specification'],
+            labels: ['Install Pheriperal', 'PC Stand Alone', 'Instalation Network', 'Instalation OS', 'Ident spec'],
             datasets: [{
               label: "ITS Skills",
               data: [99, 99, 85, 95, 80],
@@ -17704,15 +18088,75 @@
         };
         var chartInformationTechnologySupport = document.getElementById("chart-InformationTechnologySupport");
         new Chart(chartInformationTechnologySupport, configchartInformationTechnologySupport);
-        Chart.defaults.global.defaultFontColor = '#cccccc';
       } else if (stat == "InformationTechnologyNetwork") {
         $(".inview_frame").html(
-          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/12yPnLG5v5e1VtWNfA3VkgK1sQPNakOCC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
-          );
-      } else if (stat == "InformationTechnologySystem") {
+          '<div id="loader-line"></div><div id="jarvis-circle-wrapper"><div id="jarvis-circle-inner"></div></div><div class="b-chart-strip1"></div><div class="b-chart-strip2"></div><div class="b-chart"><canvas id="chart-ITN"></canvas></div> <div class="befortext"><span>Average</span><span>90%</span><div class="b-text">Lihai membuat jaringan lokal, dan nirkabel dan juga Terampil melaksanakan prosedur perawatan serta menyelenggarakan adm sistem jaringan, maupun menginstal sumber daya berbagi pada jaringan</div></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/12yPnLG5v5e1VtWNfA3VkgK1sQPNakOCC/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>');
+          var configchartITN = {
+          type: 'radar',
+          data: {
+            labels: ['Desain LAN', 'Cable UTP & BNC', 'Install Wireless', 'Network resources', 'Network administration', 'Procedure maintenance'],
+            datasets: [{
+              label: "ITN Skills",
+              data: [90, 99, 91, 85, 80, 94],
+              backgroundColor: 'rgba(99, 211, 255, 0.2)',
+              borderColor: '#00f1ff',
+              pointBackgroundColor: '#00f1ff',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: '#00f1ff'
+            }, {
+              label: '',
+              data: [0, 0, 0, 0, 0, 0],
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            scale: {
+              gridLines: {
+                color: ['#d4d4d4']
+              }
+            }
+          }
+        };
+        var chartITN = document.getElementById("chart-ITN");
+        new Chart(chartITN, configchartITN);
+      } else if (stat == "EngineringInformationSystem") {
         $(".inview_frame").html(
-          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1Pkhz1i4Mw6OCRKCDSvgKVwc7AkGKTBfX/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+          '<div id="loader-line"></div><div id="jarvis-circle-wrapper"><div id="jarvis-circle-inner"></div></div><div class="b-chart-strip1"></div><div class="b-chart-strip2"></div><div class="b-chart"><canvas id="chart-EIS"></canvas></div><div class="befortext"><span>Average</span><span>98%</span><div class="b-text">Cakap dalam membuat algoritma, menulis atau membuat dokumen kode pemograman yang terstruktur dan Tangkas dalam mengoprasikan aplikasi basis data</div></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1Pkhz1i4Mw6OCRKCDSvgKVwc7AkGKTBfX/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
           );
+          var configchartEIS = {
+          type: 'radar',
+          data: {
+            labels: ['Algorithm', 'Write basic programs', 'Code documents', 'Operate Database'],
+            datasets: [{
+              label: "EIS Skills",
+              data: [95, 99, 99, 98],
+              backgroundColor: 'rgba(99, 211, 255, 0.2)',
+              borderColor: '#00f1ff',
+              pointBackgroundColor: '#00f1ff',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: '#00f1ff'
+            }, {
+              label: '',
+              data: [0, 0, 0, 0, 0, 0],
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            scale: {
+              gridLines: {
+                color: ['#d4d4d4']
+              }
+            }
+          }
+        };
+        var chartEIS = document.getElementById("chart-EIS");
+        new Chart(chartEIS, configchartEIS);
       } else if (stat == "LihatIjazah") {
         $(".inview_frame").html(
           '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1RxNHpvfPc1dE3xidyTmB2fqs-zohkPrw/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
