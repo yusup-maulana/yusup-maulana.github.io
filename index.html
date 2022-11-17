@@ -8101,6 +8101,12 @@
       padding-left: 0;
       margin-bottom: 0;
       list-style: none
+      border: none;
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 5%);
+      background-color: rgb(30 41 59 / 84%);
     }
 
     .nav-link {
@@ -8124,7 +8130,10 @@
     }
 
     .nav-tabs .nav-item {
-      margin-bottom: -1px
+      width: auto;
+      background: #ffffff21;
+      margin: 0.5%;
+      border-radius: 10px;
     }
 
     .nav-tabs .nav-link {
@@ -14821,25 +14830,11 @@
       border-radius: 7px 7px 7px 7px;
     }
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.05);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
 
     img {
       object-fit: cover;
       filter: blur(20px);
       transition: all 3s;
-      animation: pulse 9s linear infinite;
     }
 
     body {
@@ -14995,6 +14990,7 @@
       z-index: 500;
       box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 5%);
       background-color: rgb(30 41 59 / 84%);
+      list-style: none;
     }
 
     #myTab li button {
@@ -15002,11 +14998,13 @@
       -moz-transition: all 0.001s ease;
       -o-transition: all 0.001s ease;
       transition: all 0.001s ease;
-      height: 60px;
+      height: 40px;
       width: 100%;
       background: #ffffff00;
       border: none;
       color: #a1a0a0;
+      text-align: left;
+      display: flex;
     }
 
     #myTab li button:hover {
@@ -15028,11 +15026,11 @@
 
     .navlibuttonspanactive {
       display: block;
+      text-indent: 8px;
     }
 
     .nav-tabs .nav-item {
-
-      width: 25%;
+      width: auto;
     }
 
 
