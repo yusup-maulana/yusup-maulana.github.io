@@ -74,10 +74,9 @@
 
 
 <!-- <!DOCTYPE html> -->
-<html>
-
+<html lang="id-ID">
 <head>
-  <title>Yusup maulana</title>
+  <title>Yusup maulana | Web Programmer</title>
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="IMG/f.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14995,6 +14994,15 @@
       width: 90%;
       margin: auto;
     }
+    .skill table tr:nth-child(2){
+      border-left: 1px dashed #efefef26;
+    }
+    .skill table tr:nth-child(3){
+      border-left: 1px dashed #efefef26;
+    }
+    .skill table tr:nth-child(4){
+      border-left: 1px dashed #efefef26;
+    }
 
     .nav {
       border: none;
@@ -15660,6 +15668,7 @@
       padding-top: 7px;
       padding-bottom: 7px;
       color: white;
+      margin-bottom: 5px;
     }
 
     .skills:hover {
@@ -15676,83 +15685,98 @@
     }
 
 
-    .googleoffice {
+    .unknown {
       width: 90%;
       background-color: #0066cc6e;
     }
 
-    .jarmik {
+    .unknown {
       width: 70%;
       background-color: #0073e659;
     }
 
-    .adbp {
+    .unknown {
       width: 80%;
       background-color: #0080ff73;
     }
 
-    .mysqldb {
+    .unknown {
       width: 90%;
       background-color: #3399ff75;
     }
 
-    .progr {
+    .unknown {
       width: 90%;
       background-color: #66b3ff70;
     }
 
-    .sonveg {
+    .unknown {
       width: 90%;
       background-color: #80bfff80;
     }
 
-    .visstu {
+    .unknown {
       width: 90%;
       background-color: #99ccff6b;
     }
 
     .html {
-      width: 99%;
-      background-color: #b3470073;
+    width: 99%;
+    background-color: #b3470040;
+    border: 1px solid #ffa50070;
     }
 
     .css {
       width: 90%;
-      background-color: #cc52007a;
+      background-color: #cc52003b;
+      border: 1px solid #ffa50052;
     }
 
-    .js {
+    .unknown {
       width: 75%;
       background-color: #e65c0075;
     }
 
-    .php {
+    .unknown {
       width: 90%;
       background-color: #ff66007a;
     }
 
-    .jquery {
+    .unknown {
       width: 80%;
       background-color: #ff751a75;
     }
 
-    .vb {
+    .unknown {
       width: 80%;
       background-color: #ff853375;
     }
 
-    .java {
+    .unknown {
       width: 65%;
       background-color: #ffa36675;
     }
 
-
-    .skills-desc {
-      background-color: #ffffff;
-      height: 65px;
+    .skill > table > tbody > tr:nth-child(3) > td{
+      display: flex;
+    }
+    .skill > table > tbody > tr:nth-child(4) > td{
+      display: flex;
     }
 
-
+    .b-chart-Skills-Programming{
+      width: 46%;
+      padding: 1%;
+      margin: 1% auto;
+    }
+    .b-chart-Skills-Programming .posisichart-Programming{
+      width: 100%;
+    }
+    .b-chart-Skills-Programming h3{
+     padding:2%;
+     color:whitesmoke;
+     text-align: center;
+    }
 
 
 
@@ -17545,32 +17569,35 @@ $('.keahlian-list').hover(function() {
         <table>
           <tr>
             <td>
-              <h2>Technical Skills</h2>
+              <h2>Programming Skills</h2>
             </td>
           </tr>
           <tr>
             <td>
               <div class="container">
-                <div class="skills googleoffice"><i>Google Office</i> 90%</div>
+                <div class="skills html"><i>HTML - HyperText Markup Language </i> 99%</div>
               </div>
               <div class="container">
-                <div class="skills jarmik"><i>Jaringan Mikrotik</i> 70%</div>
+                <div class="skills css"><i>CSS - Cascading Style Sheet</i> 90%</div>
               </div>
-              <div class="container">
-                <div class="skills adbp"><i>Adobe Photoshop</i> 85%</div>
-              </div>
-              <div class="container">
-                <div class="skills mysqldb"><i>Mysql Database</i> 90%</div>
-              </div>
-              <div class="container">
-                <div class="skills progr"><i>Programmer</i> 90%</div>
-              </div>
-              <div class="container">
-                <div class="skills sonveg"><i>Sony Vegas</i> 90%</div>
-              </div>
-              <div class="container">
-                <div class="skills visstu"><i>Visual Studio</i> 90%</div>
-              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="b-chart-Skills-Programming"><h3>Programming language</h3><div class="posisichart-Programming"><canvas id="chart-Skills-Programming-language"></canvas></div></div>
+              <script>DatasetsProgramminglanguage = [94, 60, 40, 80];  var ctxProgramminglanguage = document.getElementById("chart-Skills-Programming-language");var myChartctxProgrammingskil = new Chart(ctxProgramminglanguage, {type: 'bar', data: {labels: ['PHP', 'Javascript', 'Java', 'Visual Basic .NET'],datasets: [ {label:'Result',fill:false,data:DatasetsProgramminglanguage,   backgroundColor: ['rgba(255, 99, 132, 0.2)','rgba(255, 159, 64, 0.2)','rgba(255, 205, 86, 0.2)','rgba(75, 192, 192, 0.2)'],  borderColor: ['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)', 'rgb(75, 192, 192)'], borderWidth: 1}]},options: {   scales: {yAxes: [{ ticks: { beginAtZero:true  } }] }, responsive: true, tooltips: { callbacks: { labelColor: function(tooltipItem, chart) {  return {borderColor: 'rgb(255, 0, 20)', backgroundColor: 'rgb(255,20, 0)' }  }  } }, legend: {   display: false  }, }});</script>
+            
+              <div class="b-chart-Skills-Programming"><h3>Database</h3><div class="posisichart-Programming"><canvas id="chart-Skills-database"></canvas></div>
+              <script>Datasetsdatabase = [95, 30, 60];  var ctxProgrammingDatabase = document.getElementById("chart-Skills-database");var myChartctxProgrammingskil = new Chart(ctxProgrammingDatabase, {type: 'pie', data: {labels: ['MYSQL', 'MS. SQL Server', 'Access'],datasets: [{label:'Result',fill:true,data:Datasetsdatabase,   backgroundColor: ['rgba(255, 99, 132, 0.2)','rgba(75, 192, 192, 0.2)','rgba(255, 159, 64, 0.2)'],  borderColor: ['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)', 'rgb(75, 192, 192)'], borderWidth: 1}]},options: {responsive: true, tooltips: { callbacks: { labelColor: function(tooltipItem, chart) {  return {borderColor: 'rgb(255, 0, 20)', backgroundColor: 'rgb(255,20, 0)' }  }  } }, legend: {   display: true  }, }});</script>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="b-chart-Skills-Programming"><h3>Frequently used Frameworks, Libraries, and Web Technologies</h3><div class="posisichart-Programming"><canvas id="chart-Skills-frameworkorlbr"></canvas></div></div>
+              <script>Datasetsframeworkorlbr = [80, 90, 60, 50, 30, 60];  var ctxframeworkorlbr = document.getElementById("chart-Skills-frameworkorlbr");var myChartctxProgrammingskil = new Chart(ctxframeworkorlbr, {type: 'bar', data: {labels: ['jQuery', 'Bootstrap', 'Chartjs', 'Highchart','Code igniter','Pusher'],datasets: [ {label:'Result',fill:false,data:Datasetsframeworkorlbr,   backgroundColor: ['rgba(255, 99, 132, 0.2)','rgba(255, 159, 64, 0.2)','rgba(255, 205, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(75, 192, 76, 0.2)','rgba(56, 24, 167, 0.2)'],  borderColor: ['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)', 'rgb(75, 192, 192)','#65cc00','rgb(133, 0, 255)'], borderWidth: 1}]},options: {   scales: {yAxes: [{ ticks: { beginAtZero:true  } }] }, responsive: true, tooltips: { callbacks: { labelColor: function(tooltipItem, chart) {  return {borderColor: 'rgb(255, 0, 20)', backgroundColor: 'rgb(255,20, 0)' }  }  } }, legend: {   display: false  }, }});</script>
+
+              <div class="b-chart-Skills-Programming"><h3>Programming Desktop Tools</h3><div class="posisichart-Programming"><canvas id="chart-Skills-DeskTools"></canvas></div></div>
+              <script>var configchartDeskTools = {type: 'radar', data: {labels: ['Visual Studio Code','Sublime Text', 'Microsoft Visual Studio', 'Netbeans', 'Android Studio','Crystal Report'], datasets: [{ label: "DT Skills", data: [70, 80, 90, 60, 30, 85], backgroundColor: 'rgba(255, 99, 132, 0.2)',borderColor: 'rgb(255, 99, 132)',pointBackgroundColor: 'rgb(255, 99, 132)',pointBorderColor: '#fff', pointHoverBackgroundColor: '#fff', pointHoverBorderColor: 'rgb(255, 99, 132)' }, { label: '', data: [0, 0, 0, 0, 0, 0],   }] },  options: {legend: { display: false }, scale: {gridLines: {color: ['#d4d4d4'] } }  }  }; var chartDeskTools = document.getElementById("chart-Skills-DeskTools");   new Chart(chartDeskTools, configchartDeskTools); </script>
             </td>
           </tr>
         </table>
@@ -17581,33 +17608,29 @@ $('.keahlian-list').hover(function() {
         <table>
           <tr>
             <td>
-              <h2>Programming Skills</h2>
+              <h2>Technical and Other Skills</h2>
             </td>
           </tr>
           <tr>
             <td>
+              
               <div class="container">
-                <div class="skills html"><i>HyperText Markup Language (HTML)</i> 99%</div>
+                <div class="skills js"><i>Build a Mikrotik Network</i> 85%</div>
               </div>
               <div class="container">
-                <div class="skills css"><i>Cascading Style Sheet (CSS)</i> 90%</div>
+                <div class="skills php"><i>Google Office</i> 90%</div>
               </div>
               <div class="container">
-                <div class="skills js"><i>JAVASCRIPT</i> 75%</div>
-              </div>
-              <div class="container">
-                <div class="skills php"><i>Hypertext Preprocessor (PHP)</i> 90%</div>
-              </div>
-              <div class="container">
-                <div class="skills jquery"><i>JQUERY</i> 80%</div>
+                <div class="skills jquery"><i>Adobe Photoshop</i> 90%</div>
               </div>
 
               <div class="container">
-                <div class="skills vb"><i>Visual Basic .NET</i> 80%</div>
+                <div class="skills vb"><i>Adobe Priemere</i> 70%</div>
               </div>
               <div class="container">
-                <div class="skills java"><i>JAVA</i> 65%</div>
+                <div class="skills java"><i>Sony Vegas</i> 90%</div>
               </div>
+
             </td>
           </tr>
         </table>
