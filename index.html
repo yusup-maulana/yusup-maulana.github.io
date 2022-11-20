@@ -15683,42 +15683,6 @@
       font-weight: 900;
     }
 
-
-    .unknown {
-      width: 90%;
-      background-color: #0066cc6e;
-    }
-
-    .unknown {
-      width: 70%;
-      background-color: #0073e659;
-    }
-
-    .unknown {
-      width: 80%;
-      background-color: #0080ff73;
-    }
-
-    .unknown {
-      width: 90%;
-      background-color: #3399ff75;
-    }
-
-    .unknown {
-      width: 90%;
-      background-color: #66b3ff70;
-    }
-
-    .unknown {
-      width: 90%;
-      background-color: #80bfff80;
-    }
-
-    .unknown {
-      width: 90%;
-      background-color: #99ccff6b;
-    }
-
     .html {
     width: 99%;
     background-color: #b3470040;
@@ -15731,30 +15695,6 @@
       border: 1px solid #ffa50052;
     }
 
-    .unknown {
-      width: 75%;
-      background-color: #e65c0075;
-    }
-
-    .unknown {
-      width: 90%;
-      background-color: #ff66007a;
-    }
-
-    .unknown {
-      width: 80%;
-      background-color: #ff751a75;
-    }
-
-    .unknown {
-      width: 80%;
-      background-color: #ff853375;
-    }
-
-    .unknown {
-      width: 65%;
-      background-color: #ffa36675;
-    }
 
     .skill > table > tbody > tr:nth-child(3) > td{
       display: flex;
@@ -16146,6 +16086,13 @@
       }
       .container {
        padding: 2%;
+      }
+      .pendidikan{
+        width: 100%!important;
+        display: block!important;
+      }
+      .pendidikan .pendidikan-bagi{
+        width: 100%!important;
       }
     }
 
@@ -17669,58 +17616,105 @@ $('.keahlian-list').hover(function() {
 
 
     <!-- ======================================================================================================================== START TAB 3 -->
-    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-      <style type="text/css">
-        ul.timeline {
-          color: #adadad;
-          list-style-type: none;
-          position: relative;
-        }
+<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+  <style type="text/css">
+    .pendidikan{
+      width: 100%;
+      display: flex;
+    }
+    .pendidikan .pendidikan-bagi{
+      width: 50%;
+    }
+    .pendidikan .pendidikan-bagi h2{
+      color:white;
+    }
+    .pendidikan .pendidikan-bagi .ULLastActivity{
+      border-left: 1px solid #4848488f;
+      margin-left: 3%;
+      padding-left: 2%;
+      list-style: none;
+    }
+    .pendidikan .pendidikan-bagi .ULLastActivity li{
+      margin: 0px 0px 1% 0px;
+      background: #0084c30d;
+      padding: 2%;
+      cursor: pointer;
+    }
+    .pendidikan .pendidikan-bagi .ULLastActivity li:hover{
+      background: #0084c34a;
+    }
+    .pendidikan .pendidikan-bagi .ULLastActivity li span:nth-child(1){
+      padding: 1px 5px 1px 0px;
+      border-radius: 5px;
+      font-size: small;
+      color: #cdbe91;
+    }
+    .pendidikan .pendidikan-bagi .ULLastActivity li span:nth-child(2){
+      background: rgb(255 255 255 / 0%);
+      padding: 1px 5px 1px 5px;
+      border-radius: 3px;
+      font-size: small;
+      color: #cdbe91;
+      border: 2px solid #cdbe91;
+    }
+    .pendidikan .pendidikan-bagi .ULLastActivity li h4{
+      font-size: large;
+      padding: 0;
+      margin: 4px 0px 0px 0px;
+    }
 
-        ul.timeline:before {
-          content: ' ';
-          background: #d4d9df;
-          display: inline-block;
-          position: absolute;
-          left: 29px;
-          width: 2px;
-          height: 100%;
-          z-index: 400;
-        }
+    ul.timeline {
+      color: #adadad;
+      list-style-type: none;
+      position: relative;
+    }
 
-        ul.timeline>li {
-          margin: 30px 0;
-          padding: 0px 3% 0px 4px;
-        }
+    ul.timeline:before {
+      content: ' ';
+      background: #d4d9df;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+    }
 
-        ul.timeline>li:before {
-          content: ' ';
-          background: white;
-          display: inline-block;
-          position: absolute;
-          border-radius: 50%;
-          border: 3px solid #22c0e8;
-          left: 20px;
-          width: 20px;
-          height: 20px;
-          z-index: 400;
-        }
+    ul.timeline>li {
+      margin: 30px 0;
+      padding: 0px 3% 0px 4px;
+    }
 
-        ul.timeline>li span {
-          color: #727272;
-        }
+    ul.timeline>li:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #22c0e8;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+    }
 
-        ul.timeline>li ul li ul li {
-          margin: 0% 0% 0.5% 0%;
-        }
+    ul.timeline>li span {
+      color: #727272;
+    }
 
-        ul.timeline>li p {
-          text-align: justify;
-        }
-      </style>
+    ul.timeline>li ul li ul li {
+      margin: 0% 0% 0.5% 0%;
+    }
+
+    ul.timeline>li p {
+      text-align: justify;
+    }
+  </style>
+  <div class="pendidikan">
+    <div class="pendidikan-bagi">
+      <h2>Riwayat Pendidikan</h2>
       <div class="row">
         <div class="">
-
           <ul class="timeline">
             <li>
               <span>September 2014 - Oktober 2018</span>
@@ -17799,6 +17793,17 @@ $('.keahlian-list').hover(function() {
         </div>
       </div>
     </div>
+    <div class="pendidikan-bagi">
+      <h2>Last Activity</h2>
+      <ul class="ULLastActivity">
+        <li id="Course-DigitalMarketing" class="in_view "><span>OnGoing</span><span>Kursus</span><h4>Digital Marketing Kelas Professional</h4><span><a target="_blank" href="https://jabarcodingcamp.jabarprov.go.id/">Candradimuka Jabar Coding Camp</a></span></li>
+        <li id="Course-BelajarPrinsipPemrogramanSOLID" class="in_view "><span>2022/11/11</span><span>Kursus</span><h4>Belajar Prinsip Pemrograman SOLID</h4><span><a  target="_blank" href="https://www.dicoding.com/">Dicoding Indonesia</a></span></li>
+        <li id="Course-RevouMiniCourseDataAnalytics" class="in_view "><span>2022/11/16</span><span>Kursus</span><h4>Revou Mini Course Data Analytics</h4><span><a  target="_blank" href="https://revou.co/">RevoU</a></span></li>
+        <li id="Course-BukitAlgoritmadanMasaDepanTeknologiDatadiIndonesia" class="in_view "><span>2021/10/02</span><span>Webinar</span><h4>Bukit Algoritma dan Masa Depan Teknologi Data di Indonesia</h4><span><a  target="_blank" href="https://www.instagram.com/taudata.analytics/">taudata</a></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
     <!-- ======================================================================================================================== START TAB 4 -->
     <style type="text/css">
@@ -18361,6 +18366,22 @@ $('.keahlian-list').hover(function() {
       } else if (stat == "SuketKerjaRAP") {
         $(".inview_frame").html(
           '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/105pgmA3CPSVtPPrnvPcuhHrHAjqk6QsR/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+          );
+      } else if (stat == "Course-DigitalMarketing") {
+        $(".inview_frame").html(
+          '<h1 style="color:white;text-align:center">On Going</h1>'
+          );
+      } else if (stat == "Course-BelajarPrinsipPemrogramanSOLID") {
+        $(".inview_frame").html(
+          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1i9zmAJ7v1GxGLvbziFqfUIWhz6s6w2C1/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+          );
+      } else if (stat == "Course-RevouMiniCourseDataAnalytics") {
+        $(".inview_frame").html(
+          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/127ieaRo7ngK4_uCAjCcBUV3_27eJSt2E/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+          );
+      } else if (stat == "Course-BukitAlgoritmadanMasaDepanTeknologiDatadiIndonesia") {
+        $(".inview_frame").html(
+          '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1U0Q6F7Xt0DJyeof6-Ap679-f9UBoRokr/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
           );
       } else if (stat == "portofolio-webanime") {
         $(".inview_frame").append('<iframe  src="portofolio-webanime.html" />');
