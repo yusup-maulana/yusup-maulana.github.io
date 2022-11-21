@@ -8677,7 +8677,16 @@
       margin-top: -.375rem;
       margin-bottom: 0
     }
-
+    .card-text{
+        text-align: justify;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-weight: lighter;
+        line-height: 14.5px;
+      }
     .card-text:last-child {
       margin-bottom: 0
     }
@@ -15091,7 +15100,7 @@
       height: 100%;
     }
 
-     .keahlian-list:first-child>.bungkus-skil {
+    .keahlian-list:first-child>.bungkus-skil {
       backdrop-filter: blur(4px);
     }
 
@@ -15717,7 +15726,9 @@
      text-align: center;
     }
 
-
+    .media-body ul li{
+      text-align: justify;
+    }
 
 
     @media screen and (min-width: 1200px) {
@@ -15960,7 +15971,7 @@
       }
 
       .leher .leher1 {
-        margin: 0px 1% 0px 1%;
+        margin: 7px 1% 0px 1%;
         padding: 3%;
       }
 
@@ -17234,8 +17245,8 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Website Andir</h5>
-              <p class="card-text" style="font-size: smaller;">Website Command Centre untuk kecamatan Andir Bandung</p>
-              <a target="_blank" href="https://maulana-project11.000webhostapp.com"
+              <p class="card-text" style="font-size: smaller;">Website Command Centre untuk kecamatan Andir Bandung untuk memenuhi tugas skripsi</p>
+              <a target="_blank" href="https://commandcenter-maulanaproject.000webhostapp.com/"
                 class="btn btn-warning btn-sm">Demo</a>
               <button id="portofolio-webcommandcentre" class="btn btn-info btn-sm in_view">Selengkapnya</button>
             </div>
@@ -18087,16 +18098,13 @@ $('.keahlian-list').hover(function() {
       $("#in_view_form").animate({
         top: '-100%',
       });
-      $(".inview_nama").empty();
-      $(".inview_status").empty();
-      $(".inview_idtrans").empty();
-      $(".inview_tgl").empty();
       $(".inview_frame").empty();
     }
     $(document).on('click', '.close-button', function () {
       klikClosebtninview();
     });
     $(document).on('click', '.in_view', function () {
+      $(".inview_frame").empty();
       var stat = $(this).attr("id");
       if (stat == "DataAnalytic") {
         $(".inview_frame").html(
