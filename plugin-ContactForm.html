@@ -1,0 +1,247 @@
+<style>
+.background-style-linux {
+  display: flex;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.background-style-linux .container {
+    padding: 5% 15% 0% 15%;
+    background: #000112bf;
+    width: 100%;
+    height: 100%;
+}
+
+.background-style-linux .container .screen {
+  position: relative;
+  background-image: repeating-linear-gradient(90deg, hsla(69, 0%, 61%, 0.05) 0px, hsla(69, 0%, 61%, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, hsla(69, 0%, 61%, 0.05) 0px, hsla(69, 0%, 61%, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, hsla(69, 0%, 61%, 0.08) 0px, hsla(69, 0%, 61%, 0.08) 1px, transparent 1px, transparent 13px), repeating-linear-gradient(90deg, hsla(69, 0%, 61%, 0.08) 0px, hsla(69, 0%, 61%, 0.08) 1px, transparent 1px, transparent 13px), linear-gradient(45deg, rgb(4, 4, 4), rgb(79, 79, 79));
+  border-radius: 15px;
+}
+
+.background-style-linux .container .screen:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.background-style-linux .container .screen .screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.background-style-linux .container .screen .screen-header .screen-header-left {
+  margin-right: auto;
+  width: 100%;
+  text-align: right;
+}
+
+.background-style-linux .container .screen .screen-header .screen-header-left .screen-header-button {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: #ed1c6f;
+  cursor:pointer;
+}
+
+.background-style-linux .container .screen .screen-body {
+  display: flex;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left .app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color:#09b2be;
+  font-size: 26px;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left .app-title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 84px;
+  height: 4px;
+  background:#09b2be;
+}
+
+.background-style-linux .container .screen .screen-body .screen-body-item.left .app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group {
+  margin-bottom: 15px;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group.message {
+  margin-top: 40px;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-control::placeholder {
+  color: #666;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-button {
+    background: #00725d45;
+    color: #09b2be;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid;
+}
+
+.background-style-linux .container .screen .screen-body  .screen-body-item .app-form .app-form-group .app-form-button:hover {
+  background: #00725dc4;
+}
+
+
+@media screen and (max-width: 520px) {
+ .background-style-linux .container .screen .screen-body {
+    flex-direction: column;
+  }
+
+ .background-style-linux .container .screen .screen-body .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title {
+    flex-direction: row;
+  }
+
+  .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title span {
+    margin-right: 12px;
+  }
+
+ .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+ .background-style-linux .container .screen .screen-body {
+    padding: 40px;
+  }
+
+ .background-style-linux .container .screen .screen-bod .screen-body-item {
+    padding: 0;
+  }
+}
+
+
+
+</style>
+<div class="background-style-linux animasikan fadeInDown ">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button "></div>
+        </div>
+       
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>IM </span>
+            <span>READY</span>
+          </div>
+          <div class="app-contact"></div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <form  method="post">
+              <div class="app-form-group">
+                <input type="text" class="app-form-control"   name="name" placeholder=" Name" id="email_name" >
+              </div>
+              <div class="app-form-group">
+                <input type="email" class="app-form-control" name="email" placeholder=" your@email.com" id="email_email">
+              </div>
+            
+              <div class="app-form-group message">
+                <input type="text" class="app-form-control" name="comments" placeholder=" Message" id="email_msg" >
+              </div>
+              <div class="app-form-group buttons">
+              <button onclick="sendEmail()" id="sendemailtome" class="app-form-button">SEND</button>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+
+<script>
+function sendEmail() {
+  let subjeckya = document.getElementById("email_name").value;
+    let namaemail = document.getElementById("email_email").value;
+    let isinya = document.getElementById("email_msg").value;
+	Email.send({
+  SecureToken : "8a481c65-5ca3-46b0-9466-a106f8dbb409",
+	// Host: "smtp.elasticemail.com",
+	// Username : "internetclan.net@gmail.com",
+	// Password : "F6B7F192CBADF5A7F27CD75090386DB646F3",
+	To : 'yusupmaulana.net@gmail.com',
+	From : 'yusupmaulana.net@gmail.com',
+	Subject : subjeckya,
+	Body : isinya
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
+</script>
