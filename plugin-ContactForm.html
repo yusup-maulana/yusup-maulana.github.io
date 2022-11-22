@@ -1,3 +1,4 @@
+
 <style>
 .background-style-linux {
   display: flex;
@@ -202,7 +203,8 @@
         </div>
         <div class="screen-body-item">
           <div class="app-form">
-            <form  method="post">
+            <form  id="contact-form" method="post">
+              
               <div class="app-form-group">
                 <input type="text" class="app-form-control"   name="name" placeholder=" Name" id="email_name" >
               </div>
@@ -214,6 +216,7 @@
                 <input type="text" class="app-form-control" name="comments" placeholder=" Message" id="email_msg" >
               </div>
               <div class="app-form-group buttons">
+                <div class="g-recaptcha" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
               <button onclick="sendEmail()" id="sendemailtome" class="app-form-button">SEND</button>
               </div>
           </form>
@@ -224,24 +227,30 @@
   
   </div>
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<script>
+<script  type="text/javascript">
+  (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('YOUR_PUBLIC_KEY');
+      })();
 function sendEmail() {
   let subjeckya = document.getElementById("email_name").value;
     let namaemail = document.getElementById("email_email").value;
     let isinya = document.getElementById("email_msg").value;
-	Email.send({
-  SecureToken : "09866c42-fc46-4e3c-9345-71bc994794b0",
-	// Host: "smtp.elasticemail.com",
-	// Username : "internetclan.net@gmail.com",
-	// Password : "F6B7F192CBADF5A7F27CD75090386DB646F3",
-	To : 'yusupmaulana.net@gmail.com',
-	From : 'yusupmaulana.net@gmail.com',
-	Subject : "cek",
-	Body : "cek"
-	}).then(
-		message => alert(message)
-	);
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm('contact_service', 'contact_form', this)
+                  .then(function() {
+                      console.log('SUCCESS!');
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+  document.getElementById("formemailsmptp").reset();
 }
 </script>
