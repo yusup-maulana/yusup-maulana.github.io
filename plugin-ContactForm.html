@@ -232,16 +232,16 @@ function sendEmail() {
     let namaemail = document.getElementById("email_email").value;
     let isinya = document.getElementById("email_msg").value;
 	Email.send({
-  SecureToken : "8a481c65-5ca3-46b0-9466-a106f8dbb409",
+  SecureToken : "09866c42-fc46-4e3c-9345-71bc994794b0",
 	// Host: "smtp.elasticemail.com",
 	// Username : "internetclan.net@gmail.com",
 	// Password : "F6B7F192CBADF5A7F27CD75090386DB646F3",
 	To : 'yusupmaulana.net@gmail.com',
 	From : 'yusupmaulana.net@gmail.com',
-	Subject : subjeckya,
-	Body : isinya
+	Subject : "cek",
+	Body : "cek"
 	}).then(
-		message => alert("mail sent successfully")
+		message => alert(message)
 	);
 }
 </script>
