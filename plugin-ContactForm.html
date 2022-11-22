@@ -204,16 +204,16 @@
         <div class="screen-body-item">
           <div class="app-form">
             <form  id="contact-form" method="post">
-              
+              <input type="hidden" name="contact_number">
               <div class="app-form-group">
-                <input type="text" class="app-form-control"   name="name" placeholder=" Name" id="email_name" >
+                <input type="text" class="app-form-control"   name="user_name" placeholder=" Name" >
               </div>
               <div class="app-form-group">
-                <input type="email" class="app-form-control" name="email" placeholder=" your@email.com" id="email_email">
+                <input type="email" class="app-form-control" name="user_email" placeholder=" your@email.com" >
               </div>
             
               <div class="app-form-group message">
-                <input type="text" class="app-form-control" name="comments" placeholder=" Message" id="email_msg" >
+                <input type="text" class="app-form-control" name="message" placeholder=" Message" >
               </div>
               <div class="app-form-group buttons">
                 <div class="g-recaptcha" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
@@ -236,9 +236,9 @@
           emailjs.init('dqRpsNKRSHTHV8rB5');
       })();
 function sendEmail() {
-  let subjeckya = document.getElementById("email_name").value;
-    let namaemail = document.getElementById("email_email").value;
-    let isinya = document.getElementById("email_msg").value;
+  // let subjeckya = document.getElementById("email_name").value;
+  //   let namaemail = document.getElementById("email_email").value;
+  //   let isinya = document.getElementById("email_msg").value;
     document.getElementById('contact-form').addEventListener('submit', function(event) {
               event.preventDefault();
               // generate a five digit number for the contact_number variable
