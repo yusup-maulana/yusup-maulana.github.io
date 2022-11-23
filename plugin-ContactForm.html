@@ -255,17 +255,21 @@ const validate = () => {
 $('#emailtype').on('input', validate);
 
 
-function sendEmail() {
-  var emailcc = $("#emailtype").val();
-  if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)){
-      return false;
-    } else {
-      emailjssend();
-  }
+// function sendEmail() {
+//   var emailcc = $("#emailtype").val();
+//   if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)){
+//       return false;
+//     } else {
+//       document.getElementById('contact-form').addEventListener('submit', function(event) {
+//                   event.preventDefault();
+//                   $('.background-style-linux .container .screen .screen-body').html("");
+//                           $('.background-style-linux .container .screen .screen-body').append("<div style='padding: 1%; color: #bfbfbf; display: flex;  background: #117211; position: relative; border-radius: 22px;  top: 0;left: 0;right: 0; bottom: 0; margin: 11% auto;'>Thanks, I will contact you as soon as possible</div>");
+//                 });
+//   }
      
        
-}
-function emailjssend(){
+// }
+function sendEmail(){
   emailjs.init('dqRpsNKRSHTHV8rB5');
         document.getElementById('contact-form').addEventListener('submit', function(event) {
                   event.preventDefault();
