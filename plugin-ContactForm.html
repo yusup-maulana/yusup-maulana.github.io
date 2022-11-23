@@ -231,10 +231,21 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script  type="text/javascript">
-  (function() {
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init('dqRpsNKRSHTHV8rB5');
-      })();
+  // (function() {
+  //         // https://dashboard.emailjs.com/admin/account
+  //         emailjs.init('dqRpsNKRSHTHV8rB5');
+  //     })();
+  function checkRecaptcha() {
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) { 
+    //reCaptcha not verified
+    alert("no pass"); 
+  }
+  else { 
+    //reCaptch verified
+    alert("pass"); 
+  }
+}
 function sendEmail() {
   emailjs.init('dqRpsNKRSHTHV8rB5');
   // let subjeckya = document.getElementById("email_name").value;
@@ -248,10 +259,13 @@ function sendEmail() {
               emailjs.sendForm('service_ip8gcdw', 'template_9bx0vyn', this)
                   .then(function() {
                       console.log('SUCCESS!');
+                      document.getElementById("contact-form").reset();
+                      // $('.app-form').css("display","none");
+                      $('.background-style-linux .container .screen .screen-body').html("");
+                      $('.background-style-linux .container .screen .screen-body').append("<div>Thanks, I will contact you as soon as possible</div>");
                   }, function(error) {
                       console.log('FAILED...', error);
                   });
           });
-  document.getElementById("contact-form").reset();
 }
 </script>
