@@ -151,6 +151,7 @@
   background: #00725dc4;
 }
 
+#sendemailtome{visibility: hidden;}
 
 @media screen and (max-width: 520px) {
  .background-style-linux .container .screen .screen-body {
@@ -221,7 +222,7 @@
               </div>
               <div class="app-form-group buttons">
                 <div class="g-recaptcha" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
-              <button type="submit" value="Send" onclick="sendEmail()" id="sendemailtome" class="app-form-button">Send</button>
+              <button type="submit" value="Send"   onclick='sendEmail();' id="sendemailtome" class="app-form-button">Send</button>
               </div>
           </form>
           </div>
@@ -254,21 +255,6 @@ const validate = () => {
 }
 $('#emailtype').on('input', validate);
 
-
-// function sendEmail() {
-//   var emailcc = $("#emailtype").val();
-//   if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)){
-//       return false;
-//     } else {
-//       document.getElementById('contact-form').addEventListener('submit', function(event) {
-//                   event.preventDefault();
-//                   $('.background-style-linux .container .screen .screen-body').html("");
-//                           $('.background-style-linux .container .screen .screen-body').append("<div style='padding: 1%; color: #bfbfbf; display: flex;  background: #117211; position: relative; border-radius: 22px;  top: 0;left: 0;right: 0; bottom: 0; margin: 11% auto;'>Thanks, I will contact you as soon as possible</div>");
-//                 });
-//   }
-     
-       
-// }
 function sendEmail(){
   emailjs.init('dqRpsNKRSHTHV8rB5');
         document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -279,14 +265,14 @@ function sendEmail(){
                   emailjs.sendForm('service_ip8gcdw', 'template_9bx0vyn', this)
                       .then(function() {
                           console.log('SUCCESS!');
-                          document.getElementById("contact-form").reset();
-                          // $('.app-form').css("display","none");
                           $('.background-style-linux .container .screen .screen-body').html("");
                           $('.background-style-linux .container .screen .screen-body').append("<div style='padding: 1%; color: #bfbfbf; display: flex;  background: #117211; position: relative; border-radius: 22px;  top: 0;left: 0;right: 0; bottom: 0; margin: 11% auto;'>Thanks, I will contact you as soon as possible</div>");
                       }, function(error) {
                           console.log('FAILED...', error);
                       });
         });
+        $('#sendemailtome').text('Wait...');
+  $('#sendemailtome').css('visibility','hidden');
 }
 
 $('#contact-form').on('keyup keypress', function(e) {
