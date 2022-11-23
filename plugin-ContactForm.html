@@ -256,7 +256,6 @@ $('#emailtype').on('input', validate);
 
 
 function sendEmail() {
-  event.preventDefault();
   var emailcc = $("#emailtype").val();
   if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)){
       return false;
