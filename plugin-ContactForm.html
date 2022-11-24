@@ -314,18 +314,11 @@ var onloadCallback = function() {
     });
   };
   var correctCaptcha = function(response) {
-    alert(response);
+    if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)  || response.length == 0){
+    $("#sendemailtome").css("visibility","hidden");
+  }else{
+    $("#sendemailtome").css("visibility","visible");
+  }
 };
-// $(document).ready(function(responcaptchagoogle){
-//   var responcaptchagoogle = grecaptcha.getResponse();
-// if(responcaptchagoogle.length == 0){
-//   alert("0");
-// }else{
-//   alert("1");
-// }
-
-
-
-// });
 
 </script>
