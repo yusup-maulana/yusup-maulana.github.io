@@ -176,13 +176,17 @@
 }
 
 @media screen and (max-width: 600px) {
+  .background-style-linux .container{
+    padding: 1%;
+  }
  .background-style-linux .container .screen .screen-body {
-    padding: 40px;
+    padding: 0px;
   }
 
  .background-style-linux .container .screen .screen-bod .screen-body-item {
     padding: 0;
   }
+  
 }
 
 
@@ -222,7 +226,7 @@
               </div>
               <div class="app-form-group buttons">
                 <div class="g-recaptcha" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
-              <button type="submit" value="Send"   onclick='sendEmail();' id="sendemailtome" class="app-form-button">Send</button>
+              <button value="Send"  id="sendemailtome" class="app-form-button">Send</button>
               </div>
           </form>
           </div>
@@ -255,10 +259,15 @@ const validate = () => {
 }
 $('#emailtype').on('input', validate);
 
-function sendEmail(){
+
+
+$(document).one("click","#sendemailtome", function () {
+  // $('#sendemailtome').css('visibility','hidden');
   emailjs.init('dqRpsNKRSHTHV8rB5');
         document.getElementById('contact-form').addEventListener('submit', function(event) {
                   event.preventDefault();
+                  $("#sendemailtome").attr("disabled","disebled");
+                  $("#sendemailtome").text("Please wait..");
                   // generate a five digit number for the contact_number variable
                   this.contact_number.value = Math.random() * 100000 | 0;
                   // these IDs from the previous steps
@@ -266,14 +275,14 @@ function sendEmail(){
                       .then(function() {
                           console.log('SUCCESS!');
                           $('.background-style-linux .container .screen .screen-body').html("");
-                          $('.background-style-linux .container .screen .screen-body').append("<div style='padding: 1%; color: #bfbfbf; display: flex;  background: #117211; position: relative; border-radius: 22px;  top: 0;left: 0;right: 0; bottom: 0; margin: 11% auto;'>Thanks, I will contact you as soon as possible</div>");
+                          $('.background-style-linux .container .screen .screen-body').append("<div style='padding: 1%; color: #bfbfbf; display: flex;  background: #ffffff1a; position: relative; border-radius: 22px;  top: 0;left: 0;right: 0; bottom: 0; margin: 11% auto;'>Thanks, I will contact you as soon as possible</div>");
                       }, function(error) {
                           console.log('FAILED...', error);
                       });
         });
-        $('#sendemailtome').text('Wait...');
-  $('#sendemailtome').css('visibility','hidden');
-}
+    
+});
+
 
 $('#contact-form').on('keyup keypress', function(e) {
   var keyCode = e.keyCode || e.which;
