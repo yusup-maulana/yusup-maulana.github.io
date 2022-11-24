@@ -313,8 +313,11 @@ var onloadCallback = function() {
       'callback' : correctCaptcha
     });
   };
+
   var correctCaptcha = function(response) {
-    if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)){
+  var responcaptchagoogle = grecaptcha.getResponse();
+  const email = $('#emailtype').val();
+    if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)|| responcaptchagoogle.length == 0){
     $("#sendemailtome").css("visibility","hidden");
   }else{
     $("#sendemailtome").css("visibility","visible");
