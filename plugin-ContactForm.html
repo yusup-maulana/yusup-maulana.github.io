@@ -231,7 +231,8 @@
               </div>
               <div class="app-form-group buttons">
                 <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
-              <button value="Send"  id="sendemailtome" class="app-form-button">Send</button>
+                <div id='html_element'></div>
+                <button value="Send"  id="sendemailtome" class="app-form-button">Send</button>
               </div>
           </form>
           </div>
@@ -241,7 +242,7 @@
   </div>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
 <script  type="text/javascript">
 
@@ -306,17 +307,25 @@ $('#contact-form').on('keyup keypress', function(e) {
 
 });
 
+var onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : 'your_site_key',
+      'callback' : correctCaptcha
+    });
+  };
+  var correctCaptcha = function(response) {
+    alert(response);
+};
+// $(document).ready(function(responcaptchagoogle){
+//   var responcaptchagoogle = grecaptcha.getResponse();
+// if(responcaptchagoogle.length == 0){
+//   alert("0");
+// }else{
+//   alert("1");
+// }
 
-$(document).ready(function(responcaptchagoogle){
-  var responcaptchagoogle = grecaptcha.getResponse();
-if(responcaptchagoogle.length == 0){
-  alert("0");
-}else{
-  alert("1");
-}
 
 
-
-});
+// });
 
 </script>
