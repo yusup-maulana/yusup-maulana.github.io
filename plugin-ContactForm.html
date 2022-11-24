@@ -314,7 +314,7 @@ var onloadCallback = function() {
     });
   };
   var correctCaptcha = function(response) {
-    if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)  || response.length == 0){
+    if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)){
     $("#sendemailtome").css("visibility","hidden");
   }else{
     $("#sendemailtome").css("visibility","visible");
