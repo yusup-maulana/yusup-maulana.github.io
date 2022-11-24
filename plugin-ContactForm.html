@@ -20,7 +20,7 @@
 
 .background-style-linux .container .screen {
   position: relative;
-  background-image: repeating-linear-gradient(90deg, hsla(69, 0%, 61%, 0.05) 0px, hsla(69, 0%, 61%, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, hsla(69, 0%, 61%, 0.05) 0px, hsla(69, 0%, 61%, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, hsla(69, 0%, 61%, 0.08) 0px, hsla(69, 0%, 61%, 0.08) 1px, transparent 1px, transparent 13px), repeating-linear-gradient(90deg, hsla(69, 0%, 61%, 0.08) 0px, hsla(69, 0%, 61%, 0.08) 1px, transparent 1px, transparent 13px), linear-gradient(45deg, rgb(4, 4, 4), rgb(79, 79, 79));
+  background-image: linear-gradient(45deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(112.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(67.5deg, rgb(73, 160, 30) 0%, rgb(73, 160, 30) 6%,rgb(88, 141, 55) 6%, rgb(88, 141, 55) 11%,rgb(103, 122, 81) 11%, rgb(103, 122, 81) 55%,rgb(118, 103, 106) 55%, rgb(118, 103, 106) 81%,rgb(132, 84, 131) 81%, rgb(132, 84, 131) 83%,rgb(147, 65, 156) 83%, rgb(147, 65, 156) 92%,rgb(162, 46, 182) 92%, rgb(162, 46, 182) 95%,rgb(177, 27, 207) 95%, rgb(177, 27, 207) 100%),linear-gradient(90deg, rgb(24, 15, 143),rgb(170, 57, 157)); background-blend-mode:overlay,overlay,overlay,normal;
   border-radius: 15px;
 }
 
@@ -90,7 +90,7 @@
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: 84px;
+  width: 61px;
   height: 4px;
   background:#09b2be;
 }
@@ -154,12 +154,12 @@
 #sendemailtome{visibility: hidden;}
 
 @media screen and (max-width: 520px) {
- .background-style-linux .container .screen .screen-body {
+  .background-style-linux .container .screen .screen-body {
     flex-direction: column;
   }
 
- .background-style-linux .container .screen .screen-body .screen-body-item.left {
-    margin-bottom: 30px;
+  .background-style-linux .container .screen .screen-body .screen-body-item.left {
+    margin-bottom: 0px;
   }
 
   .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title {
@@ -170,28 +170,33 @@
     margin-right: 12px;
   }
 
- .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title:after {
+  .background-style-linux .container .screen .screen-body .screen-body-item.left .app-title:after {
     display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .background-style-linux{
+    top: 6px;
+  }
   .background-style-linux .container{
     padding: 1%;
   }
- .background-style-linux .container .screen .screen-body {
+  .background-style-linux .container .screen .screen-body {
     padding: 0px;
   }
 
- .background-style-linux .container .screen .screen-bod .screen-body-item {
+  .background-style-linux .container .screen .screen-bod .screen-body-item {
     padding: 0;
   }
-  
+  .background-style-linux .container .screen .screen-body .screen-body-item {
+    padding: 25px;
+  }
 }
-
-
-
 </style>
+
+
+
 <div class="background-style-linux animasikan fadeInDown ">
   <div class="container">
     <div class="screen">
@@ -204,8 +209,8 @@
       <div class="screen-body">
         <div class="screen-body-item left">
           <div class="app-title">
-            <span>IM </span>
-            <span>READY</span>
+            <span>The button will appear when all is filled </span>
+           
           </div>
           <div class="app-contact"></div>
         </div>
@@ -290,8 +295,9 @@ $('#contact-form').on('keyup keypress', function(e) {
     e.preventDefault();
     return false;
   }
+  var responcaptchagoogle = grecaptcha.getResponse();
   const email = $('#emailtype').val();
-  if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email)){
+  if($("#email_name").val() == "" || $("#email_message").val() == "" || !validateEmail(email) || responcaptchagoogle.length == 0){
     $("#sendemailtome").css("visibility","hidden");
   }else{
     $("#sendemailtome").css("visibility","visible");
