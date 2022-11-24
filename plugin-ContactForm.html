@@ -230,7 +230,7 @@
                 <input type="text" id="email_message" class="app-form-control" name="message" placeholder=" Message" required>
               </div>
               <div class="app-form-group buttons">
-                <div class="g-recaptcha" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
+                <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcJmSgjAAAAAFvkc61Bas7PeOTvs49Uoi8SGfj8"></div>
               <button value="Send"  id="sendemailtome" class="app-form-button">Send</button>
               </div>
           </form>
@@ -305,5 +305,7 @@ $('#contact-form').on('keyup keypress', function(e) {
 
 });
 
-
+$("#g-recaptcha-response").on("click", function(){
+    alert("test");
+     });
 </script>
