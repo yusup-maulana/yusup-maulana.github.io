@@ -85,6 +85,7 @@
   <meta name="author" content="yusup maulana">
   <meta name="google-site-verification" content="B01fQU13pBHkgqGVwCV5DwMFfYZTHM5yT-vzihImekQ">
 
+<!-- Slick CSS -->
   <!-- src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" -->
   <script>
     /*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */ ! function (e, t) {
@@ -3642,6 +3643,11 @@
       }, "undefined" == typeof e && (C.jQuery = C.$ = S), S
     });
   </script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--end Slick CSS -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
   </script>
@@ -14913,15 +14919,8 @@
       vertical-align: top;
     }
 
-    .head2 .head-in2 .head-in2-2 {
-      font-size: small;
-      font-style: italic;
-      line-height: 16px;
-      display: block;
-    }
-    .head2 .head-in2 .head-in2-2{
-      color: #b9c7cde8;
-    }
+
+
 
     .head2 .head-in2 .head-in2-3 {
       vertical-align: text-bottom;
@@ -14959,11 +14958,41 @@
 
     .head3 {
       width: 50%;
+      height: min-content;   
+      cursor: grab; 
+    }
+    .head3:active {   
+      cursor: grabbing; 
     }
 
     .head3 .head-in3 {
       margin: 3%;
     }
+    .slickerslide2 .head-in3{
+      border-top: 1px solid #cbbc8f;
+      border-bottom: 1px solid #cbbc8f;
+      position: relative;
+      z-index: 1;
+      top: 0px;
+      height: 13px;
+    }
+    .head3 .slickerslide2 .head-in3 .head-in3-1 {
+      font-size: small;
+      color: #cbbc8f;
+      border-radius: 50px 50px 3px 3px;
+      box-shadow: 1px 1px 0px 0px #cbbc8f;
+      position: absolute;
+      text-align: center;
+      top: -21px;
+      left: 0;
+      border-top: 1px solid;
+      border-left: 1px solid;
+      right: 0;
+      width: 107px;
+      margin: auto;
+    }
+    
+
 
     .head3 .head-in3 .head-in3-1 {
       font-size: x-large;
@@ -14975,7 +15004,11 @@
       display: block;
       font-size: small;
     }
-
+    .head3 .box_gbr-head {
+      border-radius: 5px 5px 5px 5px;
+      height: 100%;
+      margin: 0% 3%;
+    }
 
 
     .leher {
@@ -15796,7 +15829,7 @@
 /* LAPTOP===================================================================================================================================== */
     @media screen and (min-width : 1024px) and (max-width :1114px) {
       .head {
-        width: 28%;
+        width: 30%;
       }
 
       .head1 {
@@ -15848,6 +15881,10 @@
       .befortext span:nth-child(2) {
         margin: 4% 0% 0% 0%;
       }
+
+      #jarvis-circle-wrapper-profile{
+          left: -2px!important;
+        }
 
     }
 
@@ -15931,10 +15968,12 @@
 
       .head-intable1 tr td:nth-child(1) {
         text-align: right;
+        width: 50%;
       }
 
       .head3 {
         width: 100%;
+        padding: 2%;
       }
 
       .head3 .head-in3 {
@@ -15982,10 +16021,14 @@
 
       .head2 {
         width: 100%;
+        margin-top: -39px;
       }
 
       .head2 .head-in2 {
         text-align: center;
+      }
+      .head2 .head-in2-mobile {
+       
       }
 
       .head2 .head-in2 .head-intable1 {
@@ -15994,10 +16037,12 @@
 
       .head-intable1 tr td:nth-child(1) {
         text-align: right;
+        width: 50%;
       }
 
       .head3 {
         width: 100%;
+        padding: 2%;
       }
 
       .head3 .head-in3 {
@@ -16148,6 +16193,22 @@
       }
       .pendidikan .pendidikan-bagi{
         width: 100%!important;
+      }
+      .card-img-slick{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          border: 1px solid #cbbc8f;
+        }
+      .head3 .box_gbr-head {
+        /* height: 300px; */
+        background: #08909040;
+      }
+      .slickerslide2 .head-in3{
+        top:8px;
       }
     }
 
@@ -16326,13 +16387,57 @@
           background: none repeat scroll 0 0 #FFFFFF;
           width: 100%;
         }
+        
+        .circle-fire-wrapper{
+          width: 230px;
+          height: 230px;
+          position: absolute;
+          margin: auto;
+          top: 22px;
+          left: 0;
+          right: 0;
+          z-index: 4;
+        }
+        .circle-fire{
+          width: 100%;
+          height: 100%;
+          filter: url(#wavy) blur(1px);
+        }
+
+        .circle-fire:before{
+          content: "";
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          right: 25px;
+          bottom: 25px;
+          border: 3px solid #FFF;
+          border-radius: 50%;
+          box-shadow: 0 0 50px #0bb3bf, inset 0 0 50px #02b7c7;
+          -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+        }
+        .circle-fire:after{
+          content: "";
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          right: 25px;
+          bottom: 25px;
+          border: 5px solid #ffffff;
+          border-radius: 50%;
+          box-shadow: 0 0 50px #0089ff, inset 0 0 50px #fff;
+        }
+        .circle-fire:nth-child(2):before{
+          animation-delay: -2.5s;
+        }
+      
         #jarvis-circle-wrapper-profile{
           width: 230px;
           height: 230px;
           position: absolute;
           margin: auto;
           top: 22px;
-          left: -2px;
+          left: 0;
           right: 0;
           z-index: 4;
         }
@@ -16358,7 +16463,7 @@
         bottom: 15px;
         border-radius: 50%;
         border: 3px dashed transparent;
-        border-color: #cdbe83;
+        border-color: #00f1ff;
         border-style: dashed;
         -webkit-animation: spinJarvis 18s linear infinite;
         animation: spinJarvis 18s linear infinite;
@@ -16373,7 +16478,7 @@
         bottom: 25px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-color: #cdbe91;
+        border-color:white;
         border-width: 3px;
         border-style: dashed solid;
         -webkit-animation: spin 60s linear infinite;
@@ -16456,24 +16561,51 @@
             visibility: visible;
           }
         }
+
+        .card-img-slick{
+          width: 100%;
+        }
+        .slick-dots li button:before{
+          color:whitesmoke;
+        }
+        .slick-dots li.slick-active button:before{
+          color:#00ecfd;
+        }
+        .slick-slide {
+          -webkit-transform: translate3d(0,0,0);
+        }
+        .slick-track {
+          transition: fade 2000ms ease-out;  
+          infinite: true;  
+        }
       </style>
+       <!--start View in Chrome or Firefox Browser only-->
+       <svg>
+        <filter id="wavy">
+          <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="2">
+            <animate attributeName="baseFrequency" dur="60s" values="0.02;0.005;0.02" repeatCount="indefinite">
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" scale="30">
+        </filter>
+      </svg>
+    <!--end View in Chrome or Firefox Browser only -->
       <div class="card-container">
         <div class="card">
           <div class="front">
             <div class="cover">
             </div>
+            <div class="circle-fire-wrapper"><div class="circle-fire"></div></div>
             <div id="jarvis-circle-wrapper-profile"><div id="jarvis-circle-inner-profile"></div></div>
+           
             <div class="user">
               <img class="img-circle" src="IMG/img.png" data-src="IMG/profile.webp" alt="yusup maulana photos" />
             </div>
+        
             <div class="content">
               <div class="main">
                 <h3 class="name"></h3>
                 <p class="profession">PROGRAMMER</p>
-
-
               </div>
-
             </div>
           </div> <!-- end front panel -->
           <div class="back">
@@ -16503,11 +16635,8 @@
             <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
           </svg> <i class="bi bi-cloud-arrow-down-fill"></i></h2></a></span>
         </span>
-       
       </div>
-      <div class="head-in2">
-        <span class="head-in2-2">Kab. Bandung Barat, Jawa Barat, Indonesia</span>
-      </div>
+
       <div class="head-in2">
         <span class="head-in2-3"><i class="bi bi-whatsapp"></i><svg xmlns="http://www.w3.org/2000/svg" width="20"
             height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -16519,384 +16648,399 @@
               <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
             </svg> <i class="bi bi-box-arrow-up-right"></i></a></span>
       </div>
-      <div class="head-in2">
+      <div class="head-in2 head-in2-mobile">
         <table class="head-intable1">
           <tr>
-            <td>Tempat, Tanggal Lahir </td>
-            <td>: Bandung, 07 Juli 1996</td>
-          </tr>
-          <tr>
-            <td>Jenis Kelamin</td>
-            <td>: Laki-laki</td>
-          </tr>
-          <tr>
-            <td>Agama</td>
-            <td>: Islam </td>
+            <td>Menguasai Bahasa </td>
+            <td>: Indonesia & Sunda</td>
           </tr>
           <tr>
             <td>Status</td>
-            <td>: Belum Menikah </td>
+            <td>: Lajang </td>
           </tr>
+          <tr>
+            <td>Hobi</td>
+            <td>: Diam</td>
+          </tr>
+          <tr>
+            <td>Usia</td>
+            <td>: <span class="usia"></span></td>
+          </tr>
+         
         </table>
       </div>
     </div>
 
-    <div class="head3">
-      <div class="head-in3">
-        <span class="head-in3-1">Tentang Saya</span>
-      </div>
-      <div class="head-in3">
-        <style type="text/css">
-          .animate-text1 {
-            text-align: justify;
-            transform: scale(0.94);
-            animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-            font-weight: lighter;
-            color: #b9c7cde8;
-          }
-
-          @keyframes scale {
-            100% {
-              transform: scale(1);
-            }
-          }
-
-          span {
-            opacity: 0;
-            filter: blur(4px);
-          }
-
-          span:nth-child(1) {
-            animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(2) {
-            animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(3) {
-            animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(4) {
-            animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(5) {
-            animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(6) {
-            animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(7) {
-            animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(8) {
-            animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(9) {
-            animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(10) {
-            animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(11) {
-            animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(12) {
-            animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(13) {
-            animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(14) {
-            animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(15) {
-            animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(16) {
-            animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(17) {
-            animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(18) {
-            animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(19) {
-            animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(20) {
-            animation: fade-in 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(21) {
-            animation: fade-in 0.8s 2.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(22) {
-            animation: fade-in 0.8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(23) {
-            animation: fade-in 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(24) {
-            animation: fade-in 0.8s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(25) {
-            animation: fade-in 0.8s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(26) {
-            animation: fade-in 0.8s 2.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(27) {
-            animation: fade-in 0.8s 2.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(28) {
-            animation: fade-in 0.8s 2.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(29) {
-            animation: fade-in 0.8s 2.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(30) {
-            animation: fade-in 0.8s 3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(31) {
-            animation: fade-in 0.8s 3.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(32) {
-            animation: fade-in 0.8s 3.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(33) {
-            animation: fade-in 0.8s 3.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(34) {
-            animation: fade-in 0.8s 3.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(35) {
-            animation: fade-in 0.8s 3.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(36) {
-            animation: fade-in 0.8s 3.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(37) {
-            animation: fade-in 0.8s 3.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(38) {
-            animation: fade-in 0.8s 3.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(39) {
-            animation: fade-in 0.8s 3.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(40) {
-            animation: fade-in 0.8s 4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(41) {
-            animation: fade-in 0.8s 4.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(42) {
-            animation: fade-in 0.8s 4.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(43) {
-            animation: fade-in 0.8s 4.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(44) {
-            animation: fade-in 0.8s 4.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(45) {
-            animation: fade-in 0.8s 4.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(46) {
-            animation: fade-in 0.8s 4.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(47) {
-            animation: fade-in 0.8s 4.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(48) {
-            animation: fade-in 0.8s 4.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(49) {
-            animation: fade-in 0.8s 4.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(50) {
-            animation: fade-in 0.8s 5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(51) {
-            animation: fade-in 0.8s 5.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(52) {
-            animation: fade-in 0.8s 5.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(53) {
-            animation: fade-in 0.8s 5.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(54) {
-            animation: fade-in 0.8s 5.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(55) {
-            animation: fade-in 0.8s 5.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(56) {
-            animation: fade-in 0.8s 5.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(57) {
-            animation: fade-in 0.8s 5.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(58) {
-            animation: fade-in 0.8s 5.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(59) {
-            animation: fade-in 0.8s 5.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(60) {
-            animation: fade-in 0.8s 6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(61) {
-            animation: fade-in 0.8s 6.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(62) {
-            animation: fade-in 0.8s 6.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          span:nth-child(63) {
-            animation: fade-in 0.8s 6.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          }
-
-          @keyframes fade-in {
-            100% {
-              opacity: 1;
-              filter: blur(0);
-            }
-          }
-        </style>
-        <div class="animate-text1">
-          <span>Keahlian</span>
-          <span>favorit</span>
-          <span>saya</span>
-          <span>adalah</span>
-          <span>membangun</span>
-          <span>sebuah</span>
-          <span>Web dalam</span>
-          <span style="    color: #0bb4c0; font-weight: 600;text-shadow: 0 0 5px #ffffff47;">Pemograman Native</span>
-          <span>dan membuat</span>
-          <span>sebuah Jaringan Komputer</span>
-          <span>Selain itu,</span>
-          <span>saya berpengalaman</span>
-          <span>dalam Tender</span>
-          <span>Proyek</span>
-          <span>pengadaan</span>
-          <span>barang/jasa</span>
-          <span>di lingkungan</span>
-          <span>PT PLN (Persero),</span>
-          <span>juga</span>
-          <span>sebagai</span>
-          <span>IT Support</span>
-          <span>dan Administrasi</span>
-          <span>lebih</span>
-          <span>dari</span>
-          <span>4 tahun</span>
-          <span>di PT. Raya Azura Persada</span>
-          <span>dengan</span>
-          <span>hasil</span>
-          <span>efisiensi</span>
-          <span>dalam</span>
-          <span>pengelolaan</span>
-          <span>data</span>
-          <span>meningkat</span>
-          <span>sebesar</span>
-          <span>60%,</span>
-          <span>Saya</span>
-          <span>juga</span>
-          <span>dapat</span>
-          <span>mengelola</span>
-          <span>beberapa</span>
-          <span>tanggung</span>
-          <span>jawab</span>
-          <span>sekaligus</span>
-          <span>dengan</span>
-          <span>berfokus</span>
-          <span>pada</span>
-          <span>satu tugas</span>
-          <span>sambil melacak</span>
-          <span>yang lain.</span>
-          <span>Sehingga</span>
-          <span>Perasaan</span>
-          <span>produktivitas</span>
-          <span>saya,</span>
-          <span>dapat</span>
-          <span>meningkatkan</span>
-          <span>motivasi</span>
-          <span>orang</span>
-          <span>lain</span>
-          <span>untuk</span>
-          <span>terus</span>
-          <span>mengerjakan</span>
-          <span>tugas</span>
-          <span>mereka.</span>
+    <div class="head3" data-ride="slick" data-slick='{   "arrows":false }'>
+      <div> <!-- slide slick 1 --> 
+            <div class="head-in3">
+              <span class="head-in3-1">Tentang Saya</span>
+            </div>
+            <div class="head-in3">
+              <style type="text/css">
+                .animate-text1 {
+                  text-align: justify;
+                  transform: scale(0.94);
+                  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+                  font-weight: lighter;
+                  color: #b9c7cde8;
+                }
+
+                @keyframes scale {
+                  100% {
+                    transform: scale(1);
+                  }
+                }
+
+                span {
+                  opacity: 0;
+                  filter: blur(4px);
+                }
+
+                span:nth-child(1) {
+                  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(2) {
+                  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(3) {
+                  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(4) {
+                  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(5) {
+                  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(6) {
+                  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(7) {
+                  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(8) {
+                  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(9) {
+                  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(10) {
+                  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(11) {
+                  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(12) {
+                  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(13) {
+                  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(14) {
+                  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(15) {
+                  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(16) {
+                  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(17) {
+                  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(18) {
+                  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(19) {
+                  animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(20) {
+                  animation: fade-in 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(21) {
+                  animation: fade-in 0.8s 2.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(22) {
+                  animation: fade-in 0.8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(23) {
+                  animation: fade-in 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(24) {
+                  animation: fade-in 0.8s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(25) {
+                  animation: fade-in 0.8s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(26) {
+                  animation: fade-in 0.8s 2.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(27) {
+                  animation: fade-in 0.8s 2.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(28) {
+                  animation: fade-in 0.8s 2.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(29) {
+                  animation: fade-in 0.8s 2.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(30) {
+                  animation: fade-in 0.8s 3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(31) {
+                  animation: fade-in 0.8s 3.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(32) {
+                  animation: fade-in 0.8s 3.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(33) {
+                  animation: fade-in 0.8s 3.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(34) {
+                  animation: fade-in 0.8s 3.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(35) {
+                  animation: fade-in 0.8s 3.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(36) {
+                  animation: fade-in 0.8s 3.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(37) {
+                  animation: fade-in 0.8s 3.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(38) {
+                  animation: fade-in 0.8s 3.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(39) {
+                  animation: fade-in 0.8s 3.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(40) {
+                  animation: fade-in 0.8s 4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(41) {
+                  animation: fade-in 0.8s 4.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(42) {
+                  animation: fade-in 0.8s 4.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(43) {
+                  animation: fade-in 0.8s 4.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(44) {
+                  animation: fade-in 0.8s 4.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(45) {
+                  animation: fade-in 0.8s 4.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(46) {
+                  animation: fade-in 0.8s 4.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(47) {
+                  animation: fade-in 0.8s 4.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(48) {
+                  animation: fade-in 0.8s 4.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(49) {
+                  animation: fade-in 0.8s 4.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(50) {
+                  animation: fade-in 0.8s 5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(51) {
+                  animation: fade-in 0.8s 5.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(52) {
+                  animation: fade-in 0.8s 5.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(53) {
+                  animation: fade-in 0.8s 5.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(54) {
+                  animation: fade-in 0.8s 5.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(55) {
+                  animation: fade-in 0.8s 5.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(56) {
+                  animation: fade-in 0.8s 5.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(57) {
+                  animation: fade-in 0.8s 5.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(58) {
+                  animation: fade-in 0.8s 5.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(59) {
+                  animation: fade-in 0.8s 5.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(60) {
+                  animation: fade-in 0.8s 6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(61) {
+                  animation: fade-in 0.8s 6.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(62) {
+                  animation: fade-in 0.8s 6.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                span:nth-child(63) {
+                  animation: fade-in 0.8s 6.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+                }
+
+                @keyframes fade-in {
+                  100% {
+                    opacity: 1;
+                    filter: blur(0);
+                  }
+                }
+              </style>
+              <div class="animate-text1">
+                <span>Keahlian</span>
+                <span>favorit</span>
+                <span>saya</span>
+                <span>adalah</span>
+                <span>membangun</span>
+                <span>sebuah</span>
+                <span>Web dalam</span>
+                <span style="    color: #0bb4c0; font-weight: 600;text-shadow: 0 0 5px #ffffff47;">Pemograman Native</span>
+                <span>dan membuat</span>
+                <span>sebuah Jaringan Komputer</span>
+                <span>Selain itu,</span>
+                <span>saya berpengalaman</span>
+                <span>dalam Tender</span>
+                <span>Proyek</span>
+                <span>pengadaan</span>
+                <span>barang/jasa</span>
+                <span>di lingkungan</span>
+                <span>PT PLN (Persero),</span>
+                <span>juga</span>
+                <span>sebagai</span>
+                <span>IT Support</span>
+                <span>dan Administrasi</span>
+                <span>lebih</span>
+                <span>dari</span>
+                <span>4 tahun</span>
+                <span>di PT. Raya Azura Persada</span>
+                <span>dengan</span>
+                <span>hasil</span>
+                <span>efisiensi</span>
+                <span>dalam</span>
+                <span>pengelolaan</span>
+                <span>data</span>
+                <span>meningkat</span>
+                <span>sebesar</span>
+                <span>60%,</span>
+                <span>Saya</span>
+                <span>juga</span>
+                <span>dapat</span>
+                <span>mengelola</span>
+                <span>beberapa</span>
+                <span>tanggung</span>
+                <span>jawab</span>
+                <span>sekaligus</span>
+                <span>dengan</span>
+                <span>berfokus</span>
+                <span>pada</span>
+                <span>satu tugas</span>
+                <span>sambil melacak</span>
+                <span>yang lain.</span>
+                <span>Sehingga</span>
+                <span>Perasaan</span>
+                <span>produktivitas</span>
+                <span>saya,</span>
+                <span>dapat</span>
+                <span>meningkatkan</span>
+                <span>motivasi</span>
+                <span>orang</span>
+                <span>lain</span>
+                <span>untuk</span>
+                <span>terus</span>
+                <span>mengerjakan</span>
+                <span>tugas</span>
+                <span>mereka.</span>
+              </div>
+            </div>
+      </div><!-- end slide slick 1 --> 
+      
+      <div class="slickerslide2"><!--  slide slick 2 --> 
+        <div class="head-in3">
+          <span class="head-in3-1">Temui Saya</span>
         </div>
+        <div class="box_gbr-head">
+          <img src="IMG/img.png" class="card-img-slick" data-src="IMG/me2.webp" alt="Cashflow Proyek">
+        </div>
+      </div><!-- end slide slick 2 --> 
 
-      </div>
-    </div>
+      <div><!--  slide slick 3 --> 
+        your content 2
+      </div><!-- end slide slick 3 --> 
 
+    </div>   <!--end head3-->
   </div>
 
-  <!-- mailto:yusupmaulana.net@gmail.com -->
+
   <div class="leher">
     <div class="slide-leher"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-down" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM1 11.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
@@ -16966,6 +17110,17 @@
         </svg> <i class="bi bi-box-arrow-up-right"></i></a>
   </div>
   <script>
+
+$('.head3').slick({
+  lazyLoad: 'ondemand',
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+
+
     var btnSlideLeherval = 0;
     $(document).on('click','.slide-leher', function(){
       if(btnSlideLeherval == 0){
@@ -17029,13 +17184,22 @@
     </li>
   </ul>
   <script type="text/javascript">
+    function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+    var usia = getAge("1996-07-07");
+    $(".usia").html(usia + " Tahun");
     $(document).on('click', '#myTab li button', function () {
-
       $('.navlibuttonspan').removeClass("navlibuttonspanactive");
       $(this).find("span").addClass('navlibuttonspanactive');
-
     });
-
 
     $(document).on('mouseout', '#myTab li button', function () {
       $('#myTab li button').removeClass("navlibuttonspanopen");
