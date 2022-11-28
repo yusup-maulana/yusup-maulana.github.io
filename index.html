@@ -3648,11 +3648,12 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!--end Slick CSS -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
-  </script>
+  </script> -->
+
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-  <style type="text/css">
+<style type="text/css">
     /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -4276,8 +4277,8 @@
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      margin-right: -15px;
-      margin-left: -15px
+      /* margin-right: -15px;
+      margin-left: -15px */
     }
 
     .no-gutters {
@@ -6499,15 +6500,38 @@
     }
 
     .btn-info {
-      color: #fff;
-      background-color: #17a2b8;
-      border-color: #17a2b8
+      position: relative;
+      padding: 10px 25px;
+      padding-left: 1.25rem!important;
+      padding-right: 1.25rem!important;
+      display: inline-block;
+      border-top: solid 1px rgba(255,255,255,0.2);
+      border-bottom: solid 1px rgba(255,255,255,0.2);
+      font-family: 'Baloo Chettan 2', cursive;
+      text-transform: uppercase;
+      color: #AEEDD7;
+      letter-spacing: 1px;
+      overflow:hidden; 
+    }
+    .btn-info::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: #259990;
+      left: 7px;
+      transform: translateX(-40px) rotate(45deg);
+      border: solid 3px #194846;
+      box-shadow: 2px -2px 0px #1A5754;
+      transition: all 0.2s ease;
     }
 
     .btn-info:hover {
-      color: #fff;
-      background-color: #138496;
-      border-color: #117a8b
+      background: linear-gradient(to right, #183F3E, TRANSPARENT);
+      color: #AEEDD7;
+    }
+    .btn-info:hover::before{
+      transform: translateX(-20px) rotate(45deg);
     }
 
     .btn-info.focus,
@@ -8648,7 +8672,7 @@
       flex-direction: column;
       min-width: 0;
       word-wrap: break-word;
-      background-color: #fff;
+      /* background-color: #fff; */
       background-clip: border-box;
       border: 1px solid rgba(0, 0, 0, .125);
       border-radius: .25rem
@@ -8676,7 +8700,9 @@
     }
 
     .card-title {
-      margin-bottom: .75rem
+      margin-bottom: .75rem;
+      color: #b9ae87;
+      text-shadow: 0 0 1px #b1700b;
     }
 
     .card-subtitle {
@@ -8687,11 +8713,12 @@
         text-align: justify;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         font-weight: lighter;
-        line-height: 14.5px;
+        line-height: 17.5px;
+        color: #aed3ed;
       }
     .card-text:last-child {
       margin-bottom: 0
@@ -8757,9 +8784,14 @@
     }
 
     .card-img-top {
-      width: 100%;
-      border-top-left-radius: calc(.25rem - 1px);
-      border-top-right-radius: calc(.25rem - 1px)
+      width: 30%;
+      border-bottom-left-radius: calc(0.25rem - 1px);
+      border-bottom-right-radius: calc(10.25rem - 1px);
+      border-top-left-radius: calc(0.25rem - 1px);
+      border-top-right-radius: calc(0.25rem - 1px);
+      position: absolute;
+      bottom: 11px;
+      right: 11px;
     }
 
     .card-img-bottom {
@@ -14814,6 +14846,7 @@
   </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.0/Chart.bundle.min.js"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
     #loader {
       background: #0908088c;
     }
@@ -14855,7 +14888,7 @@
     body {
       background-image: repeating-linear-gradient(90deg, hsla(69, 0%, 61%, 0.05) 0px, hsla(69, 0%, 61%, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, hsla(69, 0%, 61%, 0.05) 0px, hsla(69, 0%, 61%, 0.05) 1px, transparent 1px, transparent 104px), repeating-linear-gradient(0deg, rgba(77, 77, 77, 0.08) 0px, rgba(77, 77, 77, 0.08) 1px, transparent 1px, transparent 13px), repeating-linear-gradient(90deg, rgba(77, 77, 77, 0.08) 0px, rgba(77, 77, 77, 0.08) 1px, transparent 1px, transparent 13px), linear-gradient(45deg, rgb(6, 7, 30), rgb(6, 36, 44));
       margin: 0;
-      font-family: calibri, Arial, Helvetica, sans-serif;
+      font-family:  'Baloo Chettan 2', cursive, calibri, Arial, Helvetica, sans-serif;
 
     }
 
@@ -14895,14 +14928,16 @@
     }
 
     .head2 .head-in2 {
-      margin: 5%;
+    margin: 0% 3% 2% 3%;
+    padding: 3% 4% 3% 4%;
+    background: #1a67951c;
     }
 
     .head2 .head-in2 .head-in2-1 h1{
       font-size: x-large;
       padding: 3% 5% 3% 5%;
-      box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 5%);
-      background-color: rgb(30 41 59 / 48%);
+      /* box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 5%);
+      background-color: rgb(30 41 59 / 48%); */
     }
     .head2 .head-in2 .head-in2-1-1 h2{
       font-size: large;
@@ -14946,10 +14981,17 @@
     }
 
     .head2 .head-in2 .head-intable1 tr {
-      border-bottom: 1px solid #ffffff5e;
+    
       line-height: 2;
       font-weight: lighter;
       color: #b9c7cde8;
+    }
+    .head2 .head-in2 .head-intable1 tr td .border-gradient-1{
+      text-align: center;
+      border-bottom: 0.5px solid transparent;
+      border-image: linear-gradient(0.25turn, #ffc107, #fbc00ca6,#f393056e, #b19d6352, rgb(255 255 255 / 0%));
+      border-image-slice: 0.5;
+      width: 100%;
     }
 
     .head2 .head-in2 .head-intable1 tr:last-child {
@@ -15010,6 +15052,45 @@
       margin: 0% 3%;
     }
 
+    .border-gradient-set{
+      position: relative;
+      top: 0.5em;
+    }
+    .border-gradient-main{
+      text-align: center;
+      border-bottom: 0.5px solid transparent;
+      border-image: linear-gradient(0.25turn, rgb(255 255 255 / 0%), #a56a00, rgb(255 255 255 / 0%));
+      border-image-slice: 0.5;
+      width: 100%;
+      position: relative;
+      top: -19px;
+    }
+    .border-gradient-main-diamond{
+      background: #a46900;
+      -webkit-clip-path: polygon(50% 94%, 100% 50%, 50% 100%, 0% 50%);
+      clip-path: polygon(50% 94%, 100% 50%, 50% 100%, 0% 50%);
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    .border-gradient-main-diamond::after{
+      background: #cbbc8f;
+      -webkit-clip-path: polygon(50.1% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(50.1% 0%, 100% 100%, 0% 100%);
+      margin: auto;
+      position: absolute;
+      top: -23px;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      content: "";
+    }
 
     .leher {
       padding: 1% 0px 1% 0%;
@@ -15043,10 +15124,27 @@
     .leher .plugin-ContactForm{
       cursor:pointer;
     }
-    .leher .plugin-ContactForm:hover{
-      color:#6c757d;
-    }
 
+    .btn-infohoveronly:hover{
+    background: linear-gradient(to right, #128f971f, TRANSPARENT);
+    text-decoration: none;
+    }
+    .btn-infohoveronly::before{
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: #259990;
+      left: 0;
+      transform: translateX(-40px) rotate(45deg);
+      border: solid 3px #194846;
+      box-shadow: 2px -2px 0px #1A5754;
+      transition: all 0.2s ease;
+    }
+    .btn-infohoveronly:hover::before{
+        transform: translateX(-20px) rotate(45deg);
+    }
+    
     .leher .leher1 span{
       padding-left: 4px;
     }
@@ -15056,22 +15154,20 @@
       height: 10px;
       vertical-align: unset;
     }
-    .leher > .plugin-ContactForm > svg {
-      width: 10px;
-      height: 10px;
-      vertical-align: middle;
+    .leher > .plugin-ContactForm > span > svg {
+      width: 15px;
+      height: 15px;
+      vertical-align: sub;
     }
 
     .tab-content {
       padding: 2%;
     }
-
-    .tab-content>.active {
+    .tab-content>.tab-pane {
       animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
       opacity: 0;
       filter: blur(4px);
     }
-
     .skill {
       margin: 3% 0% 1% 0%;
     }
@@ -15320,6 +15416,11 @@
           transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
       }
   }
+
+  .col-md-4 {
+        margin-bottom: 15px;
+      }
+
     .b-chart-strip1{
       height: 3px;
       background: #80cbfe;
@@ -16021,18 +16122,97 @@
 
       .head2 {
         width: 100%;
-        margin-top: -39px;
+        margin-top: -25px;
       }
 
       .head2 .head-in2 {
         text-align: center;
+        display: flex;
+        background: #1a679538;
+        border-radius: 15px;
+        height: auto;
+        box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+        margin: 3.5%;
+        padding: 0%;
       }
+      .head2 .head-in2 .head-in2-1-1 a{
+        text-decoration:none;
+      }
+      .head2 .head-in2 .head-in2-1-1 h2{
+        position: relative;
+        border-top: solid 1px rgba(255,255,255,0.2);
+        border-bottom: solid 1px rgba(255,255,255,0.2);
+        text-transform: uppercase;
+        color: #AEEDD7;
+        letter-spacing: 1px;
+        overflow: hidden;
+        text-decoration: none;
+        font-size: unset;
+        text-align: right;
+        top: -14px;
+        margin: 0% 5% 0% 5%;
+        border-radius: 46px;
+      }
+      .head2 .head-in2 .head-in2-1-1 h2:before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: #259990;
+        left: 7px;
+        transform: translateX(-40px) rotate(45deg);
+        border: solid 3px #194846;
+        box-shadow: 2px -2px 0px #1a5754;
+        transition: all 0.2s ease;
+      }
+      .head2 .head-in2:nth-child(2) {
+        box-shadow: none;
+        position: absolute;
+        top: 22.7em;
+        padding: 2% 3% 2% 3%;
+        left: 0.4em;
+        border-top: solid 1px rgba(255,255,255,0.2);
+        display: block;
+        height: auto;
+        background: #1a6bbfe6;
+        border-bottom-left-radius: calc(0.9rem - 1px);
+        border-bottom-right-radius: calc(1.25rem - 1px);
+        border-top-left-radius: calc(0.25rem - 1px);
+        border-top-right-radius: calc(0.25rem - 1px);
+      }
+      .head2 .head-in2:nth-child(2) > .head-in2-4{
+        font-size: medium;
+        position: relative;
+        top: 1px;
+      }
+      .head2 .head-in2:nth-child(2) > .head-in2-3{
+        vertical-align: middle;
+      }
+      .head2 .head-in2:nth-child(2) > .head-in2-3 > svg{
+        width: 18px;
+        height: 18px;
+        color: #6bb4ff;
+      }
+      .head2 .head-in2 .head-in2-1{
+        width: 100%;
+      }
+      .head2 .head-in2 .head-in2-1 h1{
+        box-shadow: none;
+        background: none;
+        padding: 3% 5% 3% 5%;
+      }
+    
       .head2 .head-in2-mobile {
-       
+        padding: 3% 5% 1% 5%;
       }
 
       .head2 .head-in2 .head-intable1 {
         width: 100%;
+      }
+
+      .head2 .head-in2 .head-intable1 tr td .border-gradient-1{
+        border-image: linear-gradient(0.25turn, rgb(255 255 255 / 0%), #c5b78ca6,#bbae86, #b19d63b0, rgb(255 255 255 / 0%));
+        border-image-slice: 0.5;
       }
 
       .head-intable1 tr td:nth-child(1) {
@@ -16272,6 +16452,8 @@
   <div class="header1">
 
     <div class="head">
+      
+      
       <style type="text/css">
         /* entire container, keeps perspective */
         .card-container {
@@ -16353,7 +16535,7 @@
 
 
         .card {
-          background: none repeat scroll 0 0 #FFFFFF;
+          /* background: none repeat scroll 0 0 #FFFFFF; */
           border-radius: 4px;
           color: #444444;
         }
@@ -16524,7 +16706,7 @@
         }
 
         .card .motto {
-          border-bottom: 1px solid #EEEEEE;
+        
           color: #999999;
           font-size: xx-small;
           padding-bottom: 10px;
@@ -16534,7 +16716,7 @@
         .main .text-center {
           font-size: small;
           text-align: justify !important;
-          color: whitesmoke;
+          color: #778990;
         }
 
         @media screen and (-ms-high-contrast: active),
@@ -16565,6 +16747,10 @@
         .card-img-slick{
           width: 100%;
         }
+        .slick-dots li button{
+          background: #ffffff14;
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
         .slick-dots li button:before{
           color:whitesmoke;
         }
@@ -16579,8 +16765,8 @@
           infinite: true;  
         }
       </style>
-       <!--start View in Chrome or Firefox Browser only-->
-       <svg>
+      <!--start View in Chrome or Firefox Browser only-->
+      <svg>
         <filter id="wavy">
           <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="2">
             <animate attributeName="baseFrequency" dur="60s" values="0.02;0.005;0.02" repeatCount="indefinite">
@@ -16610,11 +16796,14 @@
           </div> <!-- end front panel -->
           <div class="back">
             <div class="header">
-              <h5 class="motto">"Aku merindukan kekuatan yang mendominasi!"</h5>
+              <h5 class="motto">"Aku merindukan kekuatan yang mendominasi"</h5>
+            </div>
+            <div class="border-gradient-set">  
+              <div class="border-gradient-main"><div class="border-gradient-main-diamond"><div class="diamond"></div></div></div>
             </div>
             <div class="content">
               <div class="main">
-                <p class="text-center" style="font-size:small; padding: 12%;">Assalamualaikum...Saya sedang mencari peluang baru, kotak
+                <p class="text-center" style="font-size:small; padding: 12%;">Assalamualaikum.. Saya sedang mencari peluang baru, kotak
                   masuk saya selalu terbuka. Apakah Anda memiliki pertanyaan atau hanya ingin menyapa, saya akan mencoba
                   yang terbaik untuk menghubungi Anda kembali!</p>
 
@@ -16643,7 +16832,7 @@
             <path
               d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
           </svg></span><span class="head-in2-4"> <a target="_blank" style="color:white;"
-            href="https://api.whatsapp.com/send?phone=6283898610918">083-898-610-918 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+            href="https://api.whatsapp.com/send?phone=6283898610918">083898610918 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
               <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
             </svg> <i class="bi bi-box-arrow-up-right"></i></a></span>
@@ -16654,14 +16843,17 @@
             <td>Menguasai Bahasa </td>
             <td>: Indonesia & Sunda</td>
           </tr>
+          <tr><td colspan="2"><div class="border-gradient-1"></div></td></tr>
           <tr>
             <td>Status</td>
             <td>: Lajang </td>
           </tr>
+          <tr><td colspan="2"><div class="border-gradient-1"></div></td></tr>
           <tr>
             <td>Hobi</td>
             <td>: Diam</td>
           </tr>
+          <tr><td colspan="2"><div class="border-gradient-1"></div></td></tr>
           <tr>
             <td>Usia</td>
             <td>: <span class="usia"></span></td>
@@ -16676,6 +16868,7 @@
             <div class="head-in3">
               <span class="head-in3-1">Tentang Saya</span>
             </div>
+           
             <div class="head-in3">
               <style type="text/css">
                 .animate-text1 {
@@ -17041,20 +17234,21 @@
   </div>
 
 
+
   <div class="leher">
     <div class="slide-leher"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-down" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zM1 11.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
     </svg><i class="bi bi-chevron-bar-down"></i></div>
-    <div class="leher1 plugin-ContactForm" ><span><svg
+    <div class="leher1 plugin-ContactForm btn-infohoveronly" ><span><svg
           xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google"
           viewBox="0 0 16 16">
           <path
             d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
-        </svg><i class="bi bi-google"></i></span> <span>yusupmaulana.net@gmail.com</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
-        </svg><i class="bi bi-arrows-fullscreen"></i>
+        </svg><i class="bi bi-google"></i></span> <span>yusupmaulana.net@gmail.com <svg viewBox="0 0 24 24">
+          <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+      </svg></span> 
     </div>
-    <a class="leher1" href="https://www.nyenang.com/" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg"
+    <a class="leher1 btn-infohoveronly" href="https://www.nyenang.com/" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg"
           width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
           <path
             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
@@ -17063,7 +17257,7 @@
           <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
         </svg> <i class="bi bi-box-arrow-up-right"></i>
     </a>
-    <a class="leher1" href="https://www.instagram.com/maulana_net" target="_blank"><span><svg
+    <a class="leher1 btn-infohoveronly" href="https://www.instagram.com/maulana_net" target="_blank"><span><svg
           xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
           viewBox="0 0 16 16">
           <path
@@ -17073,7 +17267,7 @@
           <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
         </svg> <i class="bi bi-box-arrow-up-right"></i>
     </a>
-    <a class="leher1" href="https://www.facebook.com/chunk.lovereggae/" target="_blank">
+    <a class="leher1 btn-infohoveronly" href="https://www.facebook.com/chunk.lovereggae/" target="_blank">
       <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
           viewBox="0 0 16 16">
           <path
@@ -17084,13 +17278,13 @@
           <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
         </svg> <i class="bi bi-box-arrow-up-right"></i>
     </a>
-    <a class="leher1" href="https://github.com/yusup-maulana" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+    <a class="leher1 btn-infohoveronly" href="https://github.com/yusup-maulana" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
       <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
     </svg><i class="bi bi-github"></i></span> <span>Github </span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
       <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
     </svg> <i class="bi bi-box-arrow-up-right"></i></a>
-    <a class="leher1" href="https://www.youtube.com/channel/UCrnSCuFBjzBE6RuEiV-IKzg/featured"
+    <a class="leher1 btn-infohoveronly" href="https://www.youtube.com/channel/UCrnSCuFBjzBE6RuEiV-IKzg/featured"
       target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           class="bi bi-youtube" viewBox="0 0 16 16">
           <path
@@ -17099,7 +17293,7 @@
           <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
           <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
         </svg> <i class="bi bi-box-arrow-up-right"></i></a>
-    <a class="leher1" href="https://www.linkedin.com/in/nyenang/" target="_blank"><span><svg
+    <a class="leher1 btn-infohoveronly" href="https://www.linkedin.com/in/nyenang/" target="_blank"><span><svg
           xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
           viewBox="0 0 16 16">
           <path
@@ -17145,7 +17339,7 @@ $('.head3').slick({
 
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab"
+      <button onclick="openTabs(event, 'home')" class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab"
         aria-controls="home" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
           fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
           <path
@@ -17154,7 +17348,7 @@ $('.head3').slick({
           class="navlibuttonspan navlibuttonspanactive">Portofolio</span></button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab"
+      <button onclick="openTabs(event, 'profile')" class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab"
         aria-controls="profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
           fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
           <path
@@ -17163,7 +17357,7 @@ $('.head3').slick({
         </svg><i class="bi bi-award-fill"></i> <span class="navlibuttonspan">Keahlian</span></button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab"
+      <button onclick="openTabs(event, 'messages')" class="nav-link" id="messages-tab" data-toggle="tab" data-target="#messages" type="button" role="tab"
         aria-controls="messages" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
           fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
           <path
@@ -17173,7 +17367,7 @@ $('.head3').slick({
         </svg><i class="bi bi-mortarboard-fill"></i> <span class="navlibuttonspan">Pendidikan</span></button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab"
+      <button onclick="openTabs(event, 'settings')" class="nav-link" id="settings-tab" data-toggle="tab" data-target="#settings" type="button" role="tab"
         aria-controls="settings" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
           fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
           <path
@@ -17204,6 +17398,21 @@ $('.head3').slick({
     $(document).on('mouseout', '#myTab li button', function () {
       $('#myTab li button').removeClass("navlibuttonspanopen");
     });
+
+  function openTabs(evt, TabsName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-pane");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("nav-link");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(TabsName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
   </script>
 
 
@@ -17227,14 +17436,41 @@ $('.head3').slick({
       width: 100%;
       height: -webkit-fill-available;
       height: 100%;
-      color: white;
-      background-image: linear-gradient(45deg, rgb(144 100 159 / 41%) 0%, rgb(144 100 159 / 61%) 24%, rgb(112 112 163 / 38%) 24%, rgb(112 112 163 / 44%) 28%, rgb(79 124 166 / 39%) 28%, rgb(79 124 166 / 59%) 40%, rgb(47 136 170 / 24%) 40%, rgb(47 136 170 / 38%) 84%, rgb(14 148 173 / 38%) 84%, rgb(14 148 173 / 39%) 100%), linear-gradient(0deg, rgb(144 100 159 / 43%) 0%, rgb(144 100 159 / 49%) 24%, rgb(112 112 163 / 46%) 24%, rgb(112 112 163 / 36%) 28%, rgb(79 124 166 / 48%) 28%, rgb(79 124 166 / 35%) 40%, rgb(47 136 170 / 43%) 40%, rgb(47 136 170 / 45%) 84%, rgb(14 148 173 / 37%) 84%, rgb(14 148 173 / 30%) 100%), linear-gradient(135deg, rgb(144 100 159 / 41%) 0%, rgb(144 100 159 / 40%) 24%, rgb(112 112 163 / 52%) 24%, rgb(112 112 163 / 40%) 28%, rgb(79 124 166 / 42%) 28%, rgb(79 124 166 / 38%) 40%, rgb(47 136 170 / 43%) 40%, rgb(47 136 170 / 29%) 84%, rgb(14 148 173 / 21%) 84%, rgb(14 148 173 / 32%) 100%), linear-gradient(90deg, rgb(79 35 157 / 51%), rgb(43 171 222 / 15%));
+      background-image: linear-gradient(45deg, rgb(100 126 159 / 18%) 0%, rgb(29 159 199 / 25%) 24%, rgb(0 184 255 / 25%) 24%, rgb(112 112 163 / 0%) 28%, rgb(79 124 166 / 0%) 28%, rgb(21 104 181 / 28%) 40%, rgb(47 136 170 / 0%) 40%, rgb(47 136 170 / 0%) 84%, rgb(14 148 173 / 13%) 84%, rgb(14 148 173 / 0%) 100%), linear-gradient(0deg, rgb(144 100 159 / 0%) 0%, rgb(144 100 159 / 0%) 24%, rgb(112 112 163 / 0%) 24%, rgb(112 112 163 / 0%) 28%, rgb(79 124 166 / 0%) 28%, rgb(79 124 166 / 0%) 40%, rgb(47 136 170 / 0%) 40%, rgb(47 136 170 / 0%) 84%, rgb(14 148 173 / 0%) 84%, rgb(14 148 173 / 0%) 100%), linear-gradient(135deg, rgb(27 162 167 / 0%) 0%, rgb(4 167 185 / 35%) 24%, rgb(112 112 163 / 0%) 24%, rgb(112 112 163 / 0%) 28%, rgb(79 124 166 / 0%) 28%, rgb(79 124 166 / 8%) 40%, rgb(47 136 170 / 0%) 40%, rgb(47 136 170 / 0%) 84%, rgb(14 148 173 / 0%) 84%, rgb(14 148 173 / 12%) 100%), linear-gradient(90deg, rgb(35 122 157 / 22%), rgb(43 171 222 / 15%));
       background-blend-mode: overlay, overlay, overlay, normal;
     }
 
     .card-body:hover {
-      background-image: linear-gradient(112.5deg, rgba(250, 109, 130, 0.38) 0%, rgba(250, 109, 130, 0.38) 3%, rgba(219, 107, 130, 0.35) 3%, rgba(219, 107, 130, 0.35) 34%, rgba(187, 104, 131, 0.41) 34%, rgba(187, 104, 131, 0.41) 46%, rgba(156, 102, 131, 0.48) 46%, rgba(156, 102, 131, 0.48) 51%, rgba(124, 99, 132, 0.37) 51%, rgba(124, 99, 132, 0.37) 52%, rgba(93, 97, 132, 0.31) 52%, rgba(93, 97, 132, 0.31) 76%, rgba(61, 94, 133, 0.37) 76%, rgba(61, 94, 133, 0.37) 84%, rgba(30, 92, 133, 0.36) 84%, rgba(30, 92, 133, 0.36) 100%), linear-gradient(157.5deg, rgba(250, 109, 130, 0.38) 0%, rgba(250, 109, 130, 0.38) 3%, rgba(219, 107, 130, 0.35) 3%, rgba(219, 107, 130, 0.35) 34%, rgba(187, 104, 131, 0.41) 34%, rgba(187, 104, 131, 0.41) 46%, rgba(156, 102, 131, 0.48) 46%, rgba(156, 102, 131, 0.48) 51%, rgba(124, 99, 132, 0.37) 51%, rgba(124, 99, 132, 0.37) 52%, rgba(93, 97, 132, 0.31) 52%, rgba(93, 97, 132, 0.31) 76%, rgba(61, 94, 133, 0.37) 76%, rgba(61, 94, 133, 0.37) 84%, rgba(30, 92, 133, 0.36) 84%, rgba(30, 92, 133, 0.36) 100%), linear-gradient(45deg, rgba(250, 109, 130, 0.38) 0%, rgba(250, 109, 130, 0.38) 3%, rgba(219, 107, 130, 0.35) 3%, rgba(219, 107, 130, 0.35) 34%, rgba(187, 104, 131, 0.41) 34%, rgba(187, 104, 131, 0.41) 46%, rgba(156, 102, 131, 0.48) 46%, rgba(156, 102, 131, 0.48) 51%, rgba(124, 99, 132, 0.37) 51%, rgba(124, 99, 132, 0.37) 52%, rgba(93, 97, 132, 0.31) 52%, rgba(93, 97, 132, 0.31) 76%, rgba(61, 94, 133, 0.37) 76%, rgba(61, 94, 133, 0.37) 84%, rgba(30, 92, 133, 0.36) 84%, rgba(30, 92, 133, 0.36) 100%), linear-gradient(90deg, rgba(71, 69, 135, 0.33), rgba(241, 26, 171, 0.39));
-      background-blend-mode: overlay, overlay, overlay, normal;
+      box-shadow: rgb(0 241 255) 0px 0px 5px;
+      border-top: 2px solid #ffffff;
+      /* background-image: linear-gradient(112.5deg, rgba(250, 109, 130, 0.38) 0%, rgba(250, 109, 130, 0.38) 3%, rgba(219, 107, 130, 0.35) 3%, rgba(219, 107, 130, 0.35) 34%, rgba(187, 104, 131, 0.41) 34%, rgba(187, 104, 131, 0.41) 46%, rgba(156, 102, 131, 0.48) 46%, rgba(156, 102, 131, 0.48) 51%, rgba(124, 99, 132, 0.37) 51%, rgba(124, 99, 132, 0.37) 52%, rgba(93, 97, 132, 0.31) 52%, rgba(93, 97, 132, 0.31) 76%, rgba(61, 94, 133, 0.37) 76%, rgba(61, 94, 133, 0.37) 84%, rgba(30, 92, 133, 0.36) 84%, rgba(30, 92, 133, 0.36) 100%), linear-gradient(157.5deg, rgba(250, 109, 130, 0.38) 0%, rgba(250, 109, 130, 0.38) 3%, rgba(219, 107, 130, 0.35) 3%, rgba(219, 107, 130, 0.35) 34%, rgba(187, 104, 131, 0.41) 34%, rgba(187, 104, 131, 0.41) 46%, rgba(156, 102, 131, 0.48) 46%, rgba(156, 102, 131, 0.48) 51%, rgba(124, 99, 132, 0.37) 51%, rgba(124, 99, 132, 0.37) 52%, rgba(93, 97, 132, 0.31) 52%, rgba(93, 97, 132, 0.31) 76%, rgba(61, 94, 133, 0.37) 76%, rgba(61, 94, 133, 0.37) 84%, rgba(30, 92, 133, 0.36) 84%, rgba(30, 92, 133, 0.36) 100%), linear-gradient(45deg, rgba(250, 109, 130, 0.38) 0%, rgba(250, 109, 130, 0.38) 3%, rgba(219, 107, 130, 0.35) 3%, rgba(219, 107, 130, 0.35) 34%, rgba(187, 104, 131, 0.41) 34%, rgba(187, 104, 131, 0.41) 46%, rgba(156, 102, 131, 0.48) 46%, rgba(156, 102, 131, 0.48) 51%, rgba(124, 99, 132, 0.37) 51%, rgba(124, 99, 132, 0.37) 52%, rgba(93, 97, 132, 0.31) 52%, rgba(93, 97, 132, 0.31) 76%, rgba(61, 94, 133, 0.37) 76%, rgba(61, 94, 133, 0.37) 84%, rgba(30, 92, 133, 0.36) 84%, rgba(30, 92, 133, 0.36) 100%), linear-gradient(90deg, rgba(71, 69, 135, 0.33), rgba(241, 26, 171, 0.39));
+      background-blend-mode: overlay, overlay, overlay, normal; */
+    }
+
+    .card-body a svg{
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .card-body button svg{
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .card-body button:hover > svg path{
+      d:path("M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L1,12L12,5L23,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z");
+    }
+
+    .card-body a:hover > svg path{
+      d:path("M 19 3 C 20 3 21 3.9 21 5 V 19 C 21 20.1 20.1 21 19 21 H 5 C 3.9 21 3 20.1 3 19 V 5 C 3 3.9 3.9 3 5 3 H 19 M 7 8 L 12 10 L 8 16 L 8 16 L 14 12 L 16 17 V 8 H 7 Z");
     }
 
     .card .card_status:after {
@@ -17253,25 +17489,22 @@ $('.head3').slick({
     }
 
     .box_gbr {
-      border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 83px 5px;
       height: 200px;
       object-fit: contain;
       position: relative;
       top: 0px;
       left: 0%;
-      background: black;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      box-shadow: 0 3px 0px #ff9700, 0 3px 0px rgb(205 190 131);
       overflow: hidden;
+      opacity: 0.7;
     }
 
 
     .card_status_completed:after {
-      background: #159957;
-      /* fallback for old browsers */
+      background: #b47009;
       background: -webkit-linear-gradient(to right, #155799, #159957);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #155799, #159957);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, #155799, #b47009);
     }
 
     .card .card_status {
@@ -17281,7 +17514,7 @@ $('.head3').slick({
       padding: 0px 0px;
       font-size: 10px;
       text-align: center;
-      color: #ffffff;
+      color: #d5d5d5b5;
       transition: all 0.5s ease;
       text-transform: capitalize;
       z-index: 1;
@@ -17330,8 +17563,13 @@ $('.head3').slick({
                 user</p>
 
               <a target="_blank" href="https://maulana-project122.000webhostapp.com/"
-                class="btn btn-warning btn-sm">Demo</a>
-              <button id="portofolio-manpumping" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+                class="btn btn-info btn-sm">Demo <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg>
+                </a>
+              <button id="portofolio-manpumping" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17348,9 +17586,12 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Sebuah Website single page pengelola link video /
                 template web didesain khusus untuk layanan video dari pihak ketiga</p>
               <a target="_blank" href="https://maulanaproject1.000webhostapp.com/"
-                class="btn btn-warning btn-sm">Demo</a>
-
-              <button id="portofolio-webanime" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+                class="btn btn-info btn-sm">Demo <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg></a>
+              <button id="portofolio-webanime" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17367,8 +17608,12 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Merupakan sebuah website dari PT. Raya Azura Persada.
                 unik, simpel, dan user friendly</p>
 
-              <a target="_blank" href="http://rayaazurapersada.dx.am/" class="btn btn-primary btn-sm">Lihat</a>
-              <button id="portofolio-websiteRAP" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+              <a target="_blank" href="http://rayaazurapersada.dx.am/" class="btn btn-info btn-sm">Lihat <svg  viewBox="0 0 24 24">
+                <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+            </svg></a>
+              <button id="portofolio-websiteRAP" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17384,8 +17629,10 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi berbasis desktop untuk pengelolaan data
                 pemberdayaan masyarakat seperti agenda, kegiatan atau acara validasi proposal dan lain-lain</p>
               <a target="_blank" href="https://www.nyenang.com/2022/11/sipem-sistem-informasi-pemberdayan.html"
-                class="btn btn-warning btn-sm">Lihat
-                <button id="portofolio-inventarisRAP" class="btn btn-info btn-sm "> Selengkapnya</button></a>
+                class="btn btn-info btn-sm">Selengkapnya <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -17401,8 +17648,12 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi web pengelolaan data inventaris yang
                 terintegrasi dengan web PT. Raya Azura Persada</p>
               <a target="_blank" href="https://inventaris-maulana.000webhostapp.com/master_gudang.php"
-                class="btn btn-warning btn-sm">Demo</a>
-              <button id="portofolio-inventarisRAP" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+                class="btn btn-info btn-sm">Demo <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg></a>
+              <button id="portofolio-inventarisRAP" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17418,9 +17669,12 @@ $('.head3').slick({
               <h5 class="card-title">Cashflow Proyek</h5>
               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi web untuk membantu estimasi pengeluaran
                 rencana dan aktual Proyek </p>
-              <a target="_blank" href="https://internetclanc.000webhostapp.com/" class="btn btn-warning btn-sm">Demo</a>
-
-              <button id="portofolio-cashflow" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+              <a target="_blank" href="https://internetclanc.000webhostapp.com/" class="btn btn-info btn-sm">Demo <svg  viewBox="0 0 24 24">
+                <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+            </svg></a>
+              <button id="portofolio-cashflow" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17437,8 +17691,11 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Sistem informasi peminjaman berbasis desktop yang dibuat
                 guna mempermudah pengelolaan alat ukur dibuat untuk memenuhi tugas skripsi</p>
               <a target="_blank" href="https://www.nyenang.com/2022/11/sistem-informasi-peminjaman-alat-ukur.html"
-                class="btn btn-warning btn-sm">Lihat
-                <button class="btn btn-info btn-sm "> Selengkapnya</button></a>
+                class="btn btn-info btn-sm">Selengkapnya
+                <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -17455,8 +17712,9 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Sebuah sistem informasi administrasi kependudukan untuk
                 mengelola data KTP + KK berbasis dekstop</p>
               <a target="_blank" href="https://www.nyenang.com/2022/10/sistem-informasi-administrasi.html"
-                class="btn btn-warning btn-sm">Lihat
-                <button id="portofolio-inventarisRAP" class="btn btn-info btn-sm "> Selengkapnya</button></a>
+                class="btn btn-info btn-sm">Selengkapnya <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg></a>
             </div>
           </div>
         </div>
@@ -17472,9 +17730,12 @@ $('.head3').slick({
               <h5 class="card-title">Oseng Mercon</h5>
               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi pengelola stok bahan makanan untuk multi
                 outlet berbasis web</p>
-              <a target="_blank" href="https://internetclan.000webhostapp.com/" class="btn btn-warning btn-sm">Demo</a>
-
-              <button id="portofolio-osengmercon" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+              <a target="_blank" href="https://internetclan.000webhostapp.com/" class="btn btn-info btn-sm">Demo <svg  viewBox="0 0 24 24">
+                <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+            </svg></a>
+              <button id="portofolio-osengmercon" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div> 
@@ -17489,7 +17750,9 @@ $('.head3').slick({
               <h5 class="card-title">RABP Man. QBarang</h5>
               <p class="card-text" style="font-size: smaller;">Aplikasi berbasis desktop yang terintegrasi dengan MAN.
                 KTR, untuk mengelola rancangan anggaran biaya proyek serta estimasi harga barang </p>
-              <button id="portofolio-rabp" class="btn btn-info btn-sm in_view"> Selengkapnya</button>
+              <button id="portofolio-rabp" class="btn btn-info btn-sm in_view"> Selengkapnya <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17506,8 +17769,12 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Sebuah aplikasi berbasis web untuk pengelolaan data, baik
                 logistik, transaksi, karyawan dan info harga barang </p>
               <a target="_blank" href="https://maulana-project10.000webhostapp.com/#popuplogin"
-                class="btn btn-warning btn-sm">Demo</a>
-              <button id="portofolio-manktr" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+                class="btn btn-info btn-sm">Demo <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg></a>
+              <button id="portofolio-manktr" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17523,8 +17790,9 @@ $('.head3').slick({
               <p class="card-text" style="font-size: smaller;">Aplikasi pengelolaan barang bedasarkan rak-rak pengelola
                 yang akan expired untuk dibazarkan</p>
               <a target="_blank" href="https://www.nyenang.com/2022/11/aplikasi-bazar-sbmart-menggunakan.html"
-                class="btn btn-warning btn-sm">Lihat
-                <button id="portofolio-inventarisRAP" class="btn btn-info btn-sm "> Selengkapnya</button></a>
+                class="btn btn-info btn-sm">Selengkapnya <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg></a>
             </div>
           </div>
         </div>
@@ -17540,8 +17808,12 @@ $('.head3').slick({
               <h5 class="card-title">Website Andir</h5>
               <p class="card-text" style="font-size: smaller;">Website Command Centre untuk kecamatan Andir Bandung untuk memenuhi tugas skripsi</p>
               <a target="_blank" href="https://commandcenter-maulanaproject.000webhostapp.com/"
-                class="btn btn-warning btn-sm">Demo</a>
-              <button id="portofolio-webcommandcentre" class="btn btn-info btn-sm in_view">Selengkapnya</button>
+                class="btn btn-info btn-sm">Demo <svg  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3C20.1 3 21 3.9 21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19M8.7 8L10.8 10.1L7 14L9.8 16.8L13.6 12.9L15.7 15V8H8.7Z" />
+              </svg></a>
+              <button id="portofolio-webcommandcentre" class="btn btn-info btn-sm in_view">Selengkapnya<svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M21.36,10.46L13.54,2.64C12.69,1.79 11.31,1.79 10.46,2.64L2.64,10.46C1.79,11.31 1.79,12.69 2.64,13.54L10.46,21.36C11.31,22.21 12.69,22.21 13.54,21.36L21.36,13.54C22.21,12.69 22.21,11.31 21.36,10.46M12,19L5,12L12,5L19,12L12,19M16.5,12L12,16.5L7.5,12L12,7.5L16.5,12Z" />
+            </svg></button>
             </div>
           </div>
         </div>
@@ -17549,24 +17821,7 @@ $('.head3').slick({
       </div>
 
     </div>
-    <script type="text/javascript">
-      $(document).on('mouseover', '.card-body', function () {
-        $(this).find(".card-title").css({
-          "font-weight": "900",
-          "color": "#444444",
-          "background": "#ffffff30",
-          "padding": "5px 0px 5px 8px"
-        });
-      });
-      $(document).on('mouseout', '.card-body', function () {
-        $(this).find(".card-title").css({
-          "font-weight": "700",
-          "color": "white",
-          "background": "none",
-          "padding": "0px 0px 0px 0px"
-        });
-      });
-    </script>
+
 
 
 
