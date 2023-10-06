@@ -1,0 +1,241 @@
+<style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap");
+
+  .body2::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  .body2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(167 167 167 / 41%);
+    background-color: #061e29;
+  }
+
+  .body2::-webkit-scrollbar-thumb {
+    background-color: #00f1ffab;
+  }
+
+  .body2 {
+    font-family: "Baloo Chettan 2";
+    color: #e5e5e5;
+    margin: 2%;
+    text-align: justify;
+    padding: 3%;
+  }
+
+  .body2 a {
+    color: dodgerblue;
+  }
+
+  /* table wisata ...................*/
+  .twisata {
+  }
+
+  .twisata tr {
+    background: linear-gradient(90deg, #1193a1, transparent);
+    color: white;
+    font-weight: 900;
+    border: 3px solid #ffffff;
+  }
+
+  .twisata tr td {
+  }
+
+  .twisata tr td span {
+    background: #bdffda;
+    font-weight: 900;
+    padding: 1px 6px;
+    border-radius: 5px;
+    color: #08102b;
+  }
+
+  /* wisata-container ...................*/
+  .container-wisata {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    display: flex;
+    width: 100%;
+    padding: 1% 0%;
+    box-sizing: border-box;
+    height: 50vh;
+    border-radius: 10px;
+  }
+
+  .boxwisata {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 1px 1%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+  }
+
+  .boxwisata > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: 0.5s;
+    height: 100% !important;
+  }
+
+  .boxwisata > span {
+    position: relative;
+    left: 7px;
+    font-size: xx-small;
+    color: #f5fff7 !important;
+    bottom: 20px;
+    white-space: nowrap;
+    background-color: rgb(1 118 74 / 20%);
+    padding: 0 6px 0 4px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .boxwisata:hover {
+    flex: 1 1 50%;
+  }
+
+  .boxwisata:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<div class="container-wisata">
+  <div class="boxwisata">
+    <img alt="Curug Cipalasari" src="IMG/pumpingcharity/man.pumpingc1.webp" />
+    <span>Login Page</span>
+  </div>
+  <div class="boxwisata">
+    <img alt="Curug Cipalasari" src="IMG/pumpingcharity/man.pumpingc2.webp" />
+    <span>Laporan</span>
+  </div>
+  <div class="boxwisata">
+    <img alt="Curug Cipalasari" src="IMG/pumpingcharity/man.pumpingc3.webp" />
+    <span>Dana Kelola</span>
+  </div>
+</div>
+<br />
+
+<body class="body2">
+  Demo :
+  <a target="_blank" href="https://maulana-project122.000webhostapp.com/"
+    ><button>
+      <svg
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        stroke="currentColor"
+        stroke-width="2"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="css-i6dzq1"
+      >
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+      Explore me
+    </button></a
+  ><br />
+  <h1>Man. Pumping Charity: Sistem Informasi Pengelolaan Dana</h1>
+  <p>
+    Man. Pumping Charity adalah sebuah sistem informasi berbasis web yang
+    dirancang untuk mengelola berbagai aspek penting dalam organisasi
+    pengumpulan dana, termasuk pengendalian pengajuan SPT, pengelolaan dana,
+    keanggotaan, basecamp, profit, inventaris, transaksi, kas, dan pembuatan
+    laporan yang kompleks. Sistem ini memiliki tiga tingkatan akses pengguna
+    yang berbeda: Super Admin, Admin Entry, dan View Mode. Mari kita lihat lebih
+    dalam mengenai fitur-fitur dan komponen utama dari Man. Pumping Charity.
+  </p>
+
+  <h2>Super Admin:</h2>
+  <p>Username: admin1<br />Password: admin1</p>
+  <p>
+    Super Admin memiliki hak akses tertinggi dalam sistem ini. Mereka
+    bertanggung jawab atas manajemen keseluruhan, termasuk pengelolaan dana,
+    pengawasan anggota, pemantauan profit, inventarisasi, dan pembuatan laporan.
+    Fitur utama yang dimiliki oleh Super Admin adalah kemampuan untuk menghitung
+    profit dari investasi selama 12 bulan secara otomatis, memastikan bahwa
+    organisasi amal selalu memiliki gambaran yang jelas mengenai kondisi
+    keuangan mereka.
+  </p>
+
+  <h2>Admin Entry:</h2>
+  <p>Username: admin2<br />Password: admin2</p>
+  <p>
+    Admin Entry memiliki kewenangan untuk melakukan penginputan data ke dalam
+    sistem. Mereka dapat memperbarui informasi mengenai dana, anggota, basecamp,
+    transaksi, dan lain-lain. Ini membantu dalam menjaga integritas data dan
+    memastikan bahwa informasi yang tersimpan dalam sistem selalu akurat dan
+    terkini.
+  </p>
+
+  <h2>View Mode:</h2>
+  <p>Username: admin3<br />Password: admin3</p>
+  <p>
+    View Mode adalah tingkatan akses yang lebih terbatas. Pengguna dengan akses
+    ini dapat melihat informasi yang telah dimasukkan ke dalam sistem, termasuk
+    data SPT, informasi pemilik Curug Cipalasari, dan laporan yang dihasilkan
+    oleh Super Admin.
+  </p>
+
+  <h2>Fitur Unggulan:</h2>
+  <p>
+    a. Penghitungan Profit Otomatis: Man. Pumping Charity memiliki kemampuan
+    untuk menghitung profit dari investasi selama 12 bulan secara otomatis. Hal
+    ini membantu organisasi amal untuk memantau kinerja investasi mereka dengan
+    lebih efisien.
+  </p>
+  <p>
+    b. Real-time dan Ramah Bandwidth: Sistem ini dirancang untuk beroperasi
+    dalam waktu nyata, memungkinkan pengguna untuk mengakses data dan informasi
+    terbaru kapan saja. Selain itu, Man. Pumping Charity dirancang untuk
+    mengonsumsi bandwidth dengan efisien, memastikan pengalaman pengguna yang
+    baik tanpa membebani infrastruktur jaringan.
+  </p>
+
+  <h2>Bahan Pembuatan:</h2>
+  <p>
+    Sistem Man. Pumping Charity dibangun dengan menggunakan berbagai teknologi
+    dan bahasa pemrograman, termasuk:
+  </p>
+  <ul>
+    <li>HTML: Untuk struktur dasar halaman web.</li>
+    <li>Bootstrap 3: Framework CSS yang digunakan untuk desain responsif.</li>
+    <li>Pusher: Untuk mendukung komunikasi real-time antara pengguna.</li>
+    <li>
+      PHP 5: Bahasa pemrograman server-side untuk mengelola logika bisnis.
+    </li>
+    <li>CSS: Untuk styling halaman web.</li>
+    <li>JavaScript: Digunakan untuk fungsionalitas tambahan di sisi klien.</li>
+    <li>
+      jQuery 3.6: Library JavaScript yang memudahkan manipulasi DOM dan
+      interaksi pengguna.
+    </li>
+    <li>
+      MYSQL: Basis data untuk menyimpan dan mengelola semua data terkait dengan
+      sistem.
+    </li>
+  </ul>
+
+  <p>
+    Dengan fitur-fitur canggih dan berbagai komponen teknologi yang digunakan,
+    Man. Pumping Charity merupakan alat yang kuat dalam pengelolaan dana amal
+    dan pelaporan yang kompleks. Sistem ini memungkinkan organisasi amal untuk
+    mengoptimalkan penggunaan sumber daya mereka dan memastikan transparansi
+    dalam pengelolaan dana yang diperoleh dari berbagai sumber.
+  </p>
+
+  <br />
+  <div class="container-wisata">
+    <div class="boxwisata">
+      <img alt="Curug Cipalasari" src="IMG/pumpingcharity/man.pumpingc4.webp" />
+      <span>SPT</span>
+    </div>
+    <div class="boxwisata">
+      <img alt="Curug Cipalasari" src="IMG/pumpingcharity/man.pumpingc5.webp" />
+      <span>SPT Owner</span>
+    </div>
+    <div class="boxwisata">
+      <img alt="Curug Cipalasari" src="IMG/pumpingcharity/man.pumpingc6.webp" />
+      <span>Laporan</span>
+    </div>
+  </div>
+  <br />
+</body>
