@@ -167,31 +167,27 @@
     </svg>
     Demo : Klik di sini </a
   ><br />
-  <h2>Man. Pumping Charity: Sistem Informasi Pengelolaan Dana</h2>
+  <h2>SIPDI: Sistem Informasi Pengelolaan Dana</h2>
   <p>
-    Man. Pumping Charity adalah sebuah sistem informasi berbasis web yang
-    dirancang untuk mengelola berbagai aspek penting dalam organisasi
-    pengumpulan dana, termasuk pengendalian pengajuan SPT, pengelolaan dana,
-    keanggotaan, basecamp, profit, inventaris, transaksi, kas, dan pembuatan
-    laporan yang kompleks. Sistem ini memiliki tiga tingkatan akses pengguna
-    yang berbeda: Super Admin, Admin Entry, dan View Mode. Mari kita lihat lebih
-    dalam mengenai fitur-fitur dan komponen utama dari Man. Pumping Charity.
+    SIPDI adalah sebuah sistem informasi berbasis web yang dirancang untuk
+    mengelola berbagai aspek penting dalam organisasi pengumpulan dana. Ini
+    mencakup pengendalian pengajuan SPT, pengelolaan dana, keanggotaan,
+    basecamp, profit, inventaris, transaksi, kas, dan pembuatan laporan yang
+    kompleks. Sistem ini memiliki tiga tingkatan akses pengguna yang berbeda:
+    Super Admin, Admin Entry, dan View Mode.
   </p>
 
   <h2>Super Admin:</h2>
-  <p>Username: admin1<br />Password: admin1</p>
+  <p>Username: admin2<br />Password: admin2</p>
   <p>
-    Super Admin memiliki hak akses tertinggi dalam sistem ini. Mereka
-    bertanggung jawab atas manajemen keseluruhan, termasuk pengelolaan dana,
-    pengawasan anggota, pemantauan profit, inventarisasi, dan pembuatan laporan.
-    Fitur utama yang dimiliki oleh Super Admin adalah kemampuan untuk menghitung
-    profit dari investasi selama 12 bulan secara otomatis, memastikan bahwa
-    organisasi amal selalu memiliki gambaran yang jelas mengenai kondisi
-    keuangan mereka.
+    Super Admin memiliki hak akses tertinggi dalam sistem ini dan bertanggung
+    jawab atas manajemen keseluruhan. Tugas utama Super Admin adalah meninjau
+    data permohonan SPT dari admin entry serta memiliki kemampuan untuk mengubah
+    hak akses admin.
   </p>
 
   <h2>Admin Entry:</h2>
-  <p>Username: admin2<br />Password: admin2</p>
+  <p>Username: admin1<br />Password: admin1</p>
   <p>
     Admin Entry memiliki kewenangan untuk melakukan penginputan data ke dalam
     sistem. Mereka dapat memperbarui informasi mengenai dana, anggota, basecamp,
@@ -211,47 +207,58 @@
 
   <h2>Fitur Unggulan:</h2>
   <p>
-    a. Penghitungan Profit Otomatis: Man. Pumping Charity memiliki kemampuan
-    untuk menghitung profit dari investasi selama 12 bulan secara otomatis. Hal
-    ini membantu organisasi amal untuk memantau kinerja investasi mereka dengan
-    lebih efisien.
+    a. Menampilkan data secara realtime secara bersamaan: Fitur unggulan yang
+    membedakan sistem ini adalah kemampuannya untuk menampilkan data secara
+    realtime secara bersamaan, yang ditangani oleh Pusher. Dengan fitur ini,
+    pengguna dapat melihat pembaruan data secara langsung dan simultan,
+    menciptakan pengalaman yang lebih responsif dan efisien dalam manajemen
+    informasi. Pusher memastikan distribusi instan dari perubahan data,
+    memungkinkan kolaborasi yang lebih efektif dan pemantauan yang akurat dalam
+    waktu nyata.
   </p>
   <p>
-    b. Real-time dan Ramah Bandwidth: Sistem ini dirancang untuk beroperasi
-    dalam waktu nyata, memungkinkan pengguna untuk mengakses data dan informasi
-    terbaru kapan saja. Selain itu, Man. Pumping Charity dirancang untuk
-    mengonsumsi bandwidth dengan efisien, memastikan pengalaman pengguna yang
-    baik tanpa membebani infrastruktur jaringan.
+    b. Penghitungan Profit Otomatis: SIPDI dapat menghitung profit dari
+    investasi selama 12 bulan secara otomatis, membantu organisasi amal untuk
+    memantau kinerja investasi mereka dengan lebih efisien.
   </p>
-
+  <p>
+    c. Menghasilkan transaksi otomatis: Setiap kali terjadi profit baru, baik
+    dari basecamp atau anggota, sistem akan dengan otomatis menciptakan data
+    transaksi baru sesuai dengan pembayaran keuntungan yang dilakukan secara
+    otomatis.
+  </p>
   <h2>Teknologi:</h2>
   <p>
-    Sistem Man. Pumping Charity dibangun dengan menggunakan berbagai teknologi
-    dan bahasa pemrograman, termasuk:
+    Sistem ini dibangun dengan menggunakan berbagai teknologi dan bahasa
+    pemrograman, termasuk:
   </p>
   <ul>
     <li>HTML</li>
-    <li>Bootstrap 3</li>
-    <li>Pusher</li>
-    <li>PHP 5</li>
+    <li>Bootstrap 4.3.1</li>
+    <li>Pusher 4.1.1</li>
+    <li>PHP 7.4.33</li>
     <li>CSS</li>
     <li>Font Awesome 4.7.0</li>
     <li>JavaScript</li>
     <li>jQuery 2.2.0</li>
     <li>jQuery UI 1.12.1</li>
-    <li>SweetAlert2</li>
+    <li>Jquery Migrate 3.4.0</li>
+    <li>SweetAlert2 11</li>
     <li>Select2</li>
-    <li>MYSQL</li>
+    <li>Highcharts 11.2.0</li>
+    <li>Google Font API</li>
+    <li>Propper</li>
   </ul>
 
   <p>
     Dengan fitur-fitur canggih dan berbagai komponen teknologi yang digunakan,
-    Man. Pumping Charity merupakan alat yang kuat dalam pengelolaan dana amal
-    dan pelaporan yang kompleks. Sistem ini memungkinkan organisasi amal untuk
-    mengoptimalkan penggunaan sumber daya mereka dan memastikan transparansi
-    dalam pengelolaan dana yang diperoleh dari berbagai sumber.
+    SIPDI merupakan alat yang kuat dalam pengelolaan dana amal dan pelaporan
+    yang kompleks. Sistem ini memungkinkan organisasi amal untuk mengoptimalkan
+    penggunaan sumber daya mereka dan memastikan transparansi dalam pengelolaan
+    dana yang diperoleh dari berbagai sumber.
   </p>
-
+  Note : Aplikasi ini hanya akan beroperasi secara normal saat terhubung ke
+  internet dan tidak dapat digunakan dalam mode offline.
   <br />
   <div class="container-wisata">
     <div class="boxwisata">
