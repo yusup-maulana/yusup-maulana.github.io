@@ -1730,6 +1730,7 @@ h4 {
   .pendidikan {
     width: 100% !important;
     display: block !important;
+    margin-top: 2rem;
   }
 
   .pendidikan .pendidikan-bagi {
@@ -1753,6 +1754,59 @@ h4 {
 
   .slickerslide2 .head-in3 {
     top: 8px;
+  }
+
+  .pendidikan .pendidikan-bagi h2 {
+    font-size: x-large;
+    text-align: center;
+  }
+  ul.timeline > li p {
+    text-align: justify;
+    font-size: small;
+  }
+  .pendidikan .pendidikan-bagi .ULLastActivity li h4 {
+    font-size: medium;
+  }
+  .addSmaller {
+    font-size: 10px;
+  }
+  .pendidikan .pendidikan-bagi:nth-child(2) {
+    margin-top: 3rem;
+  }
+  .media .IconWork {
+    width: 71px !important;
+    margin: 1rem auto;
+    background: rgb(227, 227, 227);
+    border-radius: 50%;
+    padding: 6px;
+    border: 2px solid rgb(255 255 255) !important;
+    margin: 0rem auto;
+    margin-right: auto !important;
+  }
+  .media .IconWOrkBefore {
+    filter: blur(0px);
+    width: 79px !important;
+    background: rgb(209 189 148);
+    border-radius: 50%;
+    padding: 0px;
+    margin: 0rem auto;
+    height: 76px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-3px);
+  }
+  .media .media-body:before {
+    content: " ";
+    background: #ffffff;
+    display: inline-block;
+    position: relative;
+    top: -49px;
+    width: 100%;
+    height: 2rem;
+    z-index: -1;
+    border-radius: 3px;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 25% 100%);
   }
 }
 
@@ -2629,6 +2683,7 @@ span:nth-child(63) {
 .pendidikan {
   width: 100%;
   display: flex;
+  margin-top: 2rem;
 }
 
 .pendidikan .pendidikan-bagi {
@@ -2638,18 +2693,54 @@ span:nth-child(63) {
 .pendidikan .pendidikan-bagi h2 {
   color: white;
 }
-
-.pendidikan .pendidikan-bagi .ULLastActivity {
-  border-left: 1px solid #4848488f;
-  margin-left: 3%;
-  padding-left: 2%;
-  list-style: none;
+.pendidikan .pendidikan-bagi .ULLastActivity::-webkit-scrollbar {
+  width: 0.2em;
 }
 
+.pendidikan .pendidikan-bagi .ULLastActivity::-webkit-scrollbar-track {
+  background-color: #42424200;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.pendidikan .pendidikan-bagi .ULLastActivity::-webkit-scrollbar-thumb {
+  background-color: #00f1ff;
+  border-radius: 7px 7px 7px 7px;
+}
+.pendidikan .pendidikan-bagi .ULLastActivity {
+  padding-left: 2%;
+  list-style: none;
+  overflow: auto;
+  max-height: -webkit-fill-available;
+  height: 67rem;
+}
+ul.ULLastActivity:before {
+  content: " ";
+  background: #515151;
+  display: inline-block;
+  position: absolute;
+  width: 2px;
+  height: inherit;
+  z-index: 1;
+  translate: 8px;
+}
+ul.ULLastActivity > li:before {
+  content: " ";
+  background: #1f5379;
+  display: inline-block;
+  position: relative;
+  left: -7.9%;
+  top: 1.7rem;
+  border-radius: 50%;
+  border: 3px solid #c1b18c;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
 .pendidikan .pendidikan-bagi .ULLastActivity li {
   margin: 0px 0px 1% 0px;
   background: #0084c30d;
-  padding: 2%;
+  padding: 2% 2% 2% 7%;
   cursor: pointer;
 }
 
@@ -2662,6 +2753,8 @@ span:nth-child(63) {
   border-radius: 5px;
   font-size: small;
   color: #cdbe91;
+  position: relative;
+  left: -18px;
 }
 
 .pendidikan .pendidikan-bagi .ULLastActivity li span:nth-child(2) {
@@ -2671,12 +2764,19 @@ span:nth-child(63) {
   font-size: small;
   color: #cdbe91;
   border: 2px solid #cdbe91;
+  position: relative;
+  left: -18px;
 }
 
 .pendidikan .pendidikan-bagi .ULLastActivity li h4 {
   font-size: large;
   padding: 0;
   margin: 4px 0px 0px 0px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 ul.timeline {
@@ -2693,7 +2793,7 @@ ul.timeline:before {
   left: 29px;
   width: 2px;
   height: 100%;
-  z-index: 400;
+  z-index: 1;
 }
 
 ul.timeline > li {
@@ -2707,11 +2807,11 @@ ul.timeline > li:before {
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid #22c0e8;
+  border: 3px solid #007efa;
   left: 20px;
   width: 20px;
   height: 20px;
-  z-index: 400;
+  z-index: 1;
 }
 
 ul.timeline > li span {
@@ -2728,6 +2828,15 @@ ul.timeline > li p {
 /* <!-- ======================================================================================================================== START TAB 4 --> */
 .media {
   color: #adadad;
+}
+.media .IconWork {
+  width: 50px;
+  background: rgb(227, 227, 227);
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px solid rgb(209, 189, 148);
+  filter: blur(0px);
+  margin-right: 1rem;
 }
 /* <!-- ====================================================================================================== START contactform --> */
 /*=== Trigger  ===*/

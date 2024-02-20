@@ -1,4 +1,9 @@
-export function klikInviewOpen(stat) {
+export async function hideLoadingiframe() {
+  document.getElementById("loader-line").style.display = "none";
+  document.getElementById("iframeid").style.display = "block";
+}
+
+export async function klikInviewOpen(stat) {
   const courseURLs = {
     "Course-BukitAlgoritmadanMasaDepanTeknologiDatadiIndonesia":
       "https://drive.google.com/file/d/1U0Q6F7Xt0DJyeof6-Ap679-f9UBoRokr/preview",
@@ -353,7 +358,7 @@ export function klikInviewOpen(stat) {
     );
   } else if (stat == "TOEIC") {
     $(".inview_frame").html(
-      '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1MbFAvmm47GoR5rEoMdj6JgZVdQaPn0qz/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+      '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1-18cFhFNAmJlE1JQQ_iwgzEHp59fj6Qu/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
     );
   } else if (stat == "ORACLE") {
     $(".inview_frame").html(
@@ -397,7 +402,7 @@ export function klikInviewOpen(stat) {
     );
   } else if (stat == "SuketKerjaRAP") {
     $(".inview_frame").html(
-      '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/105pgmA3CPSVtPPrnvPcuhHrHAjqk6QsR/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+      '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1mNju3j0v5skbLDWu_nFG7PcURBsFyWRF/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
     );
   } else if (stat == "portofolio-webanime") {
     $(".inview_frame").append('<iframe  src="portofolio-webanime.html" />');
@@ -426,9 +431,8 @@ export function klikInviewOpen(stat) {
   $("#in_view_form").animate({
     top: "0%",
   });
-}
-
-function hideLoadingiframe() {
-  document.getElementById("loader-line").style.display = "none";
-  document.getElementById("iframeid").style.display = "block";
+  let iframeid = document.getElementById("iframeid");
+  iframeid.onload = function () {
+    hideLoadingiframe();
+  };
 }
