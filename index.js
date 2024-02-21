@@ -426,6 +426,8 @@ export async function klikInviewOpen(stat) {
     $(".inview_frame").append('<iframe  src="portofolio-manpumping.html" />');
   } else if (stat == "portofolio-rabp") {
     $(".inview_frame").append('<iframe  src="portofolio-rabp.html" />');
+  } else if (stat == "portofolio-dpb") {
+    $(".inview_frame").append('<iframe  src="portofolio-dpb.html" />');
   }
   $("#in_view_form").css("display", "block");
   $("#in_view_form").animate({

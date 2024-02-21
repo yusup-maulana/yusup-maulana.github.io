@@ -1,0 +1,372 @@
+<style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap");
+
+  .body2::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  .body2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(167 167 167 / 41%);
+    background-color: #061e29;
+  }
+
+  .body2::-webkit-scrollbar-thumb {
+    background-color: #00f1ffab;
+  }
+
+  .body2 {
+    font-family: "Baloo Chettan 2";
+    color: #e5e5e5;
+    margin: 2%;
+    text-align: justify;
+    padding: 3%;
+  }
+
+  .body2 a {
+    color: dodgerblue;
+  }
+
+  /* table wisata ...................*/
+  .twisata {
+  }
+
+  .twisata tr {
+    background: linear-gradient(90deg, #1193a1, transparent);
+    color: white;
+    font-weight: 900;
+    border: 3px solid #ffffff;
+  }
+
+  .twisata tr td {
+  }
+
+  .twisata tr td span {
+    background: #bdffda;
+    font-weight: 900;
+    padding: 1px 6px;
+    border-radius: 5px;
+    color: #08102b;
+  }
+
+  /* wisata-container ...................*/
+  .container-wisata {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    display: flex;
+    width: 100%;
+    padding: 1% 0%;
+    box-sizing: border-box;
+    height: 50vh;
+    border-radius: 10px;
+  }
+
+  .boxwisata {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 1px 1%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+  }
+
+  .boxwisata > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: 0.5s;
+    height: 100% !important;
+  }
+
+  .boxwisata > span {
+    position: relative;
+    left: 7px;
+    font-size: xx-small;
+    color: #f5fff7 !important;
+    bottom: 20px;
+    white-space: nowrap;
+    background-color: rgb(1 118 74 / 20%);
+    padding: 0 6px 0 4px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .boxwisata:hover {
+    flex: 1 1 50%;
+  }
+
+  .boxwisata:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-portofolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #7e97b8;
+    background-color: #e0e8ef;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(255, 255, 255, 0.333);
+    border-radius: 40px 40px 40px 40px;
+    padding: 16px 24px 16px 28px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px #ffffff,
+      4px 2px 16px 0px rgb(95 157 231 / 48%);
+  }
+
+  .btn-portofolio:hover {
+    color: #516d91;
+    background-color: #e5edf5;
+    box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+  }
+
+  .btn-portofolio:active {
+    box-shadow: none;
+  }
+</style>
+<div class="container-wisata">
+  <div class="boxwisata">
+    <img alt="Data Barang" src="IMG/dpb/1.webp" />
+    <span>Data Barang</span>
+  </div>
+  <div class="boxwisata">
+    <img alt="Transaksi" src="IMG/dpb/2.webp" />
+    <span>Transaksi</span>
+  </div>
+  <div class="boxwisata">
+    <img alt="Report Menu" src="IMG/dpb/3.webp" />
+    <span>Report Menu</span>
+  </div>
+</div>
+<br />
+
+<body class="body2">
+  <a
+    class="btn-portofolio"
+    target="_blank"
+    href="https://free3.glccontrol.com/"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      stroke="currentColor"
+      stroke-width="2"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="css-i6dzq1"
+    >
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+    </svg>
+    Demo : Klik di sini
+  </a>
+
+  <h1>Aplikasi Distribusi Penjualan Barang Versi 18</h1>
+  <h2>
+    Sebuah aplikasi web solusi terpadu untuk manajemen distribusi Barang,
+    efisiensi, efektivitas, dan profitabilitas
+  </h2>
+  <p>
+    Selamat datang di aplikasi Distributor, Aplikasi ini merupakan solusi
+    manajemen distribusi penjualan barang yang dikhususkan untuk sebuah
+    perusahaan distributor yang bergerak di bidang penjualan alat/barang impor
+    ke toko-toko.
+  </p>
+
+  <h2>Fitur Utama</h2>
+
+  <ul>
+    <li>
+      <h2>Login dan Keamanan</h2>
+      <p>
+        Fitur login yang aman untuk memastikan hanya pengguna yang berwenang
+        yang dapat mengakses aplikasi dan data sensitif.
+      </p>
+    </li>
+    <li>
+      <h2>Master Input</h2>
+      <ul>
+        <li>
+          Input Master Barang: Kelola daftar barang elektronik yang tersedia,
+          termasuk detail spesifikasi, harga, dan stok.
+        </li>
+        <li>
+          Input Data Customer: Simpan informasi lengkap tentang pelanggan PT.
+          Sinar Mutiara untuk mempermudah transaksi dan pelayanan pelanggan.
+        </li>
+        <li>
+          Input Data Supplier: Daftar dan kelola data supplier alat elektronik
+          yang menyediakan barang untuk PT. Sinar Mutiara.
+        </li>
+        <li>
+          Input Data Sales: Informasi lengkap tentang sales yang bekerja untuk
+          PT. Sinar Mutiara, termasuk target penjualan dan kinerja.
+        </li>
+        <li>
+          Input Data Bank: Kelola informasi akun bank yang terkait dengan
+          transaksi dan keuangan PT. Sinar Mutiara.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h2>Transaksi</h2>
+      <ul>
+        <li>
+          Transaksi Pembelian: Catat dan pantau pembelian alat elektronik dari
+          supplier.
+        </li>
+        <li>
+          Retur Pembelian: Kelola proses retur barang ke supplier jika terjadi
+          masalah atau kesalahan pada barang.
+        </li>
+        <li>
+          Pembayaran Pembelian: Catat pembayaran terhadap pembelian alat
+          elektronik.
+        </li>
+        <li>
+          Transaksi Penjualan: Catat dan pantau penjualan alat elektronik ke
+          toko-toko di daerah Jawa Barat.
+        </li>
+        <li>
+          Retur Penjualan: Kelola proses retur barang dari pelanggan jika
+          terjadi masalah atau kesalahan pada barang yang dibeli.
+        </li>
+        <li>
+          Pembayaran Penjualan: Catat pembayaran dari pelanggan terhadap
+          penjualan alat elektronik.
+        </li>
+        <li>
+          Kantong Sales: Kelola komisi dan insentif untuk sales berdasarkan
+          performa penjualan mereka.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h2>Data</h2>
+      <ul>
+        <li>
+          Data barang: Pemindaian, Melihat, Mencetak data barang juga stok.
+        </li>
+        <li>Data Sales: Pemindaian, Melihat, Mencetak Data Sales.</li>
+        <li>Data Customer: Pemindaian, Melihat, Mencetak data Customer.</li>
+        <li>Data Suplier: Pemindaian, Melihat, Mencetak Data Suplier.</li>
+        <li>
+          Data Harga Jual: Pemindaian, Melihat, Mencetak Data Barang jual.
+        </li>
+        <li>
+          Data Harga Grosir: Pemindaian, Melihat, Mencetak data Barang Harga
+          Grosir.
+        </li>
+        <li>
+          Reprot Stok Barang: Pemindaian, Melihat, Mencetak Data Stok Barang.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h2>Report</h2>
+      <p>
+        Tampilkan laporan yang berguna untuk menganalisis kinerja bisnis,
+        seperti laporan penjualan, laporan keuangan, dan lainnya.
+      </p>
+      <ul>
+        <li>
+          Report Penjualan: Laporan ini menampilkan ringkasan penjualan alat
+          elektronik selama periode tertentu. Anda dapat melihat total
+          penjualan, jumlah barang yang terjual, dan pendapatan kotor dari
+          penjualan.
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    Semua laporan dalam aplikasi ini dapat disesuaikan berdasarkan berbagai
+    kriteria pencarian, seperti rentang tanggal, kategori produk, pelanggan,
+    supplier, dan lainnya. Hal ini memungkinkan Anda untuk mendapatkan wawasan
+    yang mendalam dan analisis yang tepat sesuai dengan kebutuhan.
+  </p>
+
+  <p>
+    Anda dapat mencetak laporan atau mengekspornya ke format file tertentu untuk
+    mempermudah analisis lebih lanjut. Laporan-laporan ini akan membantu Anda
+    mengambil keputusan bisnis yang tepat dan mengoptimalkan operasional
+    distribusi alat elektronik/barang Anda.
+  </p>
+
+  <h3>Kriteria Pencarian</h3>
+
+  <ul>
+    <li>Rentang tanggal</li>
+    <li>Kategori produk</li>
+    <li>Pelanggan</li>
+    <li>Supplier</li>
+    <li>Dan lainnya</li>
+  </ul>
+
+  <h3>Manfaat Laporan</h3>
+
+  <ul>
+    <li>Mendapatkan wawasan yang mendalam tentang bisnis Anda</li>
+    <li>Melakukan analisis yang tepat untuk mengambil keputusan bisnis</li>
+    <li>Mengoptimalkan operasional distribusi alat elektronik/barang Anda</li>
+  </ul>
+
+  <h3>Format Laporan</h3>
+
+  <ul>
+    <li>Cetak</li>
+    <li>Ekspor ke format file tertentu (PDF, Excel, dll.)</li>
+  </ul>
+
+  <br />
+  <h3>Login All Access</h3>
+  <p>user : admin</p>
+  <p>pass : admin</p>
+  <br />
+  <h3>Login admin input Access</h3>
+  <p>user : admin1</p>
+  <p>pass : admin1</p>
+  <br />
+  <h2>Bahan Pembuatan</h2>
+
+  <ul>
+    <li>HTML</li>
+    <li>PHP 7.4.33</li>
+    <li>CSS</li>
+    <li>Bootstrap</li>
+    <li>jQuery UI 1.13.1</li>
+    <li>jQuery Migrate 3.4.0</li>
+    <li>jQuery 3.6.0</li>
+    <li>Plotly</li>
+    <li>Chartjs 2.1.0</li>
+    <li>Javascript</li>
+    <li>DataTables 1.13.1</li>
+    <li>SweetAlert2</li>
+    <li>Core-js 2.6.5</li>
+    <li>Clipboard.js</li>
+    <li>MySQL</li>
+    <li>Chartjs</li>
+    <li>Plotly</li>
+  </ul>
+</body>
+<div class="container-wisata">
+  <div class="boxwisata">
+    <img alt="Sales" src="IMG/dpb/4.webp" />
+    <span>Sales</span>
+  </div>
+  <div class="boxwisata">
+    <img alt="Chart Barang" src="IMG/dpb/5.webp" />
+    <span>Chart Barang</span>
+  </div>
+  <div class="boxwisata">
+    <img alt="Fluktuasi Barang" src="IMG/dpb/6.webp" />
+    <span>Fluktuasi Barang</span>
+  </div>
+</div>
