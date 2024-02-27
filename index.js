@@ -109,6 +109,8 @@ export async function klikInviewOpen(stat) {
       "https://drive.google.com/file/d/1WLZcOQ6gMkUx5_ZDsPdY5H5_Owt6wC1W/preview",
     "Course-DICODING-BMACHINELEARNING":
       "https://drive.google.com/file/d/1QPCMatbEUl7GAoZ3bhiSc5rwkVrSr_T2/preview",
+    "Labs-ALIBABACLOUD-CERDEV":
+      "https://drive.google.com/file/d/1KeDEhFciGG-DUlLs2oTZWh3Qq4KeFgwI/preview",
   };
 
   if (stat in courseURLs) {
