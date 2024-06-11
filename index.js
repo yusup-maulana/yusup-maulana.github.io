@@ -406,6 +406,9 @@ export async function klikInviewOpen(stat) {
     $(".inview_frame").html(
       '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1mNju3j0v5skbLDWu_nFG7PcURBsFyWRF/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
     );
+  } else if (stat == "portofolio-RABP-proyek") {
+    console.log("ada");
+    $(".inview_frame").append('<iframe  src="portofolio-RABPproyek.html" />');
   } else if (stat == "portofolio-webanime") {
     $(".inview_frame").append('<iframe  src="portofolio-webanime.html" />');
   } else if (stat == "portofolio-websiteRAP") {
