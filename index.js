@@ -360,7 +360,7 @@ export async function klikInviewOpen(stat) {
     );
   } else if (stat == "TOEIC") {
     $(".inview_frame").html(
-      '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1-18cFhFNAmJlE1JQQ_iwgzEHp59fj6Qu/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
+      '<div id="loader-line"></div><iframe onload="hideLoadingiframe()" id="iframeid"   src="https://drive.google.com/file/d/1PM2mOPt3B2zKF6j5YYiXquBEepwgutWW/preview" allowfullscreen="true" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%" height="360"></iframe></div>'
     );
   } else if (stat == "ORACLE") {
     $(".inview_frame").html(
